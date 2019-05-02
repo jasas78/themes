@@ -113,8 +113,8 @@ sed01:
 		-e '/ by Florian Sesser/d' \
 		-e '/ by Kyosuke Tokoro/d' \
 		-e 's;<h1>Directory Tree</h1><p>;$(dynW01);g' \
+		-e 's;<title>Directory Tree</title>;<title>https://www.jjj123.com</title>;g' \
 		-e 's;<a href="\.">\.</a><br>;$(dynW02);g' \
-		-e 's;<title>Directory Tree</title>;www.jjj123.com;g' \
 		public/index.html
 
 s3: server3

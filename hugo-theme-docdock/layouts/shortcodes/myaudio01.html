@@ -1,6 +1,7 @@
 <audio controls preload="none" style="width: 100%; margin-bottom: 20px">
-{{ with .Get "ogg" }}<source src="{{ . }}" type="audio/ogg">{{ end }}
-{{ with .Get "mp3" }}<source src="{{ . }}" type="audio/mpeg">{{ end }}
-{{ with .Get "wav" }}<source src="{{ . }}" type="audio/wav">{{ end }}
+{{ with .Get "ogg" }}<source src="{{ . }}" type="audio/ogg"><a href="{{ . }}">{{ . }}</a><br>{{ end }}
+{{ with .Get "mp3" }}<source src="{{ . }}" type="audio/mpeg"><a href="{{ . }}">{{ . }}</a><br>{{ end }}
+{{ with .Get "wav" }}<source src="{{ . }}" type="audio/wav"><a href="{{ . }}">{{ . }}</a><br>{{ end }}
 Your browser does not support the audio element.
 </audio>
+

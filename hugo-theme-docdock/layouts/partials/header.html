@@ -4,8 +4,8 @@
 	{{else}}
   {{ if .Site.GetPage "page" "_header.md" }}
     {{(.Site.GetPage "page" "_header.md").Content}}
-  {{else}}
-    <a style="color:red" href="{{.Site.Params.dynsite00}}">{{.Site.Params.dynsite00}}</a>
-    <a style="color:Orange" class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a>
+    {{else}}<br>
+  <a style="color:red" href="{{.Site.Params.dynsite00}}">{{.Site.Params.dynsite00}}</a><br>
+  <a style="color:Orange" class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a><br>
   {{end}}
 {{end}}

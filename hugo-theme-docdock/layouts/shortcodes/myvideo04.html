@@ -8,9 +8,19 @@ type="video/mp4">
 Your browser does not support the video tag.  {{ . }}
 </video>
 <a href="{{ . }}">{{ . }}</a><br>
-</div>
+</div><br>
 
-<div Width="100%" sytle="transform:rotate(90deg);">
+<div Width="100%">
+<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;transform:rotate(180deg);" 
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video>
+<a href="{{ . }}">{{ . }}</a><br>
+</div><br>
+
+<div Width="100%">
 <video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;transform:rotate(90deg);" 
 poster="{{ . }}.jpg"
 > <source src="{{ . }}"
@@ -18,26 +28,16 @@ type="video/mp4">
 Your browser does not support the video tag.  {{ . }}
 </video>
 <a href="{{ . }}">{{ . }}</a><br>
-</div>
+</div><br>
 
 <div Width="100%">
-<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;" rotate=180
+<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;transform:rotate(270deg);" 
 poster="{{ . }}.jpg"
 > <source src="{{ . }}"
 type="video/mp4">
 Your browser does not support the video tag.  {{ . }}
 </video>
 <a href="{{ . }}">{{ . }}</a><br>
-</div>
-
-<div Width="100%">
-<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;" rotate=270
-poster="{{ . }}.jpg"
-> <source src="{{ . }}"
-type="video/mp4">
-Your browser does not support the video tag.  {{ . }}
-</video>
-<a href="{{ . }}">{{ . }}</a><br>
-</div>
+</div><br>
 
 {{ end }}

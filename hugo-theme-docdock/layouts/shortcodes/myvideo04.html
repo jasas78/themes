@@ -1,7 +1,8 @@
 {{ with .Get "mp4" }}
 
 <div Width="400px" Height="400px">
-<video preload="none" controls style="margin-bottom:20px;Max-Width:400px;Max-Height:400px;transform:rotate(90deg);" 
+<video preload="none" controls Max-Width="400px" Max-Height="400px" 
+style="margin-bottom:20px;Max-Width:400px;Max-Height:400px;transform:rotate(90deg);" 
 poster="{{ . }}.jpg"
 > <source src="{{ . }}"
 type="video/mp4">
@@ -11,7 +12,8 @@ Your browser does not support the video tag.  {{ . }}
 </div><br>
 
 <div Width="400px" Height="400px">
-<video preload="none" controls style="margin-bottom:20px;Max-Width:400px;Max-Height:400px;transform:rotate(180deg);" 
+<video preload="none" controls Max-Width="400px" Max-Height="400px" 
+style="margin-bottom:20px;Max-Width:400px;Max-Height:400px;transform:rotate(90deg);" 
 poster="{{ . }}.jpg"
 > <source src="{{ . }}"
 type="video/mp4">

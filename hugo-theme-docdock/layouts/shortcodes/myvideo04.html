@@ -1,0 +1,43 @@
+{{ with .Get "mp4" }}
+
+<div Width="100%">
+<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;"
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video>
+<a href="{{ . }}">{{ . }}</a><br>
+</div>
+
+<div Width="100%">
+<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;" rotate=90
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video>
+<a href="{{ . }}">{{ . }}</a><br>
+</div>
+
+<div Width="100%">
+<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;" rotate=180
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video>
+<a href="{{ . }}">{{ . }}</a><br>
+</div>
+
+<div Width="100%">
+<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;" rotate=270
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video>
+<a href="{{ . }}">{{ . }}</a><br>
+</div>
+
+{{ end }}

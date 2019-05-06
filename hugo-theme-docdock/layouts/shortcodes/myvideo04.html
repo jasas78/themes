@@ -1,43 +1,24 @@
 {{ with .Get "mp4" }}
 
-<div Width="100%">
-<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;"
+<div Width="400px" Height="400px">
+<video preload="none" controls style="margin-bottom:20px;Max-Width:400px;Max-Height:400px;transform:rotate(90deg);" 
 poster="{{ . }}.jpg"
 > <source src="{{ . }}"
 type="video/mp4">
 Your browser does not support the video tag.  {{ . }}
-</video>
-<a href="{{ . }}">{{ . }}</a><br>
+</video><br>
+<a href="{{ . }}">{{ . }}</a>
 </div><br>
 
-<div Width="100%">
-<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;transform:rotate(180deg);" 
+<div Width="400px" Height="400px">
+<video preload="none" controls style="margin-bottom:20px;Max-Width:400px;Max-Height:400px;transform:rotate(180deg);" 
 poster="{{ . }}.jpg"
 > <source src="{{ . }}"
 type="video/mp4">
 Your browser does not support the video tag.  {{ . }}
-</video>
-<a href="{{ . }}">{{ . }}</a><br>
+</video><br>
+<a href="{{ . }}">{{ . }}</a>
 </div><br>
 
-<div Width="100%" style="width:47%;margin-bottom:20px;transform:rotate(90deg);" >
-<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;transform:rotate(90deg);" 
-poster="{{ . }}.jpg"
-> <source src="{{ . }}"
-type="video/mp4">
-Your browser does not support the video tag.  {{ . }}
-</video>
-<a href="{{ . }}">{{ . }}</a><br>
-</div><br>
-
-<div Width="100%" style="width:47%;margin-bottom:20px;transform:rotate(90deg);" >
-<video preload="none" controls Width="47%" style="width:47%;margin-bottom:20px;transform:rotate(270deg);" 
-poster="{{ . }}.jpg"
-> <source src="{{ . }}"
-type="video/mp4">
-Your browser does not support the video tag.  {{ . }}
-</video>
-<a href="{{ . }}">{{ . }}</a><br>
-</div><br>
 
 {{ end }}

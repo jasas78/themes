@@ -23,6 +23,11 @@ gd :
 
 ga :
 	nice -n 19 git add .
+rp:
+	@echo nice -n 19 git repack -a -d --window-memory 10m --max-pack-size 20m
+	nice -n 19 git config pack.windowMemory 10m
+	nice -n 19 git config pack.packSizeLimit 20m
+
 
 existHugo:=$(strip $(firstword $(wildcard scripts.Hugo/config.toml config.toml)))
 

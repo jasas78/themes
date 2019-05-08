@@ -1,0 +1,1 @@
+/bin/gen_index.include.all.subdir.gen._index.md.sh

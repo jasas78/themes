@@ -1,0 +1,1 @@
+for aa1 in * ; do ( cd ${aa1} && /bin/gen_index.include.all.subdir.gen._index.md.sh ) ; done

@@ -42,8 +42,9 @@ rg:regen
 regen:
 	[ -f scripts.Hugo/config.toml ] && make regenX -C scripts.Hugo || make regenX 
 #	[ -d themes ] || echo "you should run : git clone https://marstool@github.com/marstool/themes.git"
+#	[ -d themes ] || git clone https://marstool@github.com/marstool/themes.git
 regenX:
-	[ -d themes ] || git clone https://marstool@github.com/marstool/themes.git
+	[ -d themes ] || rsync -a ../themes/  themes/
 	cd themes && git pull
 	[ -L public ] || ln -s ../public/
 	rm -fr public/*

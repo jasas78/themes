@@ -5,12 +5,12 @@
   {{ if .Site.GetPage "page" "_header.md" }}
     {{(.Site.GetPage "page" "_header.md").Content}}
     {{else}}
-    <br><br>
-    <a style="color:red" href="{{.Site.Params.dynsite00}}">{{.Site.Params.dynsite00}}</a><br><br>
-    <a style="color:Orange" href="https://ww.jjj123.com">ww.jjj123.com</a>
-    <a style="color:black" class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a><br><br>
-    <a style="color:red" href="{{.Site.Params.dynsite02}}">{{.Site.Params.dynsite01}}</a><br><br>
-    <a style="color:Orange" href="{{.Site.Params.dynsite02}}">{{.Site.Params.dynsite02}}</a><br><br>
-    <a style="color:black" href="{{.Site.Params.dynsite03}}">{{.Site.Params.dynsite03}}</a><br><br>
+    <br>
+    <a style="color:red" href="{{.Site.Params.dynsite00}}">{{.Site.Params.dynsite00}}</a><br>
+    <a style="color:Orange" href="https://ww.jjj123.com">ww.jjj123.com</a><br>
+    <a style="color:black" class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a><br>
+    <a style="color:red" href="{{.Site.Params.dynsite02}}">{{.Site.Params.dynsite01}}</a><br>
+    <a style="color:Orange" href="{{.Site.Params.dynsite02}}">{{.Site.Params.dynsite02}}</a><br>
+    <a style="color:black" href="{{.Site.Params.dynsite03}}">{{.Site.Params.dynsite03}}</a><br>
   {{end}}
 {{end}}

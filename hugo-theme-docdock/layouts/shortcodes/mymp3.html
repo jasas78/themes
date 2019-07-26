@@ -1,5 +1,6 @@
 <br>
 <div Width="100%" style="border:1px solid black;" >
+
 {{ with .Get "ogg" }}
 <audio controls preload="none" style="width: 100%; margin-bottom: 20px">
 <source src="{{ . }}" type="audio/ogg">
@@ -22,4 +23,9 @@ Your browser does not support the audio element.
 Your browser does not support the audio element.
 </audio><a href="{{ . }}">{{ . }}</a><br>
 {{ end }}
+
+{{ with .Get "text" }}
+<br>{{ . }}
+{{ end }}
+
 </div>

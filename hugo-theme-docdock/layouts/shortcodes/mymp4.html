@@ -1,5 +1,6 @@
+<br>
+<div Width="100%" style="border:1px solid black;" >
 {{ with .Get "mp4" }}
-<div Width="100%">
 <br>
 <video preload="none" controls Width="97%" style="width:97%;margin-bottom:20px;"
 poster="{{ . }}.jpg"
@@ -9,5 +10,5 @@ Your browser does not support the video tag.  {{ . }}
 </video>
 <a href="{{ . }}">{{ . }}</a><br>
 <a href="{{ . }}.jpg">{{ . }}.jpg</a><br>
-</div>
 {{ end }}
+</div>

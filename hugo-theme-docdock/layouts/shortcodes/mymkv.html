@@ -8,7 +8,7 @@ poster="{{ . }}.jpg"
 type="video/mkv">
 Your browser does not support the video tag.  {{ . }}
 </video>
-<a href="{{ . }}">{{ . }}</a><br>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a><br>
 {{ end }}
 
 {{ with .Get "text" }}

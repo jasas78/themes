@@ -14,6 +14,7 @@ git :
 	git config --global core.packedGitLimit         "35m"
 	git config --global core.packedGitWindowSize    "36m"
 	git config --global http.postbuffer             "5m"
+	git config --global core.fileMode               false
 	git repack -a -d --window-memory 10m --max-pack-size 50m
 
 gitX:

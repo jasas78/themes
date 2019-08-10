@@ -7,8 +7,22 @@ all:
 include Makefile.env
 
 git :
-	git config --global pack.windowMemory "32m"
-	git repack -a -d --window-memory 10m --max-pack-size 100m
+	git config --global pack.windowMemory           "32m"
+	git config --global pack.packSizeLimit          "33m"
+	git config --global pack.deltaCacheSize         "34m"
+	git config --global pack.threads                "1"
+	git config --global core.packedGitLimit         "35m"
+	git config --global core.packedGitWindowSize    "36m"
+	git config --global http.postbuffer             "5m"
+	git repack -a -d --window-memory 10m --max-pack-size 50m
+
+gitX:
+	swapoff                /swapfile || echo
+	#dd if=/dev/zero     of=/swapfile bs=1024 count=1048576
+	dd if=/dev/zero     of=/swapfile bs=1024 count=4194304
+	chmod 600              /swapfile
+	mkswap                 /swapfile
+	swapon                 /swapfile
 
 up:
 	nice -n 19 git push -u origin master

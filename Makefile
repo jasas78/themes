@@ -6,6 +6,10 @@ all:
 
 include Makefile.env
 
+git :
+	git config --global pack.windowMemory "32m"
+	git repack -a -d --window-memory 10m --max-pack-size 100m
+
 up:
 	nice -n 19 git push -u origin master
 e:

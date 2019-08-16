@@ -1,3 +1,4 @@
+<br>
 <div Width="100%" style="border:1px solid black;" >
 
 {{ with .Get "text" }}
@@ -7,6 +8,13 @@
 {{ end }}
 
 {{ with .Get "link" }}
+<div Width="100%" style="border:1px solid black;" >
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+</div>
+{{ end }}
+
+
+{{ with .Get "jpg" }}
 <div Width="100%" style="border:1px solid black;" >
 <a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
 </div>

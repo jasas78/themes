@@ -1,11 +1,14 @@
 <div Width="100%" style="border:1px solid black;" >
 
-{{ with .Get "s4" }}  
-nbsp nbsp nbsp    nbsp 
-{{ end }}
-
 {{ with .Get "text" }}
 <div Width="100%" style="border:1px solid black;" >
+{{ . }}
+</div>
+{{ end }}
+
+{{ with .Get "texts2" }}
+<div Width="100%" style="border:1px solid black;" >
+&nbsp &nbsp 
 {{ . }}
 </div>
 {{ end }}

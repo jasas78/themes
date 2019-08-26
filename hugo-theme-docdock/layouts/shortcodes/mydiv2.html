@@ -4,6 +4,11 @@
 {{ . }}
 {{ end }}
 
+{{ with .Get "texts2" }}
+&nbsp &nbsp &nbsp &nbsp 
+{{ . }}
+{{ end }}
+
 {{ with .Get "link" }}
 <a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
 {{ end }}

@@ -51,6 +51,17 @@ rp:
 	nice -n 19 git config pack.packSizeLimit 20m
 
 
+
+
+define help_textHU
+
+	rg -> regen   : regen all hugo
+	s  -> server  : run hugo   server to test local
+	s2 -> server2 : run python server to test local
+
+endef
+
+
 testHugo1:=$(strip $(firstword $(wildcard scripts.Hugo/config.toml)))
 testHugo2:=$(strip $(firstword $(wildcard config.toml)))
 testHugo3:=$(strip $(firstword $(wildcard hugo-theme-docdock/theme.toml)))
@@ -68,26 +79,25 @@ $(info using    UseHugoOnTop)
 
 rg:regen
 regen:
-	[ -f scripts.Hugo/config.toml ] && make regenX -C scripts.Hugo || make regenX 
-#	[ -d themes ] || echo "you should run : git clone https://marstool@github.com/marstool/themes.git"
-#	[ -d themes ] || git clone https://marstool@github.com/marstool/themes.git
-regenX:
-	[ -d themes ] || rsync -a ../../themes/  themes/
-	cd themes && git pull
-	[ -L public ] || ln -s ../public/
+	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_33 file <scripts.Hugo/config.toml> exist ?" ; exit 33 )
+	[ -d scripts.Hugo/themes ] || rsync -a ../themes/  scripts.Hugo/themes/
+	@[ -d scripts.Hugo/themes ] || ( echo "why_no_34 dir <scripts.Hugo/themes> exist ?" ; exit 34 )
+	@[ -f scripts.Hugo/themes/hugo-theme-docdock/theme.toml ] || ( echo \
+	     "why_no_36 file <scripts.Hugo/themes/hugo-theme-docdock/theme.toml> exist ?" ; exit 36 )
+	cd scripts.Hugo/themes/ && git pull
+	@[ -d docs ] || mkdir docs
+	@[ -L public ] || ln -s docs/ public
+	@[ -L scripts.Hugo/public ] || ln -s ../public/ scripts.Hugo/
 	rm -fr public/*
-	rm -fr resources/_gen/*
-	cp ../CNAME public/
-	[ -f public/CNAME ] || ( echo ; echo "why no CNAME ? exit" ; echo ; exit 32 )
-	nice -n 19 hugo
+	rm -fr scripts.Hugo/resources/_gen/*
+	cp CNAME public/
+	@[ -f public/CNAME ] || ( echo "why_no_38 file <public/CNAME> exist ?" ; exit 38 )
+	cd scripts.Hugo/ && nice -n 19 hugo
 
 s : server
 server:
-	[ -d themes ] || echo "you should run : git clone https://marstool@github.com/marstool/themes.git"
-	[ -f scripts.Hugo/config.toml ] && make serverX -C scripts.Hugo || make serverX 
-serverX:
-	nice -n 19 hugo server --disableFastRender
-#	nice -n 19 hugo server
+	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_41 file <scripts.Hugo/config.toml> exist ?" ; exit 41 )
+	cd scripts.Hugo/ && nice -n 19 hugo server --disableFastRender
 
 # hddps://themes.gohugo.io/
 # hddps://gohugo.io/themes/
@@ -99,16 +109,7 @@ server2X:
 	cd public/ && python -m SimpleHTTPServer 33221
 
 
-define help_textHU
-
-	rg -> regen   : regen all hugo
-	s  -> server  : run hugo   server to test local
-	s2 -> server2 : run python server to test local
-
-endef
 export help_textHU
-
-
 endif
 ############################################### UseHugoOnTop  end
 ############################################### UseHugoOnTop  end
@@ -120,6 +121,11 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
+rg regen     s2 server2     s server :
+	cd .. && make $@
+
+
+export help_textHU
 endif
 ############################################### UseHugoUnderScript end
 ############################################### UseHugoUnderScript end

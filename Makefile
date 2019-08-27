@@ -104,8 +104,7 @@ server:
 
 s2: server2
 server2:
-	[ -f scripts.Hugo/config.toml ] && make server2X -C scripts.Hugo || make server2X 
-server2X:
+	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
 	cd public/ && python -m SimpleHTTPServer 33221
 
 

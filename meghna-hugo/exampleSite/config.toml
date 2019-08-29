@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "hddp://example.org/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Meghna"
@@ -105,7 +105,7 @@ custom_css = ["css/custom.css"]
     # footer
     [params.footer]
         copyright = "Themefisher Team"
-        copyrightURL = "http://www.themefisher.com"
+        copyrightURL = "hddp://www.themefisher.com"
 
         # social Icons
         [[params.footer.socialIcon]]

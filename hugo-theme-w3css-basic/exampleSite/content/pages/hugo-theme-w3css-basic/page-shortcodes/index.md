@@ -14,14 +14,14 @@ resources:
   - src:           img/pixabay.com/*.jpg
     params:
       origin:      pixabay.com
-      originlink:  https://pixabay.com
+      originlink:  hddps://pixabay.com
       license:     Creative Commons CC0 
-      licenselink: "https://pixabay.com/en/service/terms/#usage"
+      licenselink: "hddps://pixabay.com/en/service/terms/#usage"
       caption:     "%%I%%n%%B%%n%%O%%n%%L"
 ---
 
 
-{{% w3-quote source="https://gohugo.io/templates/shortcode-templates" layout="icon-br" %}}
+{{% w3-quote source="hddps://gohugo.io/templates/shortcode-templates" layout="icon-br" %}}
 You can extend Hugo’s built-in shortcodes by creating your own using
 the same templating syntax as that for single and list pages.
 
@@ -37,7 +37,7 @@ and list templates and basic content files.
 
 ## alert
 
-* Inspired by http://getbootstrap.com/docs/4.0/components/alerts/ and https://www.w3schools.com/w3css/w3css_panels.asp
+* Inspired by hddp://getbootstrap.com/docs/4.0/components/alerts/ and hddps://www.w3schools.com/w3css/w3css_panels.asp
 
 Configuration is in `config.toml`:
 
@@ -84,7 +84,7 @@ Configuration is in `config.toml`:
 
 ## w3-notice-icon
 
-* Inspired by [W3.CSS Notes](https://www.w3schools.com/w3css/w3css_notes.asp)
+* Inspired by [W3.CSS Notes](hddps://www.w3schools.com/w3css/w3css_notes.asp)
 
 ### Style
 
@@ -228,7 +228,7 @@ renders as
 
 
 ## w3-alert-icon
-* I ignored [W3.CSS Alerts](https://www.w3schools.com/w3css/w3css_alerts.asp)
+* I ignored [W3.CSS Alerts](hddps://www.w3schools.com/w3css/w3css_alerts.asp)
 * used borders instead
 
 
@@ -270,7 +270,7 @@ A warning with heading
 
 {{< highlight nolang >}}
 {{%/* w3-button-icon                                                %}}Hello world{{% /w3-button-icon %}}
-{{% w3-button-icon icon="fab fa-google" href="https://google.com" %}}take me to Google{{% /w3-button-icon %}}
+{{% w3-button-icon icon="fab fa-google" href="hddps://google.com" %}}take me to Google{{% /w3-button-icon %}}
 {{% w3-button-icon "/blog"                                        %}}take me to Blog{{% /w3-button-icon %}}
 {{% w3-button-icon "/faq" "far fa-question-circle"                %}}take me to FAQ{{% /w3-button-icon %}}
 {{% w3-button-icon icon="fas fa-exclamation-triangle" classes="w3-button w3-circle w3-theme-d3" %}}Purge{{% /w3-button-icon */%}}
@@ -280,7 +280,7 @@ renders to:
 
 {{% w3-button-icon                                     %}}Hello world{{% /w3-button-icon %}}
 
-{{% w3-button-icon icon="fab fa-google" href="https://google.com"           %}}take me to Google{{% /w3-button-icon %}}
+{{% w3-button-icon icon="fab fa-google" href="hddps://google.com"           %}}take me to Google{{% /w3-button-icon %}}
 
 {{% w3-button-icon "/blog"      %}}take me to Blog{{% /w3-button-icon %}}
 
@@ -290,7 +290,7 @@ renders to:
 
 
 ## w3-badge
-* Inspired by [W3.CSS Badges](https://www.w3schools.com/w3css/w3css_badges.asp)
+* Inspired by [W3.CSS Badges](hddps://www.w3schools.com/w3css/w3css_badges.asp)
 * {{% w3-badge            %}}42{{% /w3-badge %}}
 * {{% w3-badge "w3-green" %}}42{{% /w3-badge %}}
 
@@ -301,7 +301,7 @@ renders to:
 
 
 ## w3-tag
-* Inspired by [W3.CSS Tags](https://www.w3schools.com/w3css/w3css_tags.asp)
+* Inspired by [W3.CSS Tags](hddps://www.w3schools.com/w3css/w3css_tags.asp)
 * {{% w3-tag                    %}}42{{% /w3-tag %}}
 
 I'm a big one: {{% w3-tag "w3-blue w3-jumbo" %}}42{{% /w3-tag %}}
@@ -316,7 +316,7 @@ created with:
 
 
 ## w3-quote
-* Inspired by [W3.CSS Quotes](https://www.w3schools.com/w3css/w3css_quotes.asp)
+* Inspired by [W3.CSS Quotes](hddps://www.w3schools.com/w3css/w3css_quotes.asp)
 
 Some examples:
 
@@ -383,7 +383,7 @@ using blockquote:
 
 ## w3-codespan
 
-* Inspired by [W3.CSS Code](https://www.w3schools.com/w3css/w3css_code.asp)
+* Inspired by [W3.CSS Code](hddps://www.w3schools.com/w3css/w3css_code.asp)
 * Highlight Inline Code
 * all on one line
 
@@ -423,7 +423,7 @@ pre.w3-code, pre.chroma {
 
 ## w3-code
 
-* Inspired by [W3.CSS Code](https://www.w3schools.com/w3css/w3css_code.asp)
+* Inspired by [W3.CSS Code](hddps://www.w3schools.com/w3css/w3css_code.asp)
 * show code block - but no highlighting
 
 
@@ -690,7 +690,7 @@ pre.terminal-out {
 ## Page Resources
 
 ### res-attach
-* See https://gohugo.io/content-management/page-resources/
+* See hddps://gohugo.io/content-management/page-resources/
 * See [Attachments via Hugo Page Resources]({{< relref "attach-page-resources" >}}) for more information
 
 {{< w3-code >}}
@@ -711,7 +711,7 @@ icon     | 3           | fas fa-paperclip  | label icon     |
 
 ### res-figure
 
-* See https://gohugo.io/content-management/image-processing/   
+* See hddps://gohugo.io/content-management/image-processing/   
   inspired by layouts/shortcodes/imgproc.html
 * See [Hugo image processing (res-figure)]({{< relref "image-processing-with-hugo" >}}) for more information
 
@@ -731,13 +731,13 @@ resources:
     params:
       origin:      pixabay.com
       license:     Creative Commons CC0 
-      licenselink: https://pixabay.com/en/service/terms/#usage
+      licenselink: hddps://pixabay.com/en/service/terms/#usage
       caption:     "%%I%%n%%B%%n%%O"
   - src:           img/pixabay/penguin-2104173_1920.jpg
     params:
-      originlink:  https://pixabay.com/en/penguin-rockhopper-penguin-zoo-2104173/
+      originlink:  hddps://pixabay.com/en/penguin-rockhopper-penguin-zoo-2104173/
       attrby:      Michael Frankenstein
-      attrlink:    https://pixabay.com/en/users/frankenstein-2135887/
+      attrlink:    hddps://pixabay.com/en/users/frankenstein-2135887/
       imgcmd:      Resize
       imgopt:      400x
       
@@ -772,7 +772,7 @@ Code | What
 
 ### res-gallery
 
-* inspired by [Hugo Easy Gallery](https://www.liwen.id.au/heg/)
+* inspired by [Hugo Easy Gallery](hddps://www.liwen.id.au/heg/)
 * uses page resources and image processing
 
 {{< highlight nolan >}}
@@ -833,7 +833,7 @@ thumbOpt            |                   |
       origin:       pixabay.com
       license:      Creative Commons CC0
       licenseAbrv:  CC0 1.0
-      licenseLink:  https://pixabay.com/en/service/terms/
+      licenseLink:  hddps://pixabay.com/en/service/terms/
       caption:      "%%N%%n%%A%%n%%L%%n%%O"
       captionShort: "%%O%%n%%l"
 ```
@@ -865,8 +865,8 @@ Code | What
 
 * kind of obsoleted by [res-gallery](#res-gallery)
 * taken from  
-  https://github.com/liwenyip/hugo-easy-gallery/  
-  https://www.liwen.id.au/heg/  
+  hddps://github.com/liwenyip/hugo-easy-gallery/  
+  hddps://www.liwen.id.au/heg/  
 
 {{< highlight nolan >}}
 {{</* heg-load-photoswipe */>}}
@@ -954,10 +954,10 @@ Defined in:
 ## heg-figure
 
 * kind of obsoleted by [res-figure](#res-figure)
-* See for original doc: https://www.liwen.id.au/heg/
+* See for original doc: hddps://www.liwen.id.au/heg/
 * heg-figure improves the usage of `caption="" title="" attr="" attrlink=""`
 * for this demo I set caption-effect=**"none"** 
-* Inspired by https://stackoverflow.com/questions/21483356/how-to-mark-the-copyright-of-an-image-in-html
+* Inspired by hddps://stackoverflow.com/questions/21483356/how-to-mark-the-copyright-of-an-image-in-html
 
 ### with Thumbs
 
@@ -968,11 +968,11 @@ Defined in:
 {{< heg-figure link="/images/photocards/pixabay.com/01-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="126px" caption="figure caption 1" title="bar 1" >}}
 {{< heg-figure link="/images/photocards/pixabay.com/02-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="160px" caption="figure caption 2" >}}
 {{< heg-figure link="/images/photocards/pixabay.com/03-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="171px" caption="figure caption 3" attr="(c) by bar 3" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 4" attr="(c) by bar 4" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 4" attr="(c) by bar 4" attrlink="hddps://www.example.com" >}}
 {{< heg-figure link="/images/photocards/pixabay.com/05-photocard.png" thumb="-thumb" caption-position="bottom" caption-effect="none" width="145px"                    attr="(c) by bar 5" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px"                    attr="(c) by bar 6" attrlink="https://www.example.com" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="160px"                                        attrlink="https://www.example.com" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 8"             attrlink="https://www.example.com" */>}}
+{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px"                    attr="(c) by bar 6" attrlink="hddps://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="160px"                                        attrlink="hddps://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 8"             attrlink="hddps://www.example.com" */>}}
 {{< /highlight >}}
 
 renders as
@@ -983,15 +983,15 @@ renders as
 
 {{< heg-figure link="/images/photocards/pixabay.com/03-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="171px" caption="figure caption 3" attr="(c) by bar 3" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 4" attr="(c) by bar 4" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 4" attr="(c) by bar 4" attrlink="hddps://www.example.com" >}}
 
 {{< heg-figure link="/images/photocards/pixabay.com/05-photocard.png" thumb="-thumb" caption-position="bottom" caption-effect="none" width="145px"                    attr="(c) by bar 5" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px"                    attr="(c) by bar 6" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px"                    attr="(c) by bar 6" attrlink="hddps://www.example.com" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="160px"                                        attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="160px"                                        attrlink="hddps://www.example.com" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 8"             attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" thumb="-thumb" caption-position="bottom" caption-effect="none" width="135px" caption="figure caption 8"             attrlink="hddps://www.example.com" >}}
 
 
 ### without Thumbs
@@ -1001,12 +1001,12 @@ renders as
 {{< heg-figure link="/images/photocards/pixabay.com/01-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 1" title="bar 1" >}}
 {{< heg-figure link="/images/photocards/pixabay.com/02-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 2" >}}
 {{< heg-figure link="/images/photocards/pixabay.com/03-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 3" attr="(c) by bar 3" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 4" attr="(c) by bar 4" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 4" attr="(c) by bar 4" attrlink="hddps://www.example.com" >}}
 {{< heg-figure link="/images/photocards/pixabay.com/05-photocard.png" caption-position="bottom" caption-effect="none" width="640px"                    attr="(c) by bar 5" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                    attr="(c) by bar 6" attrlink="https://www.example.com" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                                        attrlink="https://www.example.com" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 8"             attrlink="https://www.example.com" >}}
-{{< heg-figure link="/images/photocards/pixabay.com/09-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 9" title="bar 9" attr="(c) by bar 9" attrlink="https://www.example.com" */>}}
+{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                    attr="(c) by bar 6" attrlink="hddps://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                                        attrlink="hddps://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 8"             attrlink="hddps://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/09-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 9" title="bar 9" attr="(c) by bar 9" attrlink="hddps://www.example.com" */>}}
 {{< /highlight >}}
 
 renders as
@@ -1017,17 +1017,17 @@ renders as
 
 {{< heg-figure link="/images/photocards/pixabay.com/03-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 3" attr="(c) by bar 3" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 4" attr="(c) by bar 4" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 4" attr="(c) by bar 4" attrlink="hddps://www.example.com" >}}
 
 {{< heg-figure link="/images/photocards/pixabay.com/05-photocard.png" caption-position="bottom" caption-effect="none" width="640px"                    attr="(c) by bar 5" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                    attr="(c) by bar 6" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/06-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                    attr="(c) by bar 6" attrlink="hddps://www.example.com" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                                        attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/07-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px"                                        attrlink="hddps://www.example.com" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 8"             attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/08-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 8"             attrlink="hddps://www.example.com" >}}
 
-{{< heg-figure link="/images/photocards/pixabay.com/09-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 9" title="bar 9" attr="(c) by bar 9" attrlink="https://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/09-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 9" title="bar 9" attr="(c) by bar 9" attrlink="hddps://www.example.com" >}}
 
 
 
@@ -1057,7 +1057,7 @@ in {{< w3-codespan >}}i18n/en.yaml{{< /w3-codespan >}}
 
 ## asciicast
 
-* taken from https://github.com/gohugoio/hugo/tree/master/docs/layouts/shortcodes
+* taken from hddps://github.com/gohugoio/hugo/tree/master/docs/layouts/shortcodes
 * added no javascript fallback
 
 {{< asciicast WJM2LEZQs8VRhNeuZ5NiGPp9I >}}
@@ -1175,14 +1175,14 @@ kbd {
 
 ## readfile
 
-* inspired by https://github.com/gohugoio/hugo/blob/master/docs/layouts/shortcodes/readfile.html
+* inspired by hddps://github.com/gohugoio/hugo/blob/master/docs/layouts/shortcodes/readfile.html
 * reads a file (or directory) and optionally renders ist using markdownify or highlight
 
 Argument | Position -1 | Default | What             | Remark
 ---------|-------------|---------|------------------|-------
 file     | 0           | .       | a file (or dir)  | . or ending in /. => directory
 md       | 1           |         | markdownify      | if "true" => process using markdownify 
-hll      | 2           | md      | highlight lang   | see [list-of-chroma-highlighting-languages](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
+hll      | 2           | md      | highlight lang   | see [list-of-chroma-highlighting-languages](hddps://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
 
 {{< w3-code >}}
 {{</* readfile "content/." */>}}
@@ -1224,13 +1224,13 @@ renders as:
 <a id="liti"></a>
 
 * **li**st by **Ti**tle
-* hugo has build in shortcodes [ref](https://gohugo.io/functions/ref) and [relref](https://gohugo.io/functions/relref): https://gohugo.io/content-management/shortcodes/
+* hugo has build in shortcodes [ref](hddps://gohugo.io/functions/ref) and [relref](hddps://gohugo.io/functions/relref): hddps://gohugo.io/content-management/shortcodes/
 * These shortcodes will look up the pages by their relative path
   (e.g., blog/post.md) or their logical name (post.md)
 * I created a shortcode to get a list of pages by their **Title**
 * by default this list is not given as a `<ul>` list - just one or more links without newlines
-* search can be done with [eq](https://gohugo.io/functions/eq) (which
-  is default) or [in](https://gohugo.io/functions/in) (substring)
+* search can be done with [eq](hddps://gohugo.io/functions/eq) (which
+  is default) or [in](hddps://gohugo.io/functions/in) (substring)
 * the case is relevant by default. Use the modifier to ignore (mod="i")
 
 

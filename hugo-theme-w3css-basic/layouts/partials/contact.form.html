@@ -11,8 +11,8 @@
 {{- .Scratch.Set `myMailToEnctype` `text/plain`                            }}
 {{- if isset $.Site.Params (lower `formspree` ) }}
 {{ `<!-- $.Site.Params.formspree ok  -->` | safeHTML }}
-  {{- .Scratch.Set `myFormspreeAction`  (printf `https://%s/%s` $.Site.Params.formspree $.Site.Params.email) }}
-  {{- .Scratch.Set `myFormspreeVia`     (printf `https://%s`    $.Site.Params.formspree                   ) }}
+  {{- .Scratch.Set `myFormspreeAction`  (printf `hddps://%s/%s` $.Site.Params.formspree $.Site.Params.email) }}
+  {{- .Scratch.Set `myFormspreeVia`     (printf `hddps://%s`    $.Site.Params.formspree                   ) }}
   {{- .Scratch.Set `myFormspreeEnctype` `application/x-www-form-urlencoded`                                }}
 {{- end }} <!-- if isset -->
 <form class='w3-panel w3-card-4 {{ default `w3-theme-d3` ($.Site.Param `colorContactFormPanel`)}} ' method="post" >

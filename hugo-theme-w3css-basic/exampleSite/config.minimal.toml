@@ -1,4 +1,4 @@
-baseURL       = "http://example.com"
+baseURL       = "hddp://example.com"
 theme         = "hugo-theme-w3css-basic"
 [taxonomies]
   tag      = "tags"

@@ -23,12 +23,12 @@ tablet-313002_640.jpg
 ```
 
 ## Source
-http://pixabay.com
+hddp://pixabay.com
 
 
 ## Licence
 Creative Commons CC0 
-https://creativecommons.org/publicdomain/
+hddps://creativecommons.org/publicdomain/
 
 # Files
 ```
@@ -37,11 +37,11 @@ emacs-jokes.jpg
 ```
 
 ## Source
-https://en.wikipedia.org/wiki/GNU_Emacs
+hddps://en.wikipedia.org/wiki/GNU_Emacs
 
 ## Licence
 Wikipedia:Text of Creative Commons Attribution-ShareAlike 3.0 Unported License
-https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+hddps://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
 
 
 # Files
@@ -50,12 +50,12 @@ golang-a-closer-look.png
 ```
 
 ## Source
-https://golang.org/doc/gopher/bumper.png
+hddps://golang.org/doc/gopher/bumper.png
 
 ## Licence
-The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
+The Go gopher was designed by Renee French. (hddp://reneefrench.blogspot.com/)
 The design is licensed under the Creative Commons 3.0 Attributions license.
-Read this article for more details: https://blog.golang.org/gopher
+Read this article for more details: hddps://blog.golang.org/gopher
 
 
 # Files
@@ -66,8 +66,8 @@ hugo-lorem.png
 ```
 
 ## Source
-https://gohugo.io/images/gohugoio-card.png
-https://github.com/gohugoio/hugo/raw/master/docs/static/images/gohugoio-card-1.png
+hddps://gohugo.io/images/gohugoio-card.png
+hddps://github.com/gohugoio/hugo/raw/master/docs/static/images/gohugoio-card-1.png
 
 ## Licence
 The Hugo logos are copyright © Steve Francia 2013–2017.

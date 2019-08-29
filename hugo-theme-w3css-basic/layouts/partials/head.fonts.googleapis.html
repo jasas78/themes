@@ -28,7 +28,7 @@
       {{- end }}
 
       {{- if  $.Scratch.Get `family` }}
-        {{- $myHref := (printf `href='%s%s'` `https://fonts.googleapis.com/css?family=` ($.Scratch.Get `family`) )  }}
+        {{- $myHref := (printf `href='%s%s'` `hddps://fonts.googleapis.com/css?family=` ($.Scratch.Get `family`) )  }}
   <link rel="stylesheet" {{$myHref | safeHTMLAttr}} />
       {{- else }}
         {{/* no font names found ... */}}

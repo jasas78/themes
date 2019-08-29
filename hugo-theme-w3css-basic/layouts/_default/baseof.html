@@ -64,14 +64,6 @@
         {{- partial `main.related.html`  . -}}
         {{- end }}
 
-        {{- if eq .Type `blog` }}
-          {{- block `blog-disqus` . }}
-            {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
-              {{ `<!-- block blog-disqus _default/baseof.html  -->` | safeHTML }}
-            {{- end}}
-          {{ end }}
-        {{- end -}}
-
         {{- if eq .Type `contact` }}
           {{- block `contactform` . }}
             {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}

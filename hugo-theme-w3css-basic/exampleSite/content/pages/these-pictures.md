@@ -19,7 +19,7 @@ categories:
 # Where did the pictures came from?
 
 * See [Images taken from...](../hugo-theme-w3css-basic/images-taken-from/).
-* hddps://pixabay.com/
+* https://pixabay.com/
 
 
 # What is Pixabay?
@@ -29,7 +29,7 @@ images and videos. All contents are released under Creative Commons
 CC0, which makes them safe to use without asking for permission or
 giving credit to the artist - even for commercial purposes.
 
-See more: hddps://pixabay.com/en/service/faq/
+See more: https://pixabay.com/en/service/faq/
 
 
 # Are there any restrictions?
@@ -53,5 +53,5 @@ In addition to these common sense regulations, there is more to know:
 
 **Model- and Property Release**
 
-See more here: hddps://pixabay.com/en/blog/posts/public-domain-images-what-is-allowed-and-what-is-4/
+See more here: https://pixabay.com/en/blog/posts/public-domain-images-what-is-allowed-and-what-is-4/
 

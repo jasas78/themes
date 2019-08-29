@@ -12,7 +12,7 @@ description: "License: Apache License 2.0"
 ---
 
 ## License
-* Apache License 2.0, hddps://github.com/gohugoio/hugo/blob/master/LICENSE.md
+* Apache License 2.0, https://github.com/gohugoio/hugo/blob/master/LICENSE.md
 * The Hugo logos are copyright © Steve Francia 2013–2017.
 * The Hugo Gopher is based on an original work by Renée French.
 

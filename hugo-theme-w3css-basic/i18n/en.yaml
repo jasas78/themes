@@ -77,6 +77,8 @@
   translation: "Show"
 - id: Comments
   translation: "comments"
+- id: disqusVia
+  translation: "via disqus.com"
 
 - id: January
   translation: "January"
@@ -105,6 +107,13 @@
 
 - id: Attachments
   translation: "Attachments"
+
+# Disqus consent
+- id: disqusTxtAgree
+  translation: Show comments for this page powered by [disqus.com](https://disqus.com). But first agree to the [Terms](https://help.disqus.com/terms-and-policies/terms-of-service)
+
+- id: disqusBtnAgree
+  translation: Yes, I agree
 
 # Cookie consent
 - id: cookieMessage

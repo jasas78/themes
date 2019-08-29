@@ -1,6 +1,6 @@
 {{/*
-hddp://photoswipe.com/documentation/seo.html
-Inspired by hddps://github.com/liwenyip/hugo-easy-gallery
+http://photoswipe.com/documentation/seo.html
+Inspired by https://github.com/liwenyip/hugo-easy-gallery
 */}}
 
 {{- $myDefaultResPagePath  :=  $.Site.Params.resGallery.defaultResPagePath  | default $.Site.Params.resources.defaultResPagePath | default `resources/images` }}
@@ -68,7 +68,7 @@ $myHovTra       : {{ $myHovTra       }} <br/>
 
 {{- end -}}
 
-<div class='res-gallery {{$myCapPos}} {{$myCapEff}} {{$myHovEff}} {{$myHovTra}}' itemscope itemtype="hddp://schema.org/ImageGallery">
+<div class='res-gallery {{$myCapPos}} {{$myCapEff}} {{$myHovEff}} {{$myHovTra}}' itemscope itemtype="http://schema.org/ImageGallery">
 {{- if $myResPage }}
   {{- range $myResImage := ( ($myResPage.Resources.ByType `image`).Match (printf "%s*" $myResMatch)) }}
     {{- if not (findRE `\.(svg)$` (lower $myResImage.Name)) }}
@@ -153,11 +153,11 @@ $myHovTra       : {{ $myHovTra       }} <br/>
     <div class='res-gallery-box '
          {{/* style="width:{{$myThumCmdOptDimentionsMax}}px; height:{{$myThumCmdOptDimentionsMax}}px;" */}}
          style="width:{{$myThumCmdOptDimentionsW}}px; height:{{$myThumCmdOptDimentionsH}}px;"
-         itemscope itemtype="hddp://schema.org/ImageGallery" >
+         itemscope itemtype="http://schema.org/ImageGallery" >
       <figure class="img"
               data-size='{{$myRegGalleryImage.Width}}x{{$myRegGalleryImage.Height}}'
               data-caption='{{$myRegGalleryImageCaption}}'
-              itemprop="associatedMedia" itemscope itemtype="hddp://schema.org/ImageObject"
+              itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
               title="{{$myResImage.Title | safeHTML}}"
       >
         <a itemprop="contentUrl" href='{{$myRegGalleryImage.RelPermalink}}' >

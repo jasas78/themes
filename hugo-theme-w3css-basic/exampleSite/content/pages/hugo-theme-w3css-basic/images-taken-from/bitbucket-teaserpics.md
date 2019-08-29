@@ -13,7 +13,7 @@ description: "License: Redistribution and use in source and binary forms are per
 
 
 ## License
-* hddps://bitbucket.org/birkenfeld/pygments-main/src/7941677dc77d4f2bf0bbd6140ade85a9454b8b80/LICENSE
+* https://bitbucket.org/birkenfeld/pygments-main/src/7941677dc77d4f2bf0bbd6140ade85a9454b8b80/LICENSE
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -26,8 +26,8 @@ met:
   notice, this list of conditions and the following disclaimer in the
   documentation and/or other materials provided with the distribution.
 
-* hddps://bitbucket.org/birkenfeld/pygments-main/src/7941677dc77d4f2bf0bbd6140ade85a9454b8b80/doc/_static/logo_only.png
-* pygments logo created by Joel Unger. hddps://dribbble.com/joelunger
+* https://bitbucket.org/birkenfeld/pygments-main/src/7941677dc77d4f2bf0bbd6140ade85a9454b8b80/doc/_static/logo_only.png
+* pygments logo created by Joel Unger. https://dribbble.com/joelunger
 
 
 ## Images

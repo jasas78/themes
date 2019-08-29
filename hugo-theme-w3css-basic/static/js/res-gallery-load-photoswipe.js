@@ -1,5 +1,5 @@
 /*
-Inspired by hddps://github.com/liwenyip/hugo-easy-gallery/
+Inspired by https://github.com/liwenyip/hugo-easy-gallery/
 */
 
 /* Show an alert if this js file has been loaded twice */

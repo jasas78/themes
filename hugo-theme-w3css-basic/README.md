@@ -1,13 +1,13 @@
 # W3.CSS Basic Theme for Hugo
 
-W3.CSS Basic is a website template built with [W3.CSS](hddps://www.w3schools.com/w3css/).  
+W3.CSS Basic is a website template built with [W3.CSS](https://www.w3schools.com/w3css/).  
 Inspiration was taken from
-[Universal](hddps://themes.gohugo.io/hugo-universal-theme/).  It is highly
+[Universal](https://themes.gohugo.io/hugo-universal-theme/).  It is highly
 [configurable](//github.com/it-gro/hugo-theme-w3css-basic/tree/master/exampleSite/config.toml).
 Change all colors in the blink of an eye, change default settings or disable
 Frontpage elements.
 
-See the [exampleSite](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/) for a demo.
+See the [exampleSite](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/) for a demo.
 
 
 ---
@@ -17,7 +17,7 @@ This theme is for:
 * Landing pages 
 * Blogs
 * Pages (not blog) in a directory structure with simple navigation (Top/Up/Down & pages on this level)
-* People who like [monochromatic colors](hddps://www.w3schools.com/colors/colors_monochromatic.asp)
+* People who like [monochromatic colors](https://www.w3schools.com/colors/colors_monochromatic.asp)
 
 
 ## Table of Contents
@@ -43,6 +43,7 @@ This theme is for:
   * [Blog](#blog)
     * [Blog List](#blog-list)
     * [Date format](#date-format)
+    * [Disqus](#disqus)
   * [Related Content](#related-content)
   * [Anchors](#anchors)
   * [Pages](#pages)
@@ -99,13 +100,13 @@ This theme is for:
 * Added shortcodes:
   * term-in
   * term-out
-  * See more [Terminal](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#terminal)   
-![screenshot Terminal](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_524.jpg)
-![screenshot Terminal](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_525.jpg)
+  * See more [Terminal](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#terminal)   
+![screenshot Terminal](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_524.jpg)
+![screenshot Terminal](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_525.jpg)
 
 
 * Added breadcrump   
-  ![screenshot breadcrump](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_523.jpg)
+  ![screenshot breadcrump](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_523.jpg)
 
 `config.toml`
 ```toml
@@ -132,27 +133,27 @@ This theme is for:
   showNavUp           = true
 ```
 
-![screenshot title-nav](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_519.jpg)
+![screenshot title-nav](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_519.jpg)
 
 
 * Added [Anchors](#anchors)
 
-![screenshot title-nav](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_520.jpg)
+![screenshot title-nav](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_520.jpg)
 
 
 * Added [Related Content](#related-content)
 
-![screenshot related](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_521.jpg)
+![screenshot related](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_521.jpg)
 
 * Added shortcode:
   * [res-gallery](#gallery-with-image-processing)
-[![screenshot res-gallery](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_516.jpg)](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/gallery-01/)
+[![screenshot res-gallery](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_516.jpg)](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/gallery-01/)
 
   
-* Added [cookieconsent](hddps://cookieconsent.insites.com/)
-[![screenshot cookieconsent](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_510.jpg)](#cookieconsent)
+* Added [cookieconsent](https://cookieconsent.insites.com/)
+[![screenshot cookieconsent](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_510.jpg)](#cookieconsent)
 
-[![screenshot cookieconsent](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_512.jpg)](#cookieconsent)
+[![screenshot cookieconsent](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_512.jpg)](#cookieconsent)
 
 * Teaser images are now resource images
 * New Front Matter (`resImgTeaser` is replacing ```teaserPic```):
@@ -172,21 +173,29 @@ resImgTeaserInCardOpt: "150x50 Bottom"
 ```
 
 See the teaser image here: [These
-Logos](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages) and compare to the one on the page.
+Logos](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages) and compare to the one on the page.
+
+* User has now to agree to Disqus. You may skip this via
+
+`config.toml`
+```toml
+  disqusSkipAgree = true
+```
+[![screenshot DiscusAgree](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_514.jpg)](#disqus)
 
 
 * Added shortcodes:
 
-  * [res-figure](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-figure)
-  [![screenshot res-figure](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_502.jpg)](#images)
-  * [res-attach](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-attach)
-  [![screenshot res-attach](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_504.jpg)](#attachments)
-  * [readfile](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#readfile)
-  [![screenshot readfile](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_506.jpg)](#include-files)
+  * [res-figure](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-figure)
+  [![screenshot res-figure](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_502.jpg)](#images)
+  * [res-attach](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-attach)
+  [![screenshot res-attach](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_504.jpg)](#attachments)
+  * [readfile](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#readfile)
+  [![screenshot readfile](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_506.jpg)](#include-files)
 
 
 * Added color theme preview via color theme selector (not on small displays)
-  [![screenshot color theme selector](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_500.jpg)](#color-theme)
+  [![screenshot color theme selector](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_500.jpg)](#color-theme)
 
 ```toml
   # This may help you to to select a w3cssColorTheme
@@ -197,13 +206,13 @@ Logos](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages) and comp
 
 My goals for this theme are:
 
-* be as universal as the [Universal](hddps://themes.gohugo.io/hugo-universal-theme/) theme
-* create a [W3.CSS](hddps://www.w3schools.com/w3css/) theme (there are many [Bootstrap](hddps://getbootstrap.com/) themes)
+* be as universal as the [Universal](https://themes.gohugo.io/hugo-universal-theme/) theme
+* create a [W3.CSS](https://www.w3schools.com/w3css/) theme (there are many [Bootstrap](https://getbootstrap.com/) themes)
 * mobile first, responsive
 * basic usage without javascript has to be possible 
 * do as much as possible not to expose visitors to tracking by third-party against their will
-* try to be [DRY](hddps://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
-* support experimenting with [monochromatic colors](hddps://www.w3schools.com/colors/colors_monochromatic.asp)
+* try to be [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* support experimenting with [monochromatic colors](https://www.w3schools.com/colors/colors_monochromatic.asp)
 * use teaser pictures and icons as eye-catcher
 
 
@@ -212,23 +221,23 @@ My goals for this theme are:
 ### Included Resources
 This theme includes resources from:
 
-* hddps://www.w3schools.com/w3css/
-* hddps://fontawesome.com/icons/
-* hddps://owlcarousel2.github.io/OwlCarousel2/
-* hddps://daneden.me/animate
-* hddps://github.com/liwenyip/hugo-easy-gallery/
-* hddp://photoswipe.com
-* hddps://fonts.google.com/
-* hddps://translate.google.com
-* hddps://cse.google.com
-* hddps://developers.google.com/gtagjs/devguide/snippet
-* hddps://cookieconsent.insites.com
+* https://www.w3schools.com/w3css/
+* https://fontawesome.com/icons/
+* https://owlcarousel2.github.io/OwlCarousel2/
+* https://daneden.me/animate
+* https://github.com/liwenyip/hugo-easy-gallery/
+* http://photoswipe.com
+* https://fonts.google.com/
+* https://translate.google.com
+* https://cse.google.com
+* https://developers.google.com/gtagjs/devguide/snippet
+* https://cookieconsent.insites.com
 
 
 ### Features Tags:
 
 animate, attachments, blog, branch-bundle, carousel, clients, color-themes,
-configuration, contact-form, cookie-consent, custom-themes, data, debug, 
+configuration, contact-form, cookie-consent, custom-themes, data, debug, disqus,
 emoji, features, figure, font-awesome, formspree.io, gallery, google-analytics,
 google-custom-search, google-fonts, google-map, google-translate,
 headless-bundle, hugo-easy-gallery, i18n, image-processing, jumbotron,
@@ -240,9 +249,9 @@ tracing
 
 
 ### Features List
-* [Monochromatic Color](hddps://www.w3schools.com/colors/colors_monochromatic.asp) Schemes
+* [Monochromatic Color](https://www.w3schools.com/colors/colors_monochromatic.asp) Schemes
 * Works with disabled javascript (using fallbacks)
-* [Responsive design](hddps://search.google.com/test/mobile-friendly?url=hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io)
+* [Responsive design](https://search.google.com/test/mobile-friendly?url=https://it-gro.github.io/hugo-theme-w3css-basic.github.io)
   * 3 (medium, lage) or 1 (small) column layout
   * small menu (truncated) on small screen (no collapse)
 * Customizable landing page
@@ -252,18 +261,18 @@ tracing
   * optional data/features     (optional css animation)
   * optional data/testimonials (carousel (if js is enabled) )
   * optional data/clients      (carousel (if js is enabled) )
-* [Fontawesome](hddps://fontawesome.com/icons?d=gallery) version 5 (local)
-* [Google fonts](hddps://fonts.google.com/) - either via api (any font) or via local files (choose local to reduce tracking)
-* Optional [google translate](hddps://translate.google.com/manager/website) widget (if js is enabled - disable it to reduce tracking)
-* Optional  [Google Global Site Tags](hddps://developers.google.com/gtagjs/) with your [GA_TRACKING_ID](hddps://support.google.com/analytics/answer/1008080) (do not activate to reduce tracking))
+* [Fontawesome](https://fontawesome.com/icons?d=gallery) version 5 (local)
+* [Google fonts](https://fonts.google.com/) - either via api (any font) or via local files (choose local to reduce tracking)
+* Optional [google translate](https://translate.google.com/manager/website) widget (if js is enabled - disable it to reduce tracking)
+* Optional  [Google Global Site Tags](https://developers.google.com/gtagjs/) with your [GA_TRACKING_ID](https://support.google.com/analytics/answer/1008080) (do not activate to reduce tracking))
 * Contact page
-  * optional [formspree.io ](hddps://formspree.io)
-  * mailto: without [formspree.io ](hddps://formspree.io) (avoid tracking & leaking)
-  * [google map](hddps://developers.google.com/maps/documentation/javascript/) (if js is enabled - do not provide coordinates to reduce tracking)
+  * optional [formspree.io ](https://formspree.io)
+  * mailto: without [formspree.io ](https://formspree.io) (avoid tracking & leaking)
+  * [google map](https://developers.google.com/maps/documentation/javascript/) (if js is enabled - do not provide coordinates to reduce tracking)
 * Search page
-  * [google customizable search](hddps://cse.google.ch/cse) api (if js is enabled - just do not include search in menu to reduce tracking)
+  * [google customizable search](https://cse.google.ch/cse) api (if js is enabled - just do not include search in menu to reduce tracking)
 * [Alternative navigation](#pages-navigation) instead of breadcrumbs (Top/Up/Down & pages on this level)
-* [hugo-easy-gallery](hddps://www.liwen.id.au/heg/) (including [PhotoSwipe](hddp://photoswipe.com/) which needs js)
+* [hugo-easy-gallery](https://www.liwen.id.au/heg/) (including [PhotoSwipe](http://photoswipe.com/) which needs js)
   
 
 
@@ -275,10 +284,10 @@ Go to the directory where you have your Hugo site and run:
 ```bash
 $ mkdir themes
 $ cd themes
-$ git clone hddps://github.com/it-gro/hugo-theme-w3css-basic
+$ git clone https://github.com/it-gro/hugo-theme-w3css-basic
 ```
 
-For more information read the official [setup guide](hddps://gohugo.io/overview/installing/) of Hugo.
+For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 
 ## Configuration
@@ -286,7 +295,7 @@ For more information read the official [setup guide](hddps://gohugo.io/overview/
 After installing the theme we recommend you to take a look at the
 [exampleSite](//github.com/it-gro/hugo-theme-w3css-basic/tree/master/exampleSite)
 directory. You will find a working [Hugo
-site](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/)
+site](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/)
 configured with this theme that you can use as a starting point for
 your site.
 
@@ -322,7 +331,7 @@ defaultContentLanguage = "en"
 * Create a file `.marquee.md` in each directory where a marquee should be shown
 * Marquee text scrolls from right to left
 
-![screenshot Marquee & Navbar long](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_100.jpg)
+![screenshot Marquee & Navbar long](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_100.jpg)
 
 #### Jumbotron
 
@@ -336,15 +345,15 @@ defaultContentLanguage = "en"
 
 * Front jumbotron text only
 
-![screenshot Jumbotron Text](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_130.jpg)
+![screenshot Jumbotron Text](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_130.jpg)
 
 * Front jumbotron text & picture
 
-![screenshot Jumbotron Text & Pic](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_140.jpg)
+![screenshot Jumbotron Text & Pic](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_140.jpg)
 
 * Front jumbotron text & icon
 
-![screenshot Jumbotron Text & Icon](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_150.jpg)
+![screenshot Jumbotron Text & Icon](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_150.jpg)
 
 
 ```
@@ -382,7 +391,7 @@ description: |
 
 * Front photocards
 
-![screenshot Photocards (9)](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_160.jpg)
+![screenshot Photocards (9)](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_160.jpg)
 
 ```
 data/photocards/
@@ -420,7 +429,7 @@ description: |
 ```
 * Front features
 
-![screenshot Feature (6)](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_170.jpg)
+![screenshot Feature (6)](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_170.jpg)
 
 ```
 data/features/
@@ -461,7 +470,7 @@ fames ac.
 ```
 * Front recent posts
 
-![screenshot Recent Posts](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_180.jpg)
+![screenshot Recent Posts](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_180.jpg)
 
 
 #### See More
@@ -482,7 +491,7 @@ suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 
 * Front see more
 
-![screenshot See More](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_190.jpg)
+![screenshot See More](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_190.jpg)
 
 
 * The background image is defined in `/static/css/w3css-basic.css`:
@@ -512,7 +521,7 @@ labore et dolore magna aliquyam erat, sed diam voluptua.
 
 * Front testimonials
 
-![screenshot Testimonials](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_210.jpg)
+![screenshot Testimonials](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_210.jpg)
 
 ```
 data/testimonials/
@@ -557,7 +566,7 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
 
 * Front clients
 
-![screenshot Clients](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_200.jpg)
+![screenshot Clients](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_200.jpg)
 
 
 ```
@@ -575,7 +584,7 @@ data/clients/
 weight: 1
 name:   "customer-1"
 resImg: "images/clients/pixabay.com/company-logo-1.png"
-url:    "hddp://www.example.com"
+url:    "http://www.example.com"
 ```
 
 
@@ -595,7 +604,7 @@ ultricies eget, tempor sit amet, ante
 
 * Blog with `paginate =  6` (short date)
 
-![screenshot Blog Paginator (6)](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_230.jpg)
+![screenshot Blog Paginator (6)](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_230.jpg)
 
 
 ```
@@ -656,19 +665,74 @@ In this theme we set
 
 * Blog article (long date)
 
+![screenshot Blog Entry](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_240.jpg)
+
+
+#### Disqus
+
+* Hugo ships with an internal Disqus template: https://gohugo.io/content-management/comments/
+* I wanted:
+  * a button the user has to click to show the comments
+  * configure whether the comment count is shown on the button or not (disqus.com/count.js)
+* I took some ideas from  https://discourse.gohugo.io/t/delaying-disqus-comments-to-save-a-ton-of-requests/6847
+
+![screenshot Blog Disqus Open](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_380.jpg)
+
+
+```toml
+# Enable comments by entering your Disqus shortname
+disqusShortname = "it-gro-github-io-hugo-theme-w3css-basic-github-io"
+
+[params]
+  # disqus (theme)
+  # ##############################
+
+  # used in partials/blog.disqus-button.html 
+  # set to true, if you want to show the count of comments
+  # fires an async request to disqus.com/count.js
+  disqusButtonShowCount = false
+```
+
+* User has to agree to Disqus. You may skip this via
+
+`config.toml`
+```toml
+  disqusSkipAgree = true
+```
+
+![screenshot DiscusAgree](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_514.jpg)
+
+
 * No JavaScript fallback
 
-![screenshot Blog Disqus NoJs](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_350.jpg)
+![screenshot Blog Disqus NoJs](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_350.jpg)
 
+
+* disqusButtonShowCount = false
+
+![screenshot Blog Disqus NoCount](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_360.jpg)
+
+
+* disqusButtonShowCount = true
+
+![screenshot Blog Disqus Count](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_370.jpg)
 
 
 
 Hook:
 
+`layouts/blog/single.html`
+```
+{{ define "blog-disqus" }}
+  {{ partial "blog.disqus-button.html" . }}
+{{ end }}
+```
+
+=> review `layouts/partials/blog.disqus-button.html`
 
 ### Anchors
 
-![screenshot title-nav](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_520.jpg)
+![screenshot title-nav](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_520.jpg)
 
 `config.toml`
 
@@ -683,16 +747,16 @@ Hook:
 
 ### Related Content
 
-![screenshot title-nav](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_521.jpg)
+![screenshot title-nav](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_521.jpg)
 
-* See more hddps://gohugo.io/content-management/related/#list-related-content
+* See more https://gohugo.io/content-management/related/#list-related-content
 * implemented in `layouts/partials/main.related.html`
 
 `config.toml`
 
 ```toml
 [params.related]
-  # hddps://gohugo.io/content-management/related/
+  # https://gohugo.io/content-management/related/
   # layouts/partials/main.related.html
   enable        = true
   limitTo       = 5
@@ -707,13 +771,13 @@ Hook:
 
 * Page navigation top level
 
-![screenshot Page Navigation (root)](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_320.jpg)
+![screenshot Page Navigation (root)](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_320.jpg)
 
 * Page navigation with Top/Up/Down and pages on this level
 
-![screenshot Page Navigation (up & down)](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_330.jpg)
+![screenshot Page Navigation (up & down)](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_330.jpg)
 
-* Check out hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/folder20/folder21/   
+* Check out https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/folder20/folder21/   
 
 ```
 content/pages/
@@ -778,23 +842,23 @@ icon:        "fas fa-globe"
   fullBarMinItemsCategory = 1
 ```
 
-![screenshot Taxonomy Bar](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_250.jpg)
+![screenshot Taxonomy Bar](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_250.jpg)
 
 * Terms lists
 
-![screenshot Categories](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_260.jpg)
+![screenshot Categories](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_260.jpg)
 
-![screenshot Tags](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_270.jpg)
+![screenshot Tags](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_270.jpg)
 
 
 ### Color Theme
 
 All W3.CSS predefined monochromatic color themes
-(hddps://www.w3schools.com/w3css/w3css_color_themes.asp) are placed in
+(https://www.w3schools.com/w3css/w3css_color_themes.asp) are placed in
 the `/static/vendor/w3css/4/` directory.
 
 You may create your own monochromatic color theme using
-hddps://www.w3schools.com/w3css/w3css_color_generator.asp and then put the css file under `/static/css/w3-theme-custom.css`.
+https://www.w3schools.com/w3css/w3css_color_generator.asp and then put the css file under `/static/css/w3-theme-custom.css`.
 
 
 Select the actual color theme:
@@ -932,6 +996,9 @@ You can configure all colors within the selected monochromatic color theme:
   #layouts/_default/terms.html:
   colorTermsPanel                       = "w3-theme-l2"
   #
+  # layouts/partials/blog.disqus-button.html
+  colorDisqusButton                     = "w3-theme-l3"
+  #
   # layouts/partials/contact.form.html
   colorContactFormPanel                 = "w3-theme-d3"
   #
@@ -972,7 +1039,7 @@ You can configure all colors within the selected monochromatic color theme:
 
 ```toml
 [params.favicon]
-  # you may want to use hddps://realfavicongenerator.net to generate your files
+  # you may want to use https://realfavicongenerator.net to generate your files
   # used in layouts/partials/head.favicon.html
   # relURL is applied to path 
   enable                 = false
@@ -1047,12 +1114,12 @@ e.g. in `main.teaser_in_card.html`
   </h3>
 ```
 
-See hddps://gohugo.io/functions/emojify/
+See https://gohugo.io/functions/emojify/
 
-![screenshot Emoji](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_242.jpg)
+![screenshot Emoji](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_242.jpg)
 
 Emoji are good for mobile devices. On desktops support is kind of "poor".
-Firefox users may have a look at hddps://github.com/eosrei/twemoji-color-font.
+Firefox users may have a look at https://github.com/eosrei/twemoji-color-font.
 
 
 ### Summary
@@ -1065,14 +1132,14 @@ summaryLength = 70
 ```
 
 `summaryLength` was introduced in hugo 0.30
-(hddps://gohugo.io/news/0.30-relnotes/). It's measure is "words".
+(https://gohugo.io/news/0.30-relnotes/). It's measure is "words".
 `teaserTruncateSummary` is in "characters". The Description (first
 priority) or the Summary (second priority) is truncated (without
 cutting words):
 
     {{- or .Description .Summary | markdownify | truncate ( or .Site.Params.teaserTruncateSummary 160)  | replaceRE "<.?p>" "" | safeHTML }}
 
-`<!--more-->` is still an option to override the summaryLength (hddps://gohugo.io/content-management/summaries/)
+`<!--more-->` is still an option to override the summaryLength (https://gohugo.io/content-management/summaries/)
 
 
 ### Pagination
@@ -1088,12 +1155,12 @@ best with any of 3, 6, 9, 12.
 ### Syntax Highlighting
 
 ```toml
-# hddps://gohugo.io/content-management/syntax-highlighting/
+# https://gohugo.io/content-management/syntax-highlighting/
 pygmentsUseClassic            = false
 pygmentsCodeFences            = true
 pygmentsCodeFencesGuessSyntax = true
-# hddps://help.farbox.com/pygments.html
-# hddps://github.com/alecthomas/chroma
+# https://help.farbox.com/pygments.html
+# https://github.com/alecthomas/chroma
 # hugo gen chromastyles --style=autumn        >  syntax.autumn.css
 # ...
 pygmentsUseClasses            = true
@@ -1132,7 +1199,7 @@ pygmentsUseClasses            = true
 ```
 
 
-=> hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/code-01/ 
+=> https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/code-01/ 
 
 
 
@@ -1141,7 +1208,7 @@ pygmentsUseClasses            = true
 
 * Navbar "Long" (for medium or large displays)
 
-![screenshot Marquee & Navbar long](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_100.jpg)
+![screenshot Marquee & Navbar long](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_100.jpg)
 
 
 ```toml
@@ -1168,7 +1235,7 @@ pygmentsUseClasses            = true
 
 * Submenu (one level)
 
-![screenshot Marquee & Navbar small](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_110.jpg)
+![screenshot Marquee & Navbar small](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_110.jpg)
 
 
 ```toml
@@ -1192,7 +1259,7 @@ pygmentsUseClasses            = true
 
 * Navbar "Small" with numOfItemsIfSmallDisplay = 2
 
-![screenshot numOfItemsIfSmallDisplay 2](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_120.jpg)
+![screenshot numOfItemsIfSmallDisplay 2](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_120.jpg)
 
 
 ```toml
@@ -1200,7 +1267,7 @@ pygmentsUseClasses            = true
 [[menu.topbar]]
   weight   = 1
   name     = "GitHub"
-  url      = "hddps://github.com/it-gro/hugo-theme-w3css-basic"
+  url      = "https://github.com/it-gro/hugo-theme-w3css-basic"
   pre      = "fab fa-github"
 ```
 
@@ -1209,7 +1276,7 @@ pygmentsUseClasses            = true
   `{{- substr (default .Name (i18n .Name)) 0 ($.Scratch.Get "smallDispMenuMaxChars") | lower}}`
 
 
-![screenshot Marquee & Navbar small](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_110.jpg)
+![screenshot Marquee & Navbar small](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_110.jpg)
 
 
 ```toml
@@ -1250,7 +1317,7 @@ pygmentsUseClasses            = true
   fontsUseGoogleApis=false
 ```
 
-* false: load fonts from `/static/vendor/google/fonts`. Use e.g. hddps://google-webfonts-helper.herokuapp.com/fonts to download google fonts.
+* false: load fonts from `/static/vendor/google/fonts`. Use e.g. https://google-webfonts-helper.herokuapp.com/fonts to download google fonts.
 * true: load fonts via Google font API 
 
 
@@ -1266,12 +1333,12 @@ pygmentsUseClasses            = true
 #### Choose any Font via googleapis
 
 If you set `fontsUseGoogleApis=true` you can choose any font from
-hddps://fonts.google.com
+https://fonts.google.com
 
 Hash Borgir had a cool idea: [How To Dynamically Use Google Fonts In A Hugo
-Website](hddps://stoned.io/web-development/hugo/How-To-Dynamically-Use-Google-Fonts-In-A-Hugo-Website/).
+Website](https://stoned.io/web-development/hugo/How-To-Dynamically-Use-Google-Fonts-In-A-Hugo-Website/).
 I had the same goal. It's all configured in the
-[config.toml](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/exampleSite/config.toml)
+[config.toml](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/exampleSite/config.toml)
 file.
 
 
@@ -1280,7 +1347,7 @@ Here's the relevant part:
 
 ```toml
 [params.googleApiFonts.family]
-  # hddps://www.w3.org/Style/Examples/007/fonts.en.html
+  # https://www.w3.org/Style/Examples/007/fonts.en.html
   # the predefined generic font names are:
   # sans-serif = ""
   # serif      = ""
@@ -1295,7 +1362,7 @@ Here's the relevant part:
   #   h1,h2,h3,h4,h5,h6     : sans-serif
   #   .w3-code,.w3-codespan : Consolas,"courier new"
 
-  # hddps://www.w3schools.com/tags/ref_byfunc.asp
+  # https://www.w3schools.com/tags/ref_byfunc.asp
   # tagsText        = [ "html", "body" ]
   tagsText        = [ "html", "body", "abbr", "address", "blockquote", "cite", "dfn", "em", "ins", "mark", "s", "time" ]
   tagsHeading     = [ "h1", "h2", "h3", "h4", "h5", "h6" ]
@@ -1327,7 +1394,7 @@ Here's the relevant part:
 This would lead to:
 
 ```html
-  <link rel="stylesheet" href="hddps://fonts.googleapis.com/css?family=Oswald|Creepster|Space+Mono|Roboto" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Creepster|Space+Mono|Roboto" />
   <style> html {font-family: 'Oswald', sans-serif; } </style>
   <style> body {font-family: 'Oswald', sans-serif; } </style>
   <style> abbr {font-family: 'Oswald', sans-serif; } </style>
@@ -1381,7 +1448,7 @@ An other example would be:
 gives:
 
 ```html
- <link rel="stylesheet" href="hddps://fonts.googleapis.com/css?family=Poppins|Days+One|Cousine" />
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Days+One|Cousine" />
   <style> html {font-family: 'Poppins', sans-serif; } </style>
   <style> body {font-family: 'Poppins', sans-serif; } </style>
   <style> time {font-family: 'Creepster', cursive; } </style>
@@ -1396,7 +1463,7 @@ gives:
 ```
 
 * So for the HTML tag `<time>` we use a different font-family. See
-hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#html-tag
+https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#html-tag
 how this look's like (the actual fonts may vary since I change them just for fun ...).
 
 * Of course this can be done via custom css as well, but here we have all in one
@@ -1424,7 +1491,7 @@ A short version (just 2 fonts) looks like this:
 gives:
 
 ```html
-  <link rel="stylesheet" href="hddps://fonts.googleapis.com/css?family=Nova+Slim|Nova+Mono" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nova+Slim|Nova+Mono" />
   <style> html {font-family: 'Nova Slim', cursive; } </style>
   <style> body {font-family: 'Nova Slim', cursive; } </style>
   <style> h1 {font-family: 'Nova Slim', cursive; } </style>
@@ -1438,7 +1505,7 @@ gives:
 ```
 
 
-* You need to go to hddps://fonts.google.com/  (preview the fonts).
+* You need to go to https://fonts.google.com/  (preview the fonts).
 * There is a usefull list: **Popular Pairings with ...** under *See Specimen*
 * After selecting a Font click *Family Selected*. You see e.g.:
 
@@ -1448,8 +1515,8 @@ gives:
 (Do not add the "+" or "|" signs in the api url - this is done in the partial)
 
 * You may want to check Hash Borgir
-[article](hddps://stoned.io/web-development/hugo/How-To-Dynamically-Use-Google-Fonts-In-A-Hugo-Website/)
-since he describes the hddps://fonts.google.com/ part with some screenshots.
+[article](https://stoned.io/web-development/hugo/How-To-Dynamically-Use-Google-Fonts-In-A-Hugo-Website/)
+since he describes the https://fonts.google.com/ part with some screenshots.
   
 
 Here is a random list of some fonts you may want to try to get the
@@ -1500,7 +1567,7 @@ cursive    = "Romanesco"
 ```toml 
 [params] 
   # Google Maps API key
-  # get our own: hddps://developers.google.com/maps/documentation/javascript/adding-a-google-map#key
+  # get our own: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#key
   # used in layouts/partials/contact.map.html
   # if empty => fallback to URL (instead of map)
   # define environment variable (=> key is not stored in github)
@@ -1524,18 +1591,18 @@ $ hugo
 
 * Contact form with map
 
-![screenshot Contact](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_290.jpg)
+![screenshot Contact](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_290.jpg)
 
 * Contact form with disabled Javascript
 
-![screenshot Contact no JavaScript](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_300.jpg)
+![screenshot Contact no JavaScript](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_300.jpg)
 
 * if no latitude or longitude is given, no map is shown
 
 
 ### Google Translation
 
-![screenshot Google Translate](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_305.jpg)
+![screenshot Google Translate](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_305.jpg)
 
 ```toml
 [params.menuTopBar]
@@ -1562,7 +1629,7 @@ $ hugo
   {{- end }}
 ```
 
-![screenshot Google Translate](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_306.jpg)
+![screenshot Google Translate](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_306.jpg)
 
 
 ####  No translation is done for
@@ -1580,14 +1647,14 @@ $ hugo
 * results of shortcode highlight (internal), w3-code, w3-codespan, cscb and csc
 * currently results of markdown backticks get translated, which is odd
 
-![screenshot Google Translate](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_307.jpg)
+![screenshot Google Translate](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_307.jpg)
 
 
 
 ### Google Custom Search API
 
 ```toml
-  # hddps://cse.google.com/cse/
+  # https://cse.google.com/cse/
   # used in layouts/partials/search.google.gcse.html
   googleCustomSearchCX = '002931815551392744433:tnypjyusk2e'
 ```
@@ -1604,26 +1671,26 @@ $ hugo
 
 
 * Google does not index github pages (?).   
-  Search on exampleSite: hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/search/  
+  Search on exampleSite: https://it-gro.github.io/hugo-theme-w3css-basic.github.io/search/  
   is "empty" :-(
 
 
 * Search form 
  
-![screenshot Search](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_280.jpg)
+![screenshot Search](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_280.jpg)
 
 
 * Search form with disabled Javascript
 
-![screenshot Search no JavaScript](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_310.jpg)
+![screenshot Search no JavaScript](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_310.jpg)
 
 
 ### Google Analytics-Tracking using gtag
 
 * The Global Site Tag (gtag.js) is the new version of Google Analytics JavaScript capture API.
 * This theme uses the new gtags.js (not the old google analytics.js)
-* [Analytics-Tracking using gtag.js](hddps://support.google.com/analytics/answer/1008080)
-* [gtag.js Developer Guide](hddps://developers.google.com/gtagjs/)
+* [Analytics-Tracking using gtag.js](https://support.google.com/analytics/answer/1008080)
+* [gtag.js Developer Guide](https://developers.google.com/gtagjs/)
 
 
 ```toml
@@ -1631,20 +1698,20 @@ $ hugo
 googleAnalytics = ""
 
 [params]
-  # hddps://developers.google.com/gtagjs/
+  # https://developers.google.com/gtagjs/
   # used in layouts/partials/head.google.gtags.html
   # you need to enter the Tracking-ID above
   enableGoogleGtag=true
 ```
 
-* Firefox has a [Tracking  Protection](hddps://support.mozilla.org/en-US/kb/tracking-protection) which
+* Firefox has a [Tracking  Protection](https://support.mozilla.org/en-US/kb/tracking-protection) which
   prevents `gtag.js` tracking by default.
 * `gtag.js` is not used if `enableGoogleGtag` is not set to `true` or the tracking code is not given (`googleAnalytics`)
 
 ```
 {{- if and $.Site.Params.enableGooglesGtag $.Site.GoogleAnalytics }}
   {{- /* <!-- Global site tag (gtag.js) - Google Analytics --> */}}
-  <script async src="hddps://www.googletagmanager.com/gtag/js?id={{$.Site.GoogleAnalytics}}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{$.Site.GoogleAnalytics}}"></script>
 ```
 
 
@@ -1664,16 +1731,16 @@ googleAnalytics = ""
 
   # used in layouts/partials/footer.bottom.html
   bottomLeft  = "Copyright (c) 2018, *lobortis nisl* ut aliquip ex ea commodo consequat"
-  bottomRight = 'created with [Hugo](hddps://gohugo.io) '
+  bottomRight = 'created with [Hugo](https://gohugo.io) '
 
 ```
 
-![screenshot Footer](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_220.jpg)
+![screenshot Footer](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_220.jpg)
 
 
 ### cookieconsent
 
-* hddps://cookieconsent.insites.com
+* https://cookieconsent.insites.com
 
 ```
 static/vendor/insites/
@@ -1699,7 +1766,7 @@ static/vendor/insites/
 
 ```toml
 [params.cookieconsent]
-  # hddps://cookieconsent.insites.com/download/
+  # https://cookieconsent.insites.com/download/
   # used in layouts/partials/head.cookieconsent.html
   enable           = true
   popupBackground  = "#efefef"
@@ -1716,20 +1783,20 @@ static/vendor/insites/
   theme            = "classic"
   #theme            = "edgeless"
   #theme            = ""
-  href             = "hddps://cookiesandyou.com"
+  href             = "https://cookiesandyou.com"
 ```
 
-![screenshot cookieconsent](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_510.jpg)
+![screenshot cookieconsent](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_510.jpg)
 
-![screenshot cookieconsent](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_512.jpg)
+![screenshot cookieconsent](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_512.jpg)
 
 
 ### RSS
 
-* This theme uses the Hugo's embedded rss.xml hddps://gohugo.io/templates/rss/#the-embedded-rss-xml
+* This theme uses the Hugo's embedded rss.xml https://gohugo.io/templates/rss/#the-embedded-rss-xml
 * Default configuration is explained here:
-  * hddps://gohugo.io/templates/rss/#configure-rss
-  * hddps://gohugo.io/getting-started/configuration/#toml-configuration
+  * https://gohugo.io/templates/rss/#configure-rss
+  * https://gohugo.io/getting-started/configuration/#toml-configuration
 
 
 ```toml
@@ -1775,15 +1842,15 @@ static/
 ```
 
 * A project can create these in the project dir in order to overwrite them. See
-  hddps://gohugo.io/themes/customizing/#override-static-files from more
+  https://gohugo.io/themes/customizing/#override-static-files from more
   information.
 
 * In addition the following arrays may be files with paths or URLS
 
 ```toml
-  custom_css        = [ "css/custom_foo.css", "hddps://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" ]
+  custom_css        = [ "css/custom_foo.css", "https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" ]
   custom_js_top     = [ "js/custom_top_bar.js" ]
-  custom_js_bottom  = [ "js/custom_bottom_foo.js", "hddps://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" ]
+  custom_js_bottom  = [ "js/custom_bottom_foo.js", "https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" ]
 ```
 
 
@@ -1856,7 +1923,7 @@ icon:          "fas fa-list"
 
 ## Shortcodes
 
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/
 
 
 ```
@@ -1896,14 +1963,14 @@ layouts/shortcodes/
 ```
 
 * currently experimental are:
-  * [List by Title](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#liti-list-by-title)
-  * [List by Taxonomy / Term](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#litt-list-by-taxonomy-term-just-one-result)
-  * [List by Taxonomy with search](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#litx-list-by-taxonomy-full-search)
+  * [List by Title](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#liti-list-by-title)
+  * [List by Taxonomy / Term](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#litt-list-by-taxonomy-term-just-one-result)
+  * [List by Taxonomy with search](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#litx-list-by-taxonomy-full-search)
 
 
 ## Page Resources
 
-* hddps://gohugo.io/content-management/page-resources/
+* https://gohugo.io/content-management/page-resources/
 
 ### Headless Images
 
@@ -1991,25 +2058,25 @@ The images is processed using hugo's build in image commands (resize to a reason
 
 ### Images
 
-* hddps://gohugo.io/content-management/image-processing/
+* https://gohugo.io/content-management/image-processing/
 * Support via shortcode `res-figure`
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/image-processing-with-hugo/
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/image-processing-with-hugo/
 
-![screenshot Image Showcase](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_338.jpg)
+![screenshot Image Showcase](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_338.jpg)
 
 ### Attachments
 
 * Support via shortcode `res-attach`
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/attach-page-resources/
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/attach-page-resources/
 
-![screenshot Attachments](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_336.jpg)
+![screenshot Attachments](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_336.jpg)
 
 
 ## Include Files
 
-* Inspired by hddps://github.com/gohugoio/hugo/blob/master/docs/layouts/shortcodes/readfile.html
+* Inspired by https://github.com/gohugoio/hugo/blob/master/docs/layouts/shortcodes/readfile.html
 * Reads a file (or directory) and optionally renders it using markdownify or highlight
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#readfile
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#readfile
 
 ```
 {{</* readfile "content/." */>}}
@@ -2034,7 +2101,7 @@ drwxrwxr-x 2018-04-13            pages
 
 => include a markdownified markdown file
 
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/readme/
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/readme/
 
 
 ## Gallery
@@ -2042,16 +2109,16 @@ drwxrwxr-x 2018-04-13            pages
 ### Gallery with image processing
 
 * uses page resources and image processing
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-gallery for documentation and examples
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-gallery for documentation and examples
 
-[![screenshot res-gallery](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_518.jpg)](hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/images-taken-from/gohugoio-teaserpics/)
+[![screenshot res-gallery](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_518.jpg)](https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/images-taken-from/gohugoio-teaserpics/)
 
 
 
 ### Hugo Easy Gallery
-* hddps://github.com/liwenyip/hugo-easy-gallery/
+* https://github.com/liwenyip/hugo-easy-gallery/
 
-![screenshot Gallery](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_340.jpg)
+![screenshot Gallery](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_340.jpg)
 
 
 `content/pages/showcase/gallery-01.md`
@@ -2093,38 +2160,38 @@ categories:
 ### Figure with image processing
 
 * uses page resources and image processing
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-figure for documentation an examples
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#res-figure for documentation an examples
 
 ### Hugo Easy Gallery Figure
 
 ```
 {{< heg-load-photoswipe >}}
-{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 4" attr="(c) by bar 4" attrlink="hddps://www.example.com" >}}
+{{< heg-figure link="/images/photocards/pixabay.com/04-photocard.jpg" caption-position="bottom" caption-effect="none" width="640px" caption="figure caption 4" attr="(c) by bar 4" attrlink="https://www.example.com" >}}
 ```
 
 * This themes version of `{{</* heg-figure .. */>}}` improves the
   usage of `title caption attr attrlink` which are all optional
 
 ```
-caption="figure caption 4" attr="(c) by bar 4" attrlink="hddps://www.example.com"
+caption="figure caption 4" attr="(c) by bar 4" attrlink="https://www.example.com"
 ```
 
 * Shown on page
 
-![screenshot Figure](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_342.jpg)
+![screenshot Figure](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_342.jpg)
 
 
 * Shown with PhotoSwipe
 
-![screenshot Figure](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_344.jpg)
+![screenshot Figure](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/snap_344.jpg)
 
 
-* See  hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#heg-figure for more examples
+* See  https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/hugo-theme-w3css-basic/page-shortcodes/#heg-figure for more examples
 
 
 ## Showcase
 
-* See hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/ for more examples
+* See https://it-gro.github.io/hugo-theme-w3css-basic.github.io/pages/showcase/ for more examples
 
 
 ## Usage
@@ -2136,9 +2203,9 @@ $ export GoogleMapsApiKey=GEeawyBOuzOPzbFGizHKGReghibngUZTGjlioZM
 $ hugo server -w --disableFastRender --navigateToChanged --themesDir ../../
 ```
 
-Now enter [`localhost:1313`](hddp://localhost:1313) in the address bar of your browser.
+Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
 
-For more information check out the official [Hugo documentation](hddp://gohugo.io/overview/usage/).
+For more information check out the official [Hugo documentation](http://gohugo.io/overview/usage/).
 
 
 ### Minifier
@@ -2173,7 +2240,7 @@ or change the file names in
 
 ### Shortcode output wrapped in &lt;p&gt;
 
-[hugo/issues/1642: Shortcode output wrapped in &lt;p&gt; tags](hddps://github.com/gohugoio/hugo/issues/1642)
+[hugo/issues/1642: Shortcode output wrapped in &lt;p&gt; tags](https://github.com/gohugoio/hugo/issues/1642)
 
 `layouts/_default/baseof.html`
 ```
@@ -2183,14 +2250,19 @@ or change the file names in
 
 
 
-See hddps://discourse.gohugo.io/t/shortcodes-and-p-tags-2/9987
+See https://discourse.gohugo.io/t/shortcodes-and-p-tags-2/9987
 
 ## Tracking
 
 Beeing able to analyse the visitors behavior via the log files on the visited site is one thing.
 But giving those informations to any third-party is not what the visitors expect by default.
 
+* Why should a third-party (disqus.com) know which blog articles I've read (even without commenting) ?
 * Why should a third-party (formspree.io) beeing able to read the visitors messages (contact form) ?
+
+If the visitors implicitly agree by clicking on a button ("see
+comments on disqus.com" or "send message via formspree.io") then this
+is perfecly fine (for me).
 
 This is also why I tried to minimize the external url's and copied all
 into the theme (`static/vendor/`*).
@@ -2205,7 +2277,7 @@ into the theme (`static/vendor/`*).
 * disable menu.topbar search (google custom search)
 * disable formspree (but keep your email)
 * do not show a comment counter on the Disqus Button
-* review result e.g. with [Firefox Lightbeam by Mozilla](hddps://addons.mozilla.org/en-GB/firefox/addon/lightbeam/)
+* review result e.g. with [Firefox Lightbeam by Mozilla](https://addons.mozilla.org/en-GB/firefox/addon/lightbeam/)
 
 All of the above is done in `config.toml`
 
@@ -2224,6 +2296,7 @@ googleAnalytics = ""
   # longitude = 
   formspree = ""
   email     = "info@example.com"
+  disqusButtonShowCount = false
 
 [params.menuTopBar]
   googleTranslateEnable = false
@@ -2233,16 +2306,16 @@ googleAnalytics = ""
 
 ## ToDo's
 
-* see [issue tracker](hddps://github.com/it-gro/hugo-theme-w3css-basic/issues)
+* see [issue tracker](https://github.com/it-gro/hugo-theme-w3css-basic/issues)
 
 
 ## Contributing
 
 Did you found a bug or got an idea for a new feature? Feel free to use
 the [issue
-tracker](hddps://github.com/it-gro/hugo-theme-w3css-basic/issues) to
+tracker](https://github.com/it-gro/hugo-theme-w3css-basic/issues) to
 let us know. Or make directly a [pull
-request](hddps://github.com/it-gro/hugo-theme-w3css-basic/pulls).
+request](https://github.com/it-gro/hugo-theme-w3css-basic/pulls).
 
 
 ## License
@@ -2254,24 +2327,24 @@ This theme is released under the [MIT License](LICENSE.md).
 
 Thanks to:
 
-* [Steve Francia](hddps://discourse.gohugo.io/u/spf13)   
-  [Bjørn Erik Pedersen](hddps://discourse.gohugo.io/u/bep)   
+* [Steve Francia](https://discourse.gohugo.io/u/spf13)   
+  [Bjørn Erik Pedersen](https://discourse.gohugo.io/u/bep)   
   you are amazing!
 
-* [devcows](hddps://github.com/devcows/hugo-universal-theme) for
-creating my starting point: the awesome [Universal](hddps://themes.gohugo.io/hugo-universal-theme/) theme.     
-They ported from [Bootstrapious](hddps://bootstrapious.com/p/universal-business-e-commerce-template).
+* [devcows](https://github.com/devcows/hugo-universal-theme) for
+creating my starting point: the awesome [Universal](https://themes.gohugo.io/hugo-universal-theme/) theme.     
+They ported from [Bootstrapious](https://bootstrapious.com/p/universal-business-e-commerce-template).
 
-* [www.w3schools.com](hddps://www.w3schools.com) for creating the free to use [W3.CSS](hddps://www.w3schools.com/w3css/) CSS framework.
+* [www.w3schools.com](https://www.w3schools.com) for creating the free to use [W3.CSS](https://www.w3schools.com/w3css/) CSS framework.
 
 * the contributors to any of                            
-  hddps://fontawesome.com/icons/                        
-  hddps://owlcarousel2.github.io/OwlCarousel2/          
-  hddps://daneden.me/animate                            
-  hddps://github.com/liwenyip/hugo-easy-gallery/        
-  hddp://photoswipe.com                                 
-  hddps://pixabay.com                                   
-  hddps://cookieconsent.insites.com                     
+  https://fontawesome.com/icons/                        
+  https://owlcarousel2.github.io/OwlCarousel2/          
+  https://daneden.me/animate                            
+  https://github.com/liwenyip/hugo-easy-gallery/        
+  http://photoswipe.com                                 
+  https://pixabay.com                                   
+  https://cookieconsent.insites.com                     
   for all their work
 
 
@@ -2279,31 +2352,31 @@ They ported from [Bootstrapious](hddps://bootstrapious.com/p/universal-business-
 
 * 1500x1000
 
-![screenshot 1500x1000](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/screenshot.png)
+![screenshot 1500x1000](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/screenshot.png)
 
 
 * 900x600
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.1.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.1.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.2.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.2.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.3.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.3.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.4.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.4.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.5.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.5.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.6.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.6.png)
 
-![screenshot thumbnail 900x600](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.7.png)
+![screenshot thumbnail 900x600](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/tn.7.png)
 
 
 * Complete
 
-![screenshot complete](hddps://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/complete.png)
+![screenshot complete](https://raw.githubusercontent.com/it-gro/hugo-theme-w3css-basic/master/images/complete.png)
 
 ---
 

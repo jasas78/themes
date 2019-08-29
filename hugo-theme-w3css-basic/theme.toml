@@ -1,16 +1,17 @@
 # theme.toml template for a Hugo theme
-# See hddps://github.com/gohugoio/hugoThemes#themetoml for an example
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name           = "W3.CSS Basic"
 license        = "MIT"
-licenselink    = "hddps://github.com/it-gro/hugo-theme-w3css-basic/blob/master/LICENSE.md"
+licenselink    = "https://github.com/it-gro/hugo-theme-w3css-basic/blob/master/LICENSE.md"
 description    = "This theme is built with W3.CSS and is highly configurable. More than 100 monochromatic color themes and 25 shortcodes. It has support for Cookie consent, image processing, image galleries, page bundles and resources (attachments)."
-homepage       = "hddps://it-gro.github.io/hugo-theme-w3css-basic.github.io"
+homepage       = "https://it-gro.github.io/hugo-theme-w3css-basic.github.io"
 tags           = [
                    "blog"
                  , "company"
                  , "contact form"
                  , "custom themes"
+                 , "disqus"
                  , "font awesome"
                  , "gallery"
                  , "google analytics"
@@ -41,6 +42,7 @@ features       = [
                  , "custom themes"
                  , "data"
                  , "debug"
+                 , "disqus"
                  , "emoji"
                  , "features"
                  , "figure"
@@ -88,10 +90,10 @@ min_version    = "0.57.1"
 
 [author]
   name         = "it-gro"
-  homepage     = "hddps://github.com/it-gro/"
+  homepage     = "https://github.com/it-gro/"
 
 # If porting an existing theme
 [original]
   name         = "Universal"
-  homepage     = "hddps://github.com/devcows/hugo-universal-theme"
-  repo         = "hddps://github.com/devcows/hugo-universal-theme.git"
+  homepage     = "https://github.com/devcows/hugo-universal-theme"
+  repo         = "https://github.com/devcows/hugo-universal-theme.git"

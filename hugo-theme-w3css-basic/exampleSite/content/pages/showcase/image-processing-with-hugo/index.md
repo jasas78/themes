@@ -16,62 +16,62 @@ resources:
     params:
       origin:      pixabay.com
       license:     Creative Commons CC0 
-      licenselink: "hddps://pixabay.com/en/service/terms/#usage"
+      licenselink: "https://pixabay.com/en/service/terms/#usage"
       caption:     "%%I%%n%%B%%n%%O"
       #caption:    "%%I%%n%%O%%n%%A%%n%%L%%n"
       
   - src:           img/pixabay/humboldt-penguin-3064468_1920.jpg
     title:         penguin-bird-water-animal
     params:
-      originlink:  hddps://pixabay.com/en/humboldt-penguin-bird-water-animal-3064468/
+      originlink:  https://pixabay.com/en/humboldt-penguin-bird-water-animal-3064468/
       attrby:      minka2507
-      attrlink:    hddps://pixabay.com/en/users/minka2507-3728206/
+      attrlink:    https://pixabay.com/en/users/minka2507-3728206/
       
   - src:           img/pixabay/penguin-1196947_1920.jpg
     title:         penguin-1196947
     params:
-      originlink:  hddps://pixabay.com/en/penguin-water-bird-swim-animal-1196947/
+      originlink:  https://pixabay.com/en/penguin-water-bird-swim-animal-1196947/
       attrby:      Andreas Lischka
-      attrlink:    hddps://pixabay.com/en/users/webandi-1460261/
+      attrlink:    https://pixabay.com/en/users/webandi-1460261/
       
   - src:           img/pixabay/penguin-2104173_1920.jpg
     title:         ""   # clear title
     params:
-      originlink:  hddps://pixabay.com/en/penguin-rockhopper-penguin-zoo-2104173/
+      originlink:  https://pixabay.com/en/penguin-rockhopper-penguin-zoo-2104173/
       attrby:      Michael Frankenstein
-      attrlink:    hddps://pixabay.com/en/users/frankenstein-2135887/
+      attrlink:    https://pixabay.com/en/users/frankenstein-2135887/
       imgopt:      400x
       
   - src:           img/pixabay/penguin-2528615_1920.jpg
     params:
-      originlink:  hddps://pixabay.com/en/penguin-bird-water-bird-animal-2528615/
+      originlink:  https://pixabay.com/en/penguin-bird-water-bird-animal-2528615/
       attrby:      Ralph
-      attrlink:    hddps://pixabay.com/en/users/Capri23auto-1767157/
+      attrlink:    https://pixabay.com/en/users/Capri23auto-1767157/
       
   - src:           img/pixabay/penguin-2753282_1920.jpg
     params:
-      originlink:  hddps://pixabay.com/en/penguin-animal-animal-world-2753282/
+      originlink:  https://pixabay.com/en/penguin-animal-animal-world-2753282/
       attrby:      Alexandra
-      attrlink:    hddps://pixabay.com/en/users/Alexas_Fotos-686414/
+      attrlink:    https://pixabay.com/en/users/Alexas_Fotos-686414/
       
   - src:           img/pixabay/penguin-935982_1920.jpg
     params:
-      originlink:  hddps://pixabay.com/en/penguin-humboldt-penguin-water-swim-935982/
-      attrlink:    hddps://pixabay.com/en/users/Gassflor-1356588/
+      originlink:  https://pixabay.com/en/penguin-humboldt-penguin-water-swim-935982/
+      attrlink:    https://pixabay.com/en/users/Gassflor-1356588/
       attrby:      Flo G
       
   - src:           img/pixabay/penguin-963703_1920.jpg
     params:
-      originlink:  hddps://pixabay.com/en/penguin-animal-animals-antarctica-963703/
+      originlink:  https://pixabay.com/en/penguin-animal-animals-antarctica-963703/
       attrby:      boudewijns8880
-      attrlink:    hddps://pixabay.com/en/users/boudewijns8880-1460019/
+      attrlink:    https://pixabay.com/en/users/boudewijns8880-1460019/
 ---
 
 Image page resources can be resized and cropped. 
 This only works for
-[images](hddps://gohugo.io/content-management/image-processing/#the-image-page-resource)
+[images](https://gohugo.io/content-management/image-processing/#the-image-page-resource)
 which are [page
-resources](hddps://gohugo.io/content-management/page-resources/), not for images
+resources](https://gohugo.io/content-management/page-resources/), not for images
 in the /static folder.
 This theme provides a shortcode `res-figure`  for page resource image processing.
 <!--more-->
@@ -93,13 +93,13 @@ resources:
     params:
       origin:      pixabay.com
       license:     Creative Commons CC0 
-      licenselink: hddps://pixabay.com/en/service/terms/#usage
+      licenselink: https://pixabay.com/en/service/terms/#usage
       caption:     "%%I%%n%%B%%n%%O"
   - src:           img/pixabay/penguin-2104173_1920.jpg
     params:
-      originlink:  hddps://pixabay.com/en/penguin-rockhopper-penguin-zoo-2104173/
+      originlink:  https://pixabay.com/en/penguin-rockhopper-penguin-zoo-2104173/
       attrby:      Michael Frankenstein
-      attrlink:    hddps://pixabay.com/en/users/frankenstein-2135887/
+      attrlink:    https://pixabay.com/en/users/frankenstein-2135887/
       imgcmd:      Resize
       imgopt:      400x
       
@@ -151,7 +151,7 @@ Code | What
 
 ## Image processing commands
 
-See hddps://gohugo.io/content-management/image-processing/
+See https://gohugo.io/content-management/image-processing/
 
 
 # Showcase
@@ -297,17 +297,17 @@ Etiam laoreet quam sed arcu. Phasellus at dui in ligula mollis ultricies.
 `config.toml`
 ```toml
 [imaging]
-# hddps://gohugo.io/content-management/image-processing/
+# https://gohugo.io/content-management/image-processing/
 # Default resample filter used for resizing. Default is Box,
 # a simple and fast averaging filter appropriate for downscaling.
-# See hddps://github.com/disintegration/imaging
+# See https://github.com/disintegration/imaging
 resampleFilter = "box"
 
 # Defatult JPEG quality setting. Default is 75.
 quality = 75
 
 # Anchor used when cropping pictures.
-# Default is "smart" which does Smart Cropping, using hddps://github.com/muesli/smartcrop
+# Default is "smart" which does Smart Cropping, using https://github.com/muesli/smartcrop
 # Smart Cropping is content aware and tries to find the best crop for each image.
 # Valid values are Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 anchor = "smart"

@@ -1,12 +1,12 @@
 # hugo-easy-gallery
-Automagical css image gallery in [Hugo](hddps://gohugo.io/) using shortcodes, with optional lightbox/carousel gadget using [PhotoSwipe](hddp://photoswipe.com/) and jQuery.
+Automagical css image gallery in [Hugo](https://gohugo.io/) using shortcodes, with optional lightbox/carousel gadget using [PhotoSwipe](http://photoswipe.com/) and jQuery.
 
-**New:** Create a gallery of all images in a directory with just one line of shortcode, see [demo](hddps://www.liwen.id.au/heg/#gallery-usage).
+**New:** Create a gallery of all images in a directory with just one line of shortcode, see [demo](https://www.liwen.id.au/heg/#gallery-usage).
 
 ## Demo
 
-- Feature demonstration at hddps://www.liwen.id.au/heg/
-- Real-life example at hddps://www.liwen.id.au/arduino-rf-codes/
+- Feature demonstration at https://www.liwen.id.au/heg/
+- Real-life example at https://www.liwen.id.au/arduino-rf-codes/
 
 ## Image Gallery Features
 
@@ -25,7 +25,7 @@ Automagical css image gallery in [Hugo](hddps://gohugo.io/) using shortcodes, wi
 - Load PhotoSwipe by calling the `{{< load-photoswipe >}}` shortcode anywhere in your post
 - Loads all of the `<figure>` elements in your post, regardless of where in your post they appear, into a lightbox/carousel style image gallery
 - Works with any existing `<figure>` elements/shortcodes in your posts
-- Does not require you to [pre-define the image sizes](hddp://photoswipe.com/documentation/faq.html#image-size) (the initialisation script pre-loads the image to determine its size; you can optionally pre-define the image size if you want to avoid this pre-loading)
+- Does not require you to [pre-define the image sizes](http://photoswipe.com/documentation/faq.html#image-size) (the initialisation script pre-loads the image to determine its size; you can optionally pre-define the image size if you want to avoid this pre-loading)
 - Loads PhotoSwipe js and css libraries from `cdnjs.cloudflare.com`
 
 ## Installation
@@ -59,10 +59,10 @@ Add the following lines to the footer of your template, just before `</body>`:
 ```html
 <!-- Load PhotoSwipe js if the load-photoswipe shortcode has been used -->
 {{ if ($.Scratch.Get "photoswipeloaded") }}
-<script src="hddps://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="/js/load-photoswipe.js"></script>
-<script src="hddps://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
-<script src="hddps://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
 {{ end }}
 ```
 
@@ -76,14 +76,14 @@ Specifying your image files:
 
 Optional parameters:
 
-- All the [features/parameters](hddps://gohugo.io/extras/shortcodes) of Hugo's built-in `figure` shortcode work as normal, i.e. src, link, title, caption, class, attr (attribution), attrlink, alt
+- All the [features/parameters](https://gohugo.io/extras/shortcodes) of Hugo's built-in `figure` shortcode work as normal, i.e. src, link, title, caption, class, attr (attribution), attrlink, alt
 - `size` (e.g. `size="1024x768"`) pre-defines the image size for PhotoSwipe. Use this option if you don't want to pre-load the linked image to determine its size.
 - `class` allows you to set any custom classes you want on the `<figure>` tag.
 
 Optional parameters for standalone `{{< figure >}}` shortcodes only (i.e. don't use on `{{< figure >}}` inside `{{< gallery >}}` - strange things may happen if you do): 
 
 - `caption-position` and `caption-effect` work the same as for the `{{< gallery >}}` shortcode (see below). 
-- `width` defines the [`max-width`](hddps://www.w3schools.com/cssref/pr_dim_max-width.asp) of the image displayed on the page. If using a thumbnail for a standalone figure, set this equal to your thumbnail's native width to make the captions behave properly (or feel free to come up with a better solution and submit a pull request :-)). Also use this option if you don't have a thumbnail and you don't want the hi-res image to take up the entire width of the screen/container. 
+- `width` defines the [`max-width`](https://www.w3schools.com/cssref/pr_dim_max-width.asp) of the image displayed on the page. If using a thumbnail for a standalone figure, set this equal to your thumbnail's native width to make the captions behave properly (or feel free to come up with a better solution and submit a pull request :-)). Also use this option if you don't have a thumbnail and you don't want the hi-res image to take up the entire width of the screen/container. 
 - `class="no-photoswipe"` prevents a `<figure>` from being loaded into PhotoSwipe. If you click on the figure you'll instead a good ol' fashioned hyperlink to a bigger image (or - if you haven't specified a bigger image - the same one).
 
 ## `{{< gallery >}}` shortcode usage
@@ -155,12 +155,12 @@ Here are some pointers if you want to adapt the CSS:
 
 ## Issues
 
-I've tested this with the [beautifulhugo](hddps://github.com/halogenica/beautifulhugo) theme. If things don't work properly with other themes, raise an issue on GitHub, or even better fix the issue and submit a pull request :-)
+I've tested this with the [beautifulhugo](https://github.com/halogenica/beautifulhugo) theme. If things don't work properly with other themes, raise an issue on GitHub, or even better fix the issue and submit a pull request :-)
 
 ## Credits
 
 These blog posts helped me immensely:
 
-- hddp://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/
-- hddp://www.thehome.dk/article/photoswipe-gallery-hugo/
-- hddps://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587
+- http://www.dwuser.com/education/content/creating-responsive-tiled-layout-with-pure-css/
+- http://www.thehome.dk/article/photoswipe-gallery-hugo/
+- https://webdesign.tutsplus.com/tutorials/the-perfect-lightbox-using-photoswipe-with-jquery--cms-23587

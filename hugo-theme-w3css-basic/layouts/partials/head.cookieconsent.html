@@ -5,7 +5,7 @@
 {{- if isset $.Site.Params (lower `cookieconsent` ) }}
 {{- if $.Site.Params.cookieconsent.enable  }}
   {{- /*
-  hddps://cookieconsent.insites.com/download/
+  https://cookieconsent.insites.com/download/
   */}}
 
 {{- /* $assetBusting := not .Site.Params.disableCSSAssetsBusting }}{{ if $assetBusting }}?{{ now.Unix }}{{ end */}}
@@ -33,7 +33,7 @@
           "message": {{ i18n "cookieMessage" | default "This website uses cookies to ensure you get the best experience on our website." }},
           "dismiss": {{ i18n "cookieDismiss" | default "Got it!" }},
           "link"   : {{ i18n "cookieLearn"   | default "Learn more" }},
-          "href"   : {{ $.Site.Params.cookieconsent.href | default "hddps://cookiesandyou.com" }}
+          "href"   : {{ $.Site.Params.cookieconsent.href | default "https://cookiesandyou.com" }}
         }
       }) /* initialise( */
     }) /* addEventListener( */

@@ -21,8 +21,8 @@ categories:
 
 ## Where did the logos came from?
 
-* hddp://fontawesome.com/icons/
-* hddps://fontawesome.com/license   
+* http://fontawesome.com/icons/
+* https://fontawesome.com/license   
   Font Awesome is fully open source and is GPL friendly. You can use it
 for commercial projects, open source projects, or really just about
 whatever you want.
@@ -32,7 +32,7 @@ whatever you want.
 
 * Applies to all desktop and webfont files in the following directory: font-awesome/fonts/.
 * License: SIL OFL 1.1
-* URL: hddp://scripts.sil.org/OFL
+* URL: http://scripts.sil.org/OFL
 * Attribution is required by MIT, SIL OLF, and CC BY
   licenses. Downloaded Font Awesome Free files already contain embedded
   comments with sufficient attribution, so you shouldn't need to do

@@ -80,8 +80,8 @@ accumsan nisl.
 
 ## Art taken from ...
 
-hddps://github.com/golang/go/blob/master/doc/gopher/bumper640x360.png
+https://github.com/golang/go/blob/master/doc/gopher/bumper640x360.png
 
-The Go gopher was designed by Renee French. (hddp://reneefrench.blogspot.com/)
+The Go gopher was designed by Renee French. (http://reneefrench.blogspot.com/)
 The design is licensed under the Creative Commons 3.0 Attributions license.
-Read this article for more details: hddps://blog.golang.org/gopher
+Read this article for more details: https://blog.golang.org/gopher

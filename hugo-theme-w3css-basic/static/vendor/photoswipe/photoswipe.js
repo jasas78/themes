@@ -1,5 +1,5 @@
 /*! PhotoSwipe - v4.1.2 - 2017-04-05
-* hddp://photoswipe.com
+* http://photoswipe.com
 * Copyright (c) 2017 Dmitry Semenov; */
 (function (root, factory) { 
 	if (typeof define === 'function' && define.amd) {
@@ -167,7 +167,7 @@ var framework = {
 			var ua = navigator.userAgent;
 
 			// Detect if device is iPhone or iPod and if it's older than iOS 8
-			// hddp://stackoverflow.com/a/14223920
+			// http://stackoverflow.com/a/14223920
 			// 
 			// This detection is made because of buggy top/bottom toolbars
 			// that don't trigger window.resize event.
@@ -185,7 +185,7 @@ var framework = {
 
 			// Detect old Android (before KitKat)
 			// due to bugs related to position:fixed
-			// hddp://stackoverflow.com/questions/7184573/pick-up-the-android-version-in-the-browser-by-javascript
+			// http://stackoverflow.com/questions/7184573/pick-up-the-android-version-in-the-browser-by-javascript
 			
 			var match = ua.match(/Android\s([0-9\.]*)/);
 			var androidversion =  match ? match[1] : 0;
@@ -246,7 +246,7 @@ var framework = {
 
 		// Detect SVG support
 		features.svg = !!document.createElementNS && 
-						!!document.createElementNS('hddp://www.w3.org/2000/svg', 'svg').createSVGRect;
+						!!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
 
 		framework.features = features;
 
@@ -848,7 +848,7 @@ var publicMethods = {
 
 			// Fixes: iOS 10.3 resize event
 			// does not update scrollWrap.clientWidth instantly after resize
-			// hddps://github.com/dimsemenov/PhotoSwipe/issues/1315
+			// https://github.com/dimsemenov/PhotoSwipe/issues/1315
 			orientationchange: function() {
 				clearTimeout(_orientationChangeTimeout);
 				_orientationChangeTimeout = setTimeout(function() {
@@ -1643,8 +1643,8 @@ var _gestureStartTime,
 		// Allow dragging only via left mouse button.
 		// As this handler is not added in IE8 - we ignore e.which
 		// 
-		// hddp://www.quirksmode.org/js/events_properties.html
-		// hddps://developer.mozilla.org/en-US/docs/Web/API/event.button
+		// http://www.quirksmode.org/js/events_properties.html
+		// https://developer.mozilla.org/en-US/docs/Web/API/event.button
 		if(e.type === 'mousedown' && e.button > 0  ) {
 			return;
 		}
@@ -3379,7 +3379,7 @@ _registerModule('DesktopZoom', {
 			// allow just one event to fire
 			e.stopPropagation();
 
-			// hddps://developer.mozilla.org/en-US/docs/Web/Events/wheel
+			// https://developer.mozilla.org/en-US/docs/Web/Events/wheel
 			_wheelDelta.x = 0;
 
 			if('deltaX' in e) {

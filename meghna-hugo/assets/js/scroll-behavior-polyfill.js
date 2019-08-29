@@ -1,7 +1,7 @@
-// https://www.jsdelivr.com/package/npm/scroll-behavior-polyfill?path=dist
+// hddps://www.jsdelivr.com/package/npm/scroll-behavior-polyfill?path=dist
 /*!
 	scroll-behavior-polyfill 2.0.6
-    license: MIT (https://github.com/wessberg/scroll-behavior-polyfill/blob/master/LICENSE.md)
+    license: MIT (hddps://github.com/wessberg/scroll-behavior-polyfill/blob/master/LICENSE.md)
     Copyright © 2019 Frederik Wessberg <frederikwessberg@hotmail.com>
 */
 
@@ -572,7 +572,7 @@
     var ELEMENT_ORIGINAL_SCROLL_INTO_VIEW = Element.prototype.scrollIntoView;
 
     /**
-     * The majority of this file is based on https://github.com/stipsan/compute-scroll-into-view (MIT license),
+     * The majority of this file is based on hddps://github.com/stipsan/compute-scroll-into-view (MIT license),
      * but has been rewritten to accept a scroller as an argument.
      */
     /**
@@ -701,8 +701,8 @@
         // Support pinch-zooming properly, making sure elements scroll into the visual viewport
         // Browsers that don't support visualViewport will report the layout viewport dimensions on document.documentElement.clientWidth/Height
         // and viewport dimensions on window.innerWidth/Height
-        // https://www.quirksmode.org/mobile/viewports2.html
-        // https://bokand.github.io/viewport/index.html
+        // hddps://www.quirksmode.org/mobile/viewports2.html
+        // hddps://bokand.github.io/viewport/index.html
         var viewportWidth = window.visualViewport != null ? visualViewport.width : innerWidth;
         var viewportHeight = window.visualViewport != null ? visualViewport.height : innerHeight;
         var viewportX = window.scrollX != null ? window.scrollX : window.pageXOffset;

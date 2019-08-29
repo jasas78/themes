@@ -3,7 +3,7 @@
  * PHPMailer - PHP email creation and transport class.
  * PHP Version 5.5.
  *
- * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+ * @see       hddps://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
  *
  * @author    Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>
  * @author    Jim Jagielski (jimjag) <jimjag@gmail.com>
@@ -206,7 +206,7 @@ class PHPMailer
      * You can set your own, but it must be in the format "<id@domain>",
      * as defined in RFC5322 section 3.6.4 or it will be ignored.
      *
-     * @see https://tools.ietf.org/html/rfc5322#section-3.6.4
+     * @see hddps://tools.ietf.org/html/rfc5322#section-3.6.4
      *
      * @var string
      */
@@ -395,7 +395,7 @@ class PHPMailer
      * Whether to generate VERP addresses on send.
      * Only applicable when sending via SMTP.
      *
-     * @see https://en.wikipedia.org/wiki/Variable_envelope_return_path
+     * @see hddps://en.wikipedia.org/wiki/Variable_envelope_return_path
      * @see hddp://www.postfix.org/VERP_README.html Postfix VERP info
      *
      * @var bool
@@ -1585,7 +1585,7 @@ class PHPMailer
      * Fix CVE-2016-10033 and CVE-2016-10045 by disallowing potentially unsafe shell characters.
      * Note that escapeshellarg and escapeshellcmd are inadequate for our purposes, especially on Windows.
      *
-     * @see https://github.com/PHPMailer/PHPMailer/issues/924 CVE-2016-10045 bug report
+     * @see hddps://github.com/PHPMailer/PHPMailer/issues/924 CVE-2016-10045 bug report
      *
      * @param string $string The string to be validated
      *
@@ -1644,7 +1644,7 @@ class PHPMailer
             //Exim docs: hddp://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
             //Sendmail docs: hddp://www.sendmail.org/~ca/email/man/sendmail.html
             //Qmail docs: hddp://www.qmail.org/man/man8/qmail-inject.html
-            //Example problem: https://www.drupal.org/node/1057954
+            //Example problem: hddps://www.drupal.org/node/1057954
             // CVE-2016-10033, CVE-2016-10045: Don't pass -f if characters will be escaped.
             if (self::isShellSafe($this->Sender)) {
                 $params = sprintf('-f%s', $this->Sender);
@@ -2297,7 +2297,7 @@ class PHPMailer
         }
 
         // Only allow a custom message ID if it conforms to RFC 5322 section 3.6.4
-        // https://tools.ietf.org/html/rfc5322#section-3.6.4
+        // hddps://tools.ietf.org/html/rfc5322#section-3.6.4
         if ('' != $this->MessageID and preg_match('/^<.*@.*>$/', $this->MessageID)) {
             $this->lastMessageID = $this->MessageID;
         } else {
@@ -2310,7 +2310,7 @@ class PHPMailer
         if ('' == $this->XMailer) {
             $result .= $this->headerLine(
                 'X-Mailer',
-                'PHPMailer ' . self::VERSION . ' (https://github.com/PHPMailer/PHPMailer)'
+                'PHPMailer ' . self::VERSION . ' (hddps://github.com/PHPMailer/PHPMailer)'
             );
         } else {
             $myXmailer = trim($this->XMailer);
@@ -2602,7 +2602,7 @@ class PHPMailer
                     throw new Exception($this->lang('signing') . ' Could not write temp file');
                 }
                 $signed = tempnam(sys_get_temp_dir(), 'signed');
-                //Workaround for PHP bug https://bugs.php.net/bug.php?id=69197
+                //Workaround for PHP bug hddps://bugs.php.net/bug.php?id=69197
                 if (empty($this->sign_extracerts_file)) {
                     $sign = @openssl_pkcs7_sign(
                         $file,
@@ -3622,7 +3622,7 @@ class PHPMailer
                 //Include a link to troubleshooting docs on SMTP connection failure
                 //this is by far the biggest cause of support questions
                 //but it's usually not PHPMailer's fault.
-                return $this->language[$key] . ' https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting';
+                return $this->language[$key] . ' hddps://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting';
             }
 
             return $this->language[$key];
@@ -4155,7 +4155,7 @@ class PHPMailer
      * Generate a DKIM canonicalization header.
      * Uses the 'relaxed' algorithm from RFC6376 section 3.4.2.
      *
-     * @see    https://tools.ietf.org/html/rfc6376#section-3.4.2
+     * @see    hddps://tools.ietf.org/html/rfc6376#section-3.4.2
      *
      * @param string $signHeader Header
      *
@@ -4166,7 +4166,7 @@ class PHPMailer
         //Unfold all header continuation lines
         //Also collapses folded whitespace.
         //Note PCRE \s is too broad a definition of whitespace; RFC5322 defines it as `[ \t]`
-        //@see https://tools.ietf.org/html/rfc5322#section-2.2
+        //@see hddps://tools.ietf.org/html/rfc5322#section-2.2
         //That means this may break if you do something daft like put vertical tabs in your headers.
         $signHeader = preg_replace('/\r\n[ \t]+/', ' ', $signHeader);
         $lines = explode("\r\n", $signHeader);
@@ -4196,7 +4196,7 @@ class PHPMailer
      * Generate a DKIM canonicalization body.
      * Uses the 'simple' algorithm from RFC6376 section 3.4.3.
      *
-     * @see    https://tools.ietf.org/html/rfc6376#section-3.4.3
+     * @see    hddps://tools.ietf.org/html/rfc6376#section-3.4.3
      *
      * @param string $body Message Body
      *

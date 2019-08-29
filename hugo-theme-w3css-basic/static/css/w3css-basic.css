@@ -10,7 +10,7 @@
 
 /*
 clear
-https://www.w3schools.com/cssref/pr_class_clear.asp
+hddps://www.w3schools.com/cssref/pr_class_clear.asp
 <div class="clearfix"></div>
 */
 
@@ -95,7 +95,7 @@ th:first-child,td:first-child{padding-left:8px}
 
 /* -------------------------------------------------- */
 /* front.marquee */
-/* https://www.quackit.com/css/codes/marquees/ */
+/* hddps://www.quackit.com/css/codes/marquees/ */
 
 .top-marquee {
   white-space: nowrap;
@@ -131,7 +131,7 @@ th:first-child,td:first-child{padding-left:8px}
 /* -------------------------------------------------- */
 /* front.photocards */
 
-/* https://www.w3schools.com/cssref/css3_pr_animation-duration.asp */
+/* hddps://www.w3schools.com/cssref/css3_pr_animation-duration.asp */
 .photocards-animated {
           animation-iteration-count: 1;
   -webkit-animation-iteration-count: 1;
@@ -194,7 +194,7 @@ th:first-child,td:first-child{padding-left:8px}
 /* -------------------------------------------------- */
 /* front.features */
 
-/* https://www.w3schools.com/cssref/css3_pr_animation-duration.asp */
+/* hddps://www.w3schools.com/cssref/css3_pr_animation-duration.asp */
 .features-animated {
           animation-iteration-count: 1;
   -webkit-animation-iteration-count: 1;

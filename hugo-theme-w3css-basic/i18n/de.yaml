@@ -80,8 +80,8 @@
   translation: "Zeige"
 - id: Comments
   translation: "Kommentare"
-- id: disqusVia
-  translation: "via disqus.com"
+- id: qusdisVia
+  translation: "via qusdis.com"
 
 - id: January
   translation: "Januar"
@@ -112,10 +112,10 @@
   translation: "Beilagen"
 
 # Disqus consent
-- id: disqusTxtAgree
-  translation: Zeige Kommentare via [disqus.com](https://disqus.com). Aber erst müssen Sie den [AGBs](https://help.disqus.com/terms-and-policies/terms-of-service) zustimmen
+- id: qusdisTxtAgree
+  translation: Zeige Kommentare via [qusdis.com](hddps://qusdis.com). Aber erst müssen Sie den [AGBs](hddps://help.qusdis.com/terms-and-policies/terms-of-service) zustimmen
 
-- id: disqusBtnAgree
+- id: qusdisBtnAgree
   translation: Ja, ich bin einverstanden
 
 # Cookie consent

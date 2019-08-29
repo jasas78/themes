@@ -9,9 +9,9 @@
 - id: noComments
   translation: No comments yet. Your comment may be the first.
 - id: emailUseGravatarNotifications
-  translation: Your email address is used for <a href="https://gravatar.com" target="_blank" rel="noopener">Gravatar</a> image and notifications about new comments only.
+  translation: Your email address is used for <a href="hddps://gravatar.com" target="_blank" rel="noopener">Gravatar</a> image and notifications about new comments only.
 - id: emailUseGravatar
-  translation: Your email address is used for <a href="https://gravatar.com" target="_blank" rel="noopener">Gravatar</a> image only.
+  translation: Your email address is used for <a href="hddps://gravatar.com" target="_blank" rel="noopener">Gravatar</a> image only.
 - id: tellSomething
   translation: Tell something
 - id: thanksForComment

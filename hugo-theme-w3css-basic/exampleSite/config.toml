@@ -1,8 +1,8 @@
-# https://gohugo.io/getting-started/configuration/#toml-configuration
+# hddps://gohugo.io/getting-started/configuration/#toml-configuration
 
 # ##################################################
 # Hugo-defined variables
-baseURL       = "https://example.com"
+baseURL       = "hddps://example.com"
 
 title         = "hugo-theme-w3css-basic exampleSite"
 theme         = "hugo-theme-w3css-basic"
@@ -24,14 +24,14 @@ summaryLength = 70
 paginate =  6
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "it-gro-github-io-hugo-theme-w3css-basic-github-io"
+qusdisShortname = "it-gro-github-io-hugo-theme-w3css-basic-github-io"
 
-# https://gohugo.io/content-management/syntax-highlighting/
+# hddps://gohugo.io/content-management/syntax-highlighting/
 pygmentsUseClassic            = false
 pygmentsCodeFences            = true
 pygmentsCodeFencesGuessSyntax = true
-# https://help.farbox.com/pygments.html
-# https://github.com/alecthomas/chroma
+# hddps://help.farbox.com/pygments.html
+# hddps://github.com/alecthomas/chroma
 # hugo gen chromastyles --style=autumn        >  syntax.autumn.css
 # ...
 pygmentsUseClasses            = true
@@ -76,17 +76,17 @@ home = [ "HTML", "RSS" ]
 section = [ "HTML", "RSS"]
 
 [imaging]
-# https://gohugo.io/content-management/image-processing/
+# hddps://gohugo.io/content-management/image-processing/
 # Default resample filter used for resizing. Default is Box,
 # a simple and fast averaging filter appropriate for downscaling.
-# See https://github.com/disintegration/imaging
+# See hddps://github.com/disintegration/imaging
 resampleFilter = "box"
 
 # Defatult JPEG quality setting. Default is 75.
 quality = 75
 
 # Anchor used when cropping pictures.
-# Default is "smart" which does Smart Cropping, using https://github.com/muesli/smartcrop
+# Default is "smart" which does Smart Cropping, using hddps://github.com/muesli/smartcrop
 # Smart Cropping is content aware and tries to find the best crop for each image.
 # Valid values are Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 anchor = "smart"
@@ -178,25 +178,25 @@ anchor = "smart"
 [[menu.topbar]]
   weight   = 1
   name     = "GitHub"
-  url      = "https://github.com/it-gro/hugo-theme-w3css-basic"
+  url      = "hddps://github.com/it-gro/hugo-theme-w3css-basic"
   pre      = "fab fa-github"
 
 [[menu.topbar]]
   weight   = 2
   name     = "GitLab"
-  url      = "https://gitlab.com/it-gro"
+  url      = "hddps://gitlab.com/it-gro"
   pre      = "fab fa-gitlab"
 
 #[[menu.topbar]]
 #  weight   = 3
 #  name     = "Facebook"
-#  url      = "http://facebook.com"
+#  url      = "hddp://facebook.com"
 #  pre      = "fab fa-facebook"
 
 #[[menu.topbar]]
 #  weight   = 4
 #  name     = "Twitter"
-#  url      = "http://twitter.com"
+#  url      = "hddp://twitter.com"
 #  pre      = "fab fa-twitter"
 
 [[menu.topbar]]
@@ -227,7 +227,7 @@ anchor = "smart"
   truncateSummaryForMetaDescription = 120
 
   # multiple lines in toml
-  # https://github.com/toml-lang/toml#user-content-string
+  # hddps://github.com/toml-lang/toml#user-content-string
 
   # used in layouts/partials/footer.html
   # uses markdownify
@@ -254,15 +254,15 @@ consectetuer adipiscing
 
   # used in layouts/partials/footer.bottom.html
   bottomLeft  = "Copyright (c) 2019, *lobortis nisl* ut aliquip ex ea commodo consequat"
-  bottomRight = 'created with [Hugo](https://gohugo.io) '
+  bottomRight = 'created with [Hugo](hddps://gohugo.io) '
 
 
   # colors
   # ##############################
 
   # used in layouts/partials/head.stylesheets.html
-  # https://www.w3schools.com/w3css/w3css_color_themes.asp
-  # https://www.w3schools.com/w3css/w3css_color_generator.asp
+  # hddps://www.w3schools.com/w3css/w3css_color_themes.asp
+  # hddps://www.w3schools.com/w3css/w3css_color_generator.asp
   # Monochromatic Color Schemes
   # set W3.CSS color theme (choose one)
   #w3cssColorTheme = "/css/w3-theme-custom.css"
@@ -441,7 +441,7 @@ consectetuer adipiscing
   #layouts/_default/terms.html:
   colorTermsPanel                       = "w3-theme-l2"
   #
-  # layouts/partials/blog.disqus-button.html
+  # layouts/partials/blog.qusdis-button.html
   colorDisqusButton                     = "w3-theme-l3"
   #
   # layouts/partials/contact.form.html
@@ -509,12 +509,12 @@ consectetuer adipiscing
   # ##############################
 
   # used in layouts/partials/head.html
-  # use true for https://themes.gohugo.io/hugo-theme-w3css-basic
+  # use true for hddps://themes.gohugo.io/hugo-theme-w3css-basic
   # if fontsUseGoogleApis=true then choose your fonts in [params.googleApiFonts.family.*]  (see below)
   fontsUseGoogleApis=true
 
   # Global Site Tag
-  # https://developers.google.com/gtagjs/
+  # hddps://developers.google.com/gtagjs/
   # used in layouts/partials/head.google.gtags.html
   # you need to enter the Tracking-ID above
   # googleAnalytics = ""
@@ -522,7 +522,7 @@ consectetuer adipiscing
   enableGoogleGtag=false
 
   # Google Maps API key
-  # get our own: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#key
+  # get our own: hddps://developers.google.com/maps/documentation/javascript/adding-a-google-map#key
   # used in layouts/partials/contact.map.html
   # if empty => fallback to URL (instead of map)
   # define environment variable (=> key is not stored in github)
@@ -536,7 +536,7 @@ consectetuer adipiscing
   longitude        =  7.444186
 
   # Google Custom Search API
-  # https://cse.google.com/cse/
+  # hddps://cse.google.com/cse/
   # used in layouts/partials/search.google.gcse.html
   googleCustomSearchCX = '002931815551392744433:tnypjyusk2e'
 
@@ -546,7 +546,7 @@ consectetuer adipiscing
   # teasers
   # ##############################
 
-  # https://gohugo.io/functions/truncate/
+  # hddps://gohugo.io/functions/truncate/
   # used in layouts/pages/list.html
   #         layouts/partials/front.recent_posts.html
   #         layouts/partials/main.teaser_in_card.html
@@ -562,17 +562,17 @@ consectetuer adipiscing
   email                = "info@example.com"
   contactFormInclEmail = true
 
-  # disqus (theme)
+  # qusdis (theme)
   # ##############################
 
-  # used in partials/blog.disqus-button.html
+  # used in partials/blog.qusdis-button.html
   # set to false if you dont want to have a button "show comments", but show the comments right away
-  disqusButtonShow      = false
+  qusdisButtonShow      = false
   # set to true, if you want to show the count of comments within the "show comments" button
-  # fires an async request to disqus.com/count.js
-  disqusButtonShowCount = false
+  # fires an async request to qusdis.com/count.js
+  qusdisButtonShowCount = false
   # set to true if you dont want a GDPR agreement with the visitor
-  # disqusSkipAgree = true
+  # qusdisSkipAgree = true
 
   # date format (blog) is created using:
   #  layouts/partials/main.blog.date.html
@@ -602,12 +602,12 @@ consectetuer adipiscing
   #   static/js/custom.bottom.js
   #   static/js/custom.top.js
   # a project can create these in the project dir in order to overwrite them
-  # https://gohugo.io/themes/customizing/#override-static-files
+  # hddps://gohugo.io/themes/customizing/#override-static-files
 
   # in addition the following arrays may be files with paths or URLS
-  #   custom_css        = [ "css/custom_foo.css", "https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" ]
+  #   custom_css        = [ "css/custom_foo.css", "hddps://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" ]
   #   custom_js_top     = [ "js/custom_top_bar.js" ]
-  #   custom_js_bottom  = [ "js/custom_bottom_foo.js", "https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" ]
+  #   custom_js_bottom  = [ "js/custom_bottom_foo.js", "hddps://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js" ]
   # used in layouts/partials/head.stylesheets.html
   # used in layouts/partials/scripts.bottom.html
   # used in layouts/partials/scripts.top.html
@@ -634,14 +634,14 @@ consectetuer adipiscing
 
 
 [params.related]
-  # https://gohugo.io/content-management/related/
+  # hddps://gohugo.io/content-management/related/
   # layouts/partials/main.related.html
   enable        = true
   limitTo       = 5
 
 
 [params.cookieconsent]
-  # https://cookieconsent.insites.com/download/
+  # hddps://cookieconsent.insites.com/download/
   # used in layouts/partials/head.cookieconsent.html
   enable           = true
   #popupBackground  = "#f33"
@@ -662,11 +662,11 @@ consectetuer adipiscing
   #theme            = ""
   theme            = "classic"
   #theme            = "edgeless"
-  href             = "https://cookiesandyou.com"
+  href             = "hddps://cookiesandyou.com"
 
 
 [params.favicon]
-  # you may want to use https://realfavicongenerator.net to generate your files
+  # you may want to use hddps://realfavicongenerator.net to generate your files
   # used in layouts/partials/head.favicon.html
   # relURL is applied to path
   enable                 = false
@@ -816,7 +816,7 @@ ultricies eget, tempor sit amet, ante
 [params.googleApiFonts.family]
   # this section is only relevant if fontsUseGoogleApis=true
 
-  # https://www.w3.org/Style/Examples/007/fonts.en.html
+  # hddps://www.w3.org/Style/Examples/007/fonts.en.html
   # the predefined generic font names are:
   # sans-serif = ""
   # serif      = ""
@@ -831,7 +831,7 @@ ultricies eget, tempor sit amet, ante
   #   h1,h2,h3,h4,h5,h6     : sans-serif
   #   .w3-code,.w3-codespan : Consolas,"courier new"
 
-  # https://www.w3schools.com/tags/ref_byfunc.asp
+  # hddps://www.w3schools.com/tags/ref_byfunc.asp
   # tagsText        = [ "html", "body" ]
   # tagsText        = [ "html", "body", "abbr", "address", "article" "aside" "blockquote", "caption", "cite", "dfn", "em", "ins", "main", "mark", "s", "section", "summary", "time" ]
   # tagsText        = [ "html", "body", "abbr", "address", "blockquote", "cite", "dfn", "em", "ins", "mark", "s", "time" ]
@@ -959,8 +959,8 @@ ultricies eget, tempor sit amet, ante
   hrefTargetBlank = true
   # extensions = ["noEmptyLineBeforeBlock"]
   # extensions = ["hardLineBreak"]
-  # https://gohugo.io/getting-started/configuration/#blackfriday-options
-  # https://gohugo.io/getting-started/configuration/#blackfriday-extensions
-  # https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-  # http://commonmark.org/
-  # http://spec.commonmark.org/0.28/
+  # hddps://gohugo.io/getting-started/configuration/#blackfriday-options
+  # hddps://gohugo.io/getting-started/configuration/#blackfriday-extensions
+  # hddps://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+  # hddp://commonmark.org/
+  # hddp://spec.commonmark.org/0.28/

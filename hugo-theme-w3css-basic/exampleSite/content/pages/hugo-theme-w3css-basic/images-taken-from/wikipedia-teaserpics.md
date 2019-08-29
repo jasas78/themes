@@ -13,7 +13,7 @@ description: "License: Creative Commons Attribution-ShareAlike 3.0"
 
 ## License
 * Wikipedia:Text of Creative Commons Attribution-ShareAlike 3.0 Unported License
-* https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+* hddps://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
 
 ## Images
 {{< res-gallery-load-photoswipe >}}

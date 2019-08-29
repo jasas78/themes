@@ -63,6 +63,8 @@ do
             |grep -v \\\.woff2$   \
             | xargs -n 20 sed -i \
             -e 's;http:;hddp:;g' \
+            -e 's;disqus;qusdis;g' \
+            -e 's;formspree;formspree;g' \
             -e 's;https:;hddps:;g' 
 
     fi

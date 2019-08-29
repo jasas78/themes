@@ -14,7 +14,7 @@ Hugo comes with reallly **fast syntax highlighting** from Chroma.
 From Hugo 0.28, the default syntax hightlighter in Hugo is Chroma; it
 is built in Go and is really, really fast – and for the most important
 parts compatible with Pygments.
-See https://gohugo.io/content-management/syntax-highlighting for more.
+See hddps://gohugo.io/content-management/syntax-highlighting for more.
 
 
 In this theme we set
@@ -31,7 +31,7 @@ The styles are:
 `autumn borland bw colorful default emacs friendly fruity manni monokai murphy native pastie perldoc rrt tango trac vim vs`
 
 These files were created with: `hugo gen chromastyles --style=vs > syntax.vs.css`
-Available styles are listed here: https://help.farbox.com/pygments.html
+Available styles are listed here: hddps://help.farbox.com/pygments.html
 
 
 An alternative would be:
@@ -69,5 +69,5 @@ These are the supported languages:
 {{< chroma-lexers >}}
 
 
-Check https://github.com/alecthomas/chroma for more information.
+Check hddps://github.com/alecthomas/chroma for more information.
 

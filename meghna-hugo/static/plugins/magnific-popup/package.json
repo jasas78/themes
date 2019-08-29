@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dimsemenov/Magnific-Popup/issues"
+    "url": "hddps://github.com/dimsemenov/Magnific-Popup/issues"
   },
   "main": "dist/jquery.magnific-popup.js",
   "style": "dist/magnific-popup.css",
@@ -50,6 +50,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dimsemenov/Magnific-Popup.git"
+    "url": "hddps://github.com/dimsemenov/Magnific-Popup.git"
   }
 }

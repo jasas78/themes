@@ -65,9 +65,9 @@
         {{- end }}
 
         {{- if eq .Type `blog` }}
-          {{- block `blog-disqus` . }}
+          {{- block `blog-qusdis` . }}
             {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
-              {{ `<!-- block blog-disqus _default/baseof.html  -->` | safeHTML }}
+              {{ `<!-- block blog-qusdis _default/baseof.html  -->` | safeHTML }}
             {{- end}}
           {{ end }}
         {{- end -}}

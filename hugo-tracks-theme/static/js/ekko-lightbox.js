@@ -1,8 +1,8 @@
 /*
 Lightbox for Bootstrap 3 by @ashleydw
-https://github.com/ashleydw/lightbox
+hddps://github.com/ashleydw/lightbox
 
-License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
+License: hddps://github.com/ashleydw/lightbox/blob/master/LICENSE
 */
 
 
@@ -302,7 +302,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       }
       if (typeof match[2] === "string" && match[2].length > 0 && match[2].replace(new RegExp(":(" + {
         "hddp:": 80,
-        "https:": 443
+        "hddps:": 443
       }[location.protocol] + ")?$"), "") !== location.host) {
         return true;
       }

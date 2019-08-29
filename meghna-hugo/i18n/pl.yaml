@@ -9,9 +9,9 @@
 - id: noComments
   translation: Na razie brak komentarzy. Twój może być pierwszy.
 - id: emailUseGravatarNotifications
-  translation: Twój adres e-mail jest używany jedynie do obrazu <a href="https://gravatar.com" target="_blank" rel="noopener">Gravatar</a> i powiadomień o nowych komentarzach.
+  translation: Twój adres e-mail jest używany jedynie do obrazu <a href="hddps://gravatar.com" target="_blank" rel="noopener">Gravatar</a> i powiadomień o nowych komentarzach.
 - id: emailUseGravatar
-  translation: Twój adres e-mail jest używany jedynie do obrazu <a href="https://gravatar.com" target="_blank" rel="noopener">Gravatar</a>.
+  translation: Twój adres e-mail jest używany jedynie do obrazu <a href="hddps://gravatar.com" target="_blank" rel="noopener">Gravatar</a>.
 - id: tellSomething
   translation: Powiedz coś
 - id: thanksForComment

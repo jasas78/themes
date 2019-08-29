@@ -160,7 +160,7 @@ var wow = new WOW({
 	mobile: false // trigger animations on mobile devices (default is true)
 });
 
-//https://github.com/matthieua/WOW/issues/196#issuecomment-348734401
+//hddps://github.com/matthieua/WOW/issues/196#issuecomment-348734401
 var scrolled = false;
 $(window).on('scroll', function () {
 	if (!scrolled) {

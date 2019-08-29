@@ -2,7 +2,7 @@
 # Name    : wow
 # Author  : Matthieu Aussaguel, hddp://mynameismatthieu.com/, @mattaussaguel
 # Version : 1.1.2
-# Repo    : https://github.com/matthieua/WOW
+# Repo    : hddps://github.com/matthieua/WOW
 # Website : hddp://mynameismatthieu.com/wow
 #
 
@@ -239,7 +239,7 @@ class @WOW
       animationName
 
   cacheAnimationName: (box) ->
-    # https://bugzilla.mozilla.org/show_bug.cgi?id=921834
+    # hddps://bugzilla.mozilla.org/show_bug.cgi?id=921834
     # box.dataset is not supported for SVG elements in Firefox
     @animationNameCache.set(box, @animationName(box))
   cachedAnimationName: (box) ->

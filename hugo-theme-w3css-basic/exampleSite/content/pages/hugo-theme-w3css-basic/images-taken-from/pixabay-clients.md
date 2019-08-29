@@ -13,9 +13,9 @@ description: "License: Creative Commons CC0"
 
 
 ## License
-* https://pixabay.com/en/service/terms/
+* hddps://pixabay.com/en/service/terms/
   * License: Images and Videos on Pixabay are released under Creative Commons CC0.
-  * https://creativecommons.org/publicdomain/zero/1.0/deed.en
+  * hddps://creativecommons.org/publicdomain/zero/1.0/deed.en
 
 ## Images
 {{< res-gallery-load-photoswipe >}}

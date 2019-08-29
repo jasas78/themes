@@ -3,7 +3,7 @@ Jasmine-jQuery: a set of jQuery helpers for Jasmine tests.
 
 Version 2.0.2
 
-https://github.com/velesin/jasmine-jquery
+hddps://github.com/velesin/jasmine-jquery
 
 Copyright (c) 2010-2014 Wojciech Zawistowski, Travis Jeffery
 

@@ -84,7 +84,7 @@ regen:
 	@[ -d scripts.Hugo/themes ] || ( echo "why_no_34 dir <scripts.Hugo/themes> exist ?" ; exit 34 )
 	@[ -f scripts.Hugo/themes/hugo-theme-docdock/theme.toml ] || ( echo \
 	     "why_no_36 file <scripts.Hugo/themes/hugo-theme-docdock/theme.toml> exist ?" ; exit 36 )
-	[ -f disable_themes_pull ] || ( cd scripts.Hugo/themes/ && git pull )
+	(test -f disable_themes_pull && (echo;echo disable_themes_pull;echo;echo))|| ( cd scripts.Hugo/themes/ && git pull )
 	@[ -d docs ] || mkdir docs
 	@[ -L public ] || ln -s docs/ public
 	@[ -L scripts.Hugo/public ] || ln -s ../public/ scripts.Hugo/

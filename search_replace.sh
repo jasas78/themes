@@ -48,6 +48,8 @@ do
     then
         find ${aa1}/ -type f      \
             \
+            |grep -v \\\.png$     \
+            \
             |grep -v \\\.ttf$     \
             |grep -v \\\.mp4$     \
             |grep -v \\\.mp3$     \
@@ -70,7 +72,6 @@ done
 
 #            |grep -v \\\.jpg$     \
 #            |grep -v \\\.gif$     \
-#            |grep -v \\\.png$     \
 
 #            |grep -v \\\.jpg$     \
 #            |grep -v \\\.gif$     \

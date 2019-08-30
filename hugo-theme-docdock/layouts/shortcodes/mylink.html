@@ -1,4 +1,9 @@
-<a href={{ with .Get "text" }}"{{ . }}"{{ end }} 
-    rel="noopener noreferrer" target="_blank" >
-{{ with .Get "link" }}{{ . }}{{ end }}
+<a 
+{{ with .Get "text" }}
+href="{{ . }}"
+{{ end }} 
+rel="noopener noreferrer" target="_blank" >
+{{ with .Get "link" }}
+{{ . }}
+{{ end }}
 </a>

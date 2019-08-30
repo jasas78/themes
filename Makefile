@@ -38,8 +38,10 @@ gs:
 	nice -n 19 git status
 gc:
 	nice -n 19 git commit -a
+
+gcXmmm:=$(shell (LC_ALL=C date +"%Y%m%d_%H%M%p" ; cat /etc/timezone )|tr "/\r\n-" _)
 gcX:
-	nice -n 19 git commit -m $$(LC_ALL=C date +"%Y%m%d_%H%M%p" )
+	nice -n 19 git commit -m $(gcXmmm)
 	
 
 gd :

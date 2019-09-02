@@ -81,6 +81,11 @@ $(if $(testHugo1),$(eval UseHugoOnTop:=1),\
 ifdef    UseHugoOnTop
 $(info using    UseHugoOnTop)
 
+rgX:
+	cd scripts.Hugo/content/ && . ../1.txt
+	cd scripts.Hugo/content/ && . ../3.txt
+	make rg
+
 rg:regen
 regen:
 	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_33 file <scripts.Hugo/config.toml> exist ?" ; exit 33 )
@@ -124,7 +129,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg regen     s2 server2     s server :
+rg regen     s2 server2     s server rgX :
 	cd .. && make $@
 
 

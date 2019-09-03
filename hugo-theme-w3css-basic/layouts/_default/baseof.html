@@ -114,6 +114,10 @@
     {{- end}}
     {{ partial `scripts.bottom.html`  . }}
 
+    {{- if eq .Type `blog` }}
+    {{< mysimcata01 >}}
+    {{- end -}}
+
     <script>
       function onload(){
       {{- if isset $.Site.Params (lower `options` ) }}

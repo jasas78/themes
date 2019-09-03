@@ -88,9 +88,11 @@
           {{ end }}
         {{- end -}}
 
+        <!--
         {{- if and (ne .Type `contact`) (ne .Type `search`) }}
           {{- partial `main.taxonomy.full.bar.html`  . -}}
         {{- end -}}
+        -->
 
         {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
         {{ `<!-- back in _default/baseof.html  -->` | safeHTML }}

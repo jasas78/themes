@@ -114,9 +114,7 @@
     {{- end}}
     {{ partial `scripts.bottom.html`  . }}
 
-    {{- if not and (ne .Type `contact`) (ne .Type `search`) }}
       {{- partial `main.taxonomy.full.bar.html`  . -}}
-    {{- end -}}
 
     <script>
       function onload(){

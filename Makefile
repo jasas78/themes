@@ -129,7 +129,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg regen     s2 server2     s server rgX :
+rg regen     s2 server2     s server rgX gcX :
 	cd .. && make $@
 
 

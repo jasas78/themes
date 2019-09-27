@@ -155,5 +155,16 @@ endif
 help_text9=$(if $(help_textTV),$(help_textTV),$(if $(help_textHU),$(help_textHU),$(help_textINDEX)))
 export help_text9
 
+define myCodeTP01
+
+endef
+
+myCodehtml_list01:=$(shell ls hugo-theme-docdock/layouts/shortcodes/my*.html)
+$(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1)))
+mc01 : myCodeCopy
+myCodeCopy:
+	@echo "<$(myCodehtml_list01)>"
+	@echo "<$(myCodehtml_list02)>"
+
 all:
 	@echo "$${help_text9}"

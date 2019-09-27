@@ -1,0 +1,18 @@
+<br>
+<div Width="95%"  style="border:1px solid black;" >
+
+{{ with .Get "mp4x" }}
+<audio controls preload="none" style="width: 100%; margin-bottom: 20px">
+<source src="{{ . }}" type="audio/mp4">
+Your browser does not support the audio element.
+</audio>
+
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+
+{{ end }}
+
+{{ with .Get "text" }}
+<br>{{ . }}
+{{ end }}
+
+</div>

@@ -62,6 +62,7 @@ define help_textHU
 	rg -> regen   : regen all hugo
 	s  -> server  : run hugo   server to test local
 	s2 -> server2 : run python server to test local
+    mc01 -> myCodeCopy01 : update all the my html shortcodes
 
 endef
 
@@ -155,16 +156,37 @@ endif
 help_text9=$(if $(help_textTV),$(help_textTV),$(if $(help_textHU),$(help_textHU),$(help_textINDEX)))
 export help_text9
 
-define myCodeTP01
+define myCodeTP02
+myCodehtml_list02 += $1
+myCodehtml_list03 += $2
+myCodehtml_list04 += $3/$2
+$3/$2 : $1/$2
+	cat $1/$2 > $3/$2 
+
 
 endef
 
+define myCodeTP01
+$$(eval  aa2=$$(shell dirname $1))
+$$(eval  aa3=$$(shell basename $1))
+$$(eval $$(call myCodeTP02,$$(aa2),$$(aa3),hugo-theme-w3css-basic/layouts/shortcodes))
+
+endef
+
+### find -type d -name shortcodes |grep /layouts/
 myCodehtml_list01:=$(shell ls hugo-theme-docdock/layouts/shortcodes/my*.html)
-$(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1)))
-mc01 : myCodeCopy
-myCodeCopy:
-	@echo "<$(myCodehtml_list01)>"
-	@echo "<$(myCodehtml_list02)>"
+$(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
+
+mc01 : myCodeCopy01
+#mc01 : myCodeCopy02 
+
+myCodeCopy01:$(myCodehtml_list04)
+
+myCodeCopy02:
+	@echo "1<$(myCodehtml_list01)>"
+	@echo "2<$(myCodehtml_list02)>"
+	@echo "3<$(myCodehtml_list03)>"
+	@echo "4<$(myCodehtml_list04)>"
 
 all:
 	@echo "$${help_text9}"

@@ -1,0 +1,48 @@
+{{ with .Get "mp4" }}
+
+<div Width="200px" Height="200px">
+<video preload="none" controls Max-Width="200px" Max-Height="200px" 
+style="margin-bottom:20px;transform:rotate(180deg);" 
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video><br>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+</div><br>
+
+<div Width="400px" Height="400px">
+<video preload="none" controls Max-Width="400px" Max-Height="400px" 
+style="margin-bottom:20px;transform:rotate(180deg);" 
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video><br>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+</div><br>
+
+<div Width="800px" Height="800px">
+<video preload="none" controls Max-Width="800px" Max-Height="800px" 
+style="margin-bottom:20px;transform:rotate(180deg);" 
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video><br>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+</div><br>
+
+<div Width="1200px" Height="1200px">
+<video preload="none" controls Max-Width="1200px" Max-Height="1200px" 
+style="margin-bottom:20px;transform:rotate(180deg);" 
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mp4">
+Your browser does not support the video tag.  {{ . }}
+</video><br>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+</div><br>
+
+
+{{ end }}

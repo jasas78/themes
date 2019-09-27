@@ -1,0 +1,18 @@
+<br>
+<div Width="100%" style="border:1px solid black;" >
+
+{{ with .Get "mkv" }}
+<video preload="none" controls Width="97%" style="width:97%;margin-bottom:20px;"
+poster="{{ . }}.jpg"
+> <source src="{{ . }}"
+type="video/mkv">
+Your browser does not support the video tag.  {{ . }}
+</video>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a><br>
+{{ end }}
+
+{{ with .Get "text" }}
+<br>{{ . }}
+{{ end }}
+
+</div>

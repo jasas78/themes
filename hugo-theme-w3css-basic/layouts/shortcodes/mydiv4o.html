@@ -1,11 +1,10 @@
 <div Width="100%" style="border:1px solid black;" >
 
 {{ with .Get "link" }}
-<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >link:</a>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" 
 {{ end }}
-
 {{ with .Get "text" }}
-{{ . }} 
+> {{ . }} </a>
 {{ end }}
 
 </div>

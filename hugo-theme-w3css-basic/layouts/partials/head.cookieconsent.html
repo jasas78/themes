@@ -2,7 +2,7 @@
   {{ `<!-- partials/head.cookieconsent.html -->` | safeHTML }}
 {{- end}}
 
-{{- if and isset $.Site.Params (lower `cookieconsent` ) }}
+{{- if not isset $.Site.Params (lower `cookieconsent` ) }}
 {{- if $.Site.Params.cookieconsent.enable  }}
   {{- /*
   hddps://cookieconsent.insites.com/download/

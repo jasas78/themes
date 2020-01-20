@@ -2,6 +2,9 @@
 
 
 <a href="{{ with .Get "link" }}{{ . }}{{ end }}" rel="noopener noreferrer" target="_blank" 
-> {{ with .Get "text" }}{{ . }}{{ end }} {{ with .Get "link2" }}{{ . }}{{ end }} </a>
+> 
+{{ with .Get "text"  }}{{ . }}{{ end }} 
+{{ with .Get "link2" }}{{ . }}{{ end }} 
+</a>
 
 </div>

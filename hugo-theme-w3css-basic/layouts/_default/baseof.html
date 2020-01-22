@@ -132,8 +132,8 @@
     </script>
 
     <!-- mytime12 begin -->
-<div id="dynTime01"></div>
-<div id="dynTime02"></div>
+<div id="PPPdynTime01"></div>
+<div id="PPPdynTime02"></div>
 <script>
 (function () {
     function startTime() {
@@ -142,9 +142,9 @@
         }, 59000);
 
         var dynTime00 = new Date();
-        document.getElementById('dynTime01').innerHTML = "San_Francisco : " +
+        document.getElementById('PPPdynTime01').innerHTML = "San_Francisco : " +
         dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
-        document.getElementById('dynTime02').innerHTML = "__Hong_Kong : " +
+        document.getElementById('PPPdynTime02').innerHTML = "__Hong_Kong : " +
         dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
     }
     startTime();

@@ -59,9 +59,10 @@ rp:
 
 define help_textHU
 
-	rg -> regen   : regen all hugo
-	s  -> server  : run hugo   server to test local
-	s2 -> server2 : run python server to test local
+	rg -> regen          : regen all hugo
+	s  -> server         : run hugo   server to test local
+	s2 -> server2        : run python server to test local
+	vh -> hugo_version   : show hugo version
     mc01 -> myCodeCopy01 : update all the my html shortcodes
 
 endef
@@ -111,6 +112,10 @@ server:
 
 # hddps://themes.gohugo.io/
 # hddps://gohugo.io/themes/
+
+vh : hugo_version   
+hugo_version   :
+	echo && echo && hugo version && echo && echo
 
 s2: server2
 server2:

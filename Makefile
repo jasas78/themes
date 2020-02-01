@@ -64,6 +64,7 @@ define help_textHU
 	s2   -> server2        : run python server to test local
 	vh   -> hugo_version   : show hugo version
 	gus  -> git_up_dusum   : ga gc up ; du -sh .git ; sync
+	rvs  -> regen_vh_s2    : regen hugo_version server2
     mc01 -> myCodeCopy01   : update all the my html shortcodes
 
 endef
@@ -117,6 +118,9 @@ server:
 vh : hugo_version   
 hugo_version   :
 	echo && echo && hugo version && echo && echo
+
+rvs  : regen_vh_s2    
+regen_vh_s2    : regen hugo_version server2
 
 s2: server2
 server2:

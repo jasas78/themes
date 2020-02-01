@@ -180,7 +180,7 @@ $$(eval $$(call myCodeTP02,$$(aa2),$$(aa3),hugo-theme-w3css-basic/layouts/shortc
 endef
 
 ### find -type d -name shortcodes |grep /layouts/
-myCodehtml_list01:=$(shell ls hugo-theme-docdock/layouts/shortcodes/my*.html)
+myCodehtml_list01:=$(shell ls hugo-theme-docdock/layouts/shortcodes/my*.html 2>/dev/null)
 $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 
 mc01 : myCodeCopy01

@@ -59,11 +59,12 @@ rp:
 
 define help_textHU
 
-	rg -> regen          : regen all hugo
-	s  -> server         : run hugo   server to test local
-	s2 -> server2        : run python server to test local
-	vh -> hugo_version   : show hugo version
-    mc01 -> myCodeCopy01 : update all the my html shortcodes
+	rg   -> regen          : regen all hugo
+	s    -> server         : run hugo   server to test local
+	s2   -> server2        : run python server to test local
+	vh   -> hugo_version   : show hugo version
+	gus  -> git_up_dusum   : ga gc up ; du -sh .git ; sync
+    mc01 -> myCodeCopy01   : update all the my html shortcodes
 
 endef
 
@@ -116,6 +117,11 @@ server:
 vh : hugo_version   
 hugo_version   :
 	echo && echo && hugo version && echo && echo
+
+gus: git_up_dusum 
+git_up_dusum : ga gc up 
+	du -sh .git 
+	sync
 
 s2: server2
 server2:
@@ -184,6 +190,11 @@ $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 
 mc01 : myCodeCopy01
 #mc01 : myCodeCopy02 
+
+gus: git_up_dusum 
+git_up_dusum : ga gc up 
+	du -sh .git 
+	sync
 
 myCodeCopy01:$(myCodehtml_list04)
 

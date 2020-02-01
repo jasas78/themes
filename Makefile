@@ -118,11 +118,6 @@ vh : hugo_version
 hugo_version   :
 	echo && echo && hugo version && echo && echo
 
-gus: git_up_dusum 
-git_up_dusum : ga gc up 
-	du -sh .git 
-	sync
-
 s2: server2
 server2:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )

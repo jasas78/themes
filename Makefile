@@ -63,7 +63,8 @@ define help_textHU
 	s    -> server         : run hugo   server to test local
 	s2   -> server2        : run python server to test local
 	vh   -> hugo_version   : show hugo version
-	gus  -> git_up_dusum   : ga gc up ; du -sh .git ; sync
+	gus  -> git_up_dusum   : ga gc  up ; du -sh .git ; sync
+	gusX -> git_up_dusumX  : ga gcX up ; du -sh .git ; sync
 	rvs  -> regen_vh_s2    : regen hugo_version server2
     mc01 -> myCodeCopy01   : update all the my html shortcodes
 
@@ -190,8 +191,12 @@ $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 mc01 : myCodeCopy01
 #mc01 : myCodeCopy02 
 
-gus: git_up_dusum 
-git_up_dusum : ga gc up 
+gus:  git_up_dusum 
+gusX: git_up_dusumX
+git_up_dusum  : ga gc  up 
+	du -sh .git 
+	sync
+git_up_dusumX : ga gcX up 
 	du -sh .git 
 	sync
 

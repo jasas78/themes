@@ -29,6 +29,7 @@ gitX:
 	swapon                 /swapfile
 
 up:
+	pwd
 	nice -n 19 git push -u origin master
 e:
 	vim Makefile.env
@@ -195,6 +196,7 @@ gus:  git_up_dusum
 gusX: git_up_dusumX
 git_up_dusum  : ga gc  up 
 	du -sh .git 
+	pwd
 	sync
 git_up_dusumX : ga gcX up 
 	du -sh .git 

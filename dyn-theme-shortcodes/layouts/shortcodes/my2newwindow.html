@@ -1,15 +1,14 @@
 {{ if len .Params | eq 1 }}
 <script language="javascript" type="text/javascript">
     <!--
-Newsite= window.open("{{ .Get 0 }}","newsite");
+Newsite= window.open({{ .Get 0 }},"newsite");
 // -->
 </script>
 {{ end }}
 {{ if len .Params | eq 2 }}
 <script language="javascript" type="text/javascript">
     <!--
-window.setTimeout('window.location="{{ .Get 0 }}"; ',{{ .Get 1 }});
-window.setTimeout('window.open("{{ .Get 0}}","newsite")',{{ .Get 1 }});
+window.setTimeout(function(){window.open("{{ .Get 0 }}","newsite")} , {{ .Get 1}});
 // -->
 </script>
 {{ end }}

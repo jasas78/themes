@@ -2,13 +2,13 @@
 <script language="javascript" type="text/javascript">
     <!--
 Newsite= window.open({{ .Get 0 }},"newsite");
-// -->
+-->
 </script>
 {{ end }}
 {{ if len .Params | eq 2 }}
 <script language="javascript" type="text/javascript">
     <!--
 window.setTimeout(function(){window.open("{{ .Get 0 }}","newsite")} , {{ .Get 1}});
-// -->
+-->
 </script>
 {{ end }}

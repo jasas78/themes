@@ -118,13 +118,16 @@ regenBaseCheck:
 	cp CNAME public/
 	@[ -f public/CNAME ] || ( echo "why_no_38 file <public/CNAME> exist ?" ; exit 38 )
 
+rmXML := rm -f docs/sitemap.xml docs/images/favicons/browserconfig.xml docs/resources/images/favicons/browserconfig.xml `find docs/ -name index.xml`
 rgt:regenTestVersion
 regenTestVersion: regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo.testing
+	$(rmXML)
 
 rg:regen
 regen: regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo
+	$(rmXML)
 
 s : server
 server:

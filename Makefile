@@ -119,15 +119,21 @@ regenBaseCheck:
 	@[ -f public/CNAME ] || ( echo "why_no_38 file <public/CNAME> exist ?" ; exit 38 )
 
 rmXML := rm -f docs/sitemap.xml docs/images/favicons/browserconfig.xml docs/resources/images/favicons/browserconfig.xml `find docs/ -name index.xml`
+updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Makefile ] || \
+	( cat scripts.Hugo/themes/Makefile > scripts.Hugo/Makefile )
+
 rgt:regenTestVersion
 regenTestVersion: regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo.testing
 	$(rmXML)
+	$(updateMakefile)
+
 
 rg:regen
 regen: regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo
 	$(rmXML)
+	$(updateMakefile)
 
 s : server
 server:

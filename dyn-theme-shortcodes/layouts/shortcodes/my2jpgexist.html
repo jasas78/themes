@@ -3,16 +3,11 @@
 {{- $tBase1 := path.Dir .Page.File -}}
 {{- $tBase20 := path.Join "content" $tBase1 -}}
 {{- $tBase3 := readDir $tBase20 -}}
-{{- $found01 := 0 -}}
 {{- range $tBase3 -}}
 {{- $nowName := .Name -}}
 {{- if eq $nowName $cmp1 -}}
-{{- $found01 := 1 -}}
 <a  href="{{ $nowName }}">
 <img src="{{ $nowName }}" style="max-width:99%; max-height:1000px;"></a>
 {{- end -}}
-{{- end -}}
-{{- if eq $found01 0 -}}
-&nbsp;!-- {{ $tBase1 }} : file not found :{{ $cmp1 }}, --
 {{- end -}}
 {{- end -}}

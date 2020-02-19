@@ -60,17 +60,18 @@ rp:
 
 define help_textHU
 
-	rg   -> regen          : regen all hugo
-	s    -> server         : run hugo   server to test local
-	s2   -> server2        : run python server to test local
-	vh   -> hugo_version   : show hugo version
-	gus  -> git_up_dusum   : ga gc  up ; du -sh .git ; sync
-	gusX -> git_up_dusumX  : ga gcX up ; du -sh .git ; sync
-	rvs  -> regen_vh_s2    : regen hugo_version server2
-    mc01 -> myCodeCopy01   : update all the my html shortcodes
+	rg   -> regen            : regen all hugo
+	rgt  -> regenTestVersion : regen all hugo use test version of hugo
+	s    -> server           : run hugo   server to test local
+	s2   -> server2          : run python server to test local
+	vh   -> hugo_version     : show hugo version
+	gus  -> git_up_dusum     : ga gc  up ; du -sh .git ; sync
+	gusX -> git_up_dusumX    : ga gcX up ; du -sh .git ; sync
+	rvs  -> regen_vh_s2      : regen hugo_version server2
 
 endef
 
+#    mc01 -> myCodeCopy01   : update all the my html shortcodes
 
 testHugo1:=$(strip $(firstword $(wildcard scripts.Hugo/config.toml)))
 testHugo2:=$(strip $(firstword $(wildcard config.toml)))
@@ -92,8 +93,7 @@ rgX:
 	cd scripts.Hugo/content/ && . ../3.txt
 	make rg
 
-rg:regen
-regen:
+regenBaseCheck:
 	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_33 file <scripts.Hugo/config.toml> exist ?" ; exit 33 )
 	[ -d scripts.Hugo/themes ] || rsync -a ../themes/  scripts.Hugo/themes/
 	@[ -d scripts.Hugo/themes ] || ( echo "why_no_34 dir <scripts.Hugo/themes> exist ?" ; exit 34 )
@@ -107,6 +107,13 @@ regen:
 	rm -fr scripts.Hugo/resources/_gen/*
 	cp CNAME public/
 	@[ -f public/CNAME ] || ( echo "why_no_38 file <public/CNAME> exist ?" ; exit 38 )
+
+rgt:regenTestVersion
+regenTestVersion: regenBaseCheck
+	cd scripts.Hugo/ && nice -n 19 hugo.testing
+
+rg:regen
+regen: regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo
 
 s : server
@@ -142,7 +149,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg regen     s2 server2     s server rgX gcX :
+rg rgt regen     s2 server2     s server rgX gcX :
 	cd .. && make $@
 
 
@@ -189,8 +196,8 @@ endef
 myCodehtml_list01:=$(shell ls hugo-theme-docdock/layouts/shortcodes/my*.html 2>/dev/null)
 $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 
-mc01 : myCodeCopy01
-#mc01 : myCodeCopy02 
+#mc01 : myCodeCopy01
+##mc01 : myCodeCopy02 
 
 gus:  git_up_dusum 
 gusX: git_up_dusumX

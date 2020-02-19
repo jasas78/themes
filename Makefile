@@ -68,6 +68,9 @@ define help_textHU
 	gus  -> git_up_dusum     : ga gc  up ; du -sh .git ; sync
 	gusX -> git_up_dusumX    : ga gcX up ; du -sh .git ; sync
 	rvs  -> regen_vh_s2      : regen hugo_version server2
+	v1   -> vim test file 01 for hugo
+	v2   -> vim test file 02 for hugo
+	v3   -> vim test file 03 for hugo
 
 endef
 
@@ -87,6 +90,13 @@ $(if $(testHugo1),$(eval UseHugoOnTop:=1),\
 ############################################### UseHugoOnTop  start
 ifdef    UseHugoOnTop
 $(info using    UseHugoOnTop)
+
+v1 :
+	vim `ls scripts.Hugo/layouts/shortcodes/my*.html | head -n 1`
+v2 :
+	vim `ls scripts.Hugo/layouts/shortcodes/my*.html | head -n 2|tail -n 1`
+v3 :
+	vim `ls scripts.Hugo/layouts/shortcodes/my*.html | head -n 3|tail -n 1`
 
 rgX:
 	cd scripts.Hugo/content/ && . ../1.txt
@@ -149,7 +159,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg rgt regen     s2 server2     s server rgX gcX :
+rg rgt regen     s2 server2     s server rgX gcX v1 v2 v3 :
 	cd .. && make $@
 
 

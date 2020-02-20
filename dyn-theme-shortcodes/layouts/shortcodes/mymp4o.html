@@ -10,8 +10,8 @@ type="video/mp4">
 YN032 {{ . }}
 </video>
 <br>
-<a href="{{ . }}"     rel="noopener noreferrer" download target="_blank" >{{ . }} --- -- download 下载download</a><br>
-<a href="{{ . }}.jpg" rel="noopener noreferrer" download target="_blank" >{{ . }}.jpg -- download 下载download</a><br>
+<a href="{{ . }}"     rel="noopener noreferrer" download target="_blank" >--- -- download 下载 {{ . }} </a><br>
+<a href="{{ . }}.jpg" rel="noopener noreferrer" download target="_blank" >jpg -- download 下载 {{ . }}.</a><br>
 {{ end }}
 
 {{ with .Get "text" }}

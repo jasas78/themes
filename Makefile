@@ -124,14 +124,14 @@ updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Make
 
 rgt:regenTestVersion
 regenTestVersion: regenBaseCheck
-	cd scripts.Hugo/ && nice -n 19 hugo.testing
+	cd scripts.Hugo/ && nice -n 19 hugo.testing         && hugo.testing version
 	$(rmXML)
 	$(updateMakefile)
 
 
 rg:regen
 regen: regenBaseCheck
-	cd scripts.Hugo/ && nice -n 19 hugo
+	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
 	$(rmXML)
 	$(updateMakefile)
 

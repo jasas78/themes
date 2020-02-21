@@ -1,0 +1,117 @@
+{{- $cmp1 := .Get "mp4" -}}
+{{- if not $cmp1 -}}
+{{- errorf "\n\n No mp4 para exist. exit ." -}}
+{{- end -}}
+
+{{- $dealwithed := 1 -}}
+{{- $size1 := 0 -}}
+{{- $cmp2 := printf "%s.jpg" $cmp1 -}}
+
+
+{{- $tBase1 := path.Dir .Page.File -}}
+{{- $tBase20 := path.Join "content" $tBase1 -}}
+{{- $tBase3 := readDir $tBase20 -}}
+
+
+
+{{- range $tBase3 -}}
+{{- $nowName := .Name -}}
+{{- if eq $nowName $cmp1 -}}
+{{- $dealwithed = 2 -}}
+{{- $size1 = .Size -}}
+{{/* got [{{- $cmp1 -}}],<br> */}}
+{{- end -}}
+{{- end -}}
+
+{{- if ne $dealwithed 2 -}}
+{{- errorf "\n\n file [%s] not found. exit ." $cmp1 -}}
+{{- end -}}
+
+
+
+{{ $size8 := printf "%d byte" $size1 }}
+{{ $size9 := "" }}
+{{ $size2 := $size1 }}
+{{ $size3 := mul 1.0 $size1 }}
+{{ $size4 := 1.0 }}
+
+{{ if ge $size2 1024 }}
+{{ $size2 = div $size2 1024}}
+{{ if ge $size2 1024 }}
+{{ $size4 = div $size3 1048576  }}
+{{ $size9 = printf "%.1f MiB" $size4 }}
+{{ else }}
+{{ $size4 = div $size3 1024  }}
+{{ $size9 = printf "%.1f KiB" $size4 }}
+{{ end }}
+{{ end }}
+
+
+
+{{- range $tBase3 -}}
+{{- $nowName := .Name -}}
+{{- if eq $nowName $cmp2 -}}
+{{- $dealwithed = 3 -}}
+{{/* got [{{- $cmp2 -}}],<br> */}}
+{{- end -}}
+{{- end -}}
+
+{{- if ne $dealwithed 3 -}}
+{{- errorf "\n\n file [%s] not found. exit ." $cmp2 -}}
+{{- end -}}
+
+{{- $downshow1 := "click to download video file" -}}
+{{- $downshow2 := "click to download jpg   file" -}}
+{{- $downshow3 := printf "%s %s" $size8 $size9 -}}
+{{- $downshow4 := "If some phones display abnormally, " -}}
+{{- $downshow5 := "Please play in landscape or full screen" -}}
+
+
+{{- $currentLang := .Site.Language.Lang -}}
+{{- if eq "cn" $currentLang -}}
+{{- $downshow1 = "点击下载原始视频文件" -}}
+{{- $downshow2 = "点击下载 jpg 文件:" -}}
+{{- $downshow4 = "如果部分手机显示不正常，" -}}
+{{- $downshow5 = "请横屏播放，或者全屏播放" -}}
+{{- end -}}
+
+
+
+<div Width="100%" style="border:1px solid Blue;font-size:150%" >
+<video preload="none" controls style="margin-bottom:2px;Max-Width:100%"
+    poster="{{- $cmp2 -}}" >
+    <source type="video/mp4" src="{{- $cmp1 -}}">
+    YN032 {{- $cmp1 -}}
+</video>
+
+<br>
+<a rel="noopener noreferrer" 
+   style="border:none solid Blue;font-size:150%; background-color:AliceBlue; "
+   download 
+   target="_blank" 
+   href="{{- $cmp1 -}}"     
+   > {{- $downshow1 -}} </a><br>
+
+<a rel="noopener noreferrer" 
+   download 
+   target="_blank" 
+   style="border:none solid Blue;font-size:150%; background-color:Gray; "
+   href="{{- $cmp2 -}}"     
+   > {{- $downshow2 -}} </a><br>
+
+{{ $downshow3 }}<br>
+{{ $downshow4 }}<br>
+{{ $downshow5 }}<br>
+
+</div> 
+
+{{/*
+<div> 
+    cmp1,{{- $cmp1 -}},<br>
+    size1,{{- $size1 -}},<br>
+    size8,{{- $size8 -}},<br>
+    size9,{{- $size9 -}},<br>
+    sizeT,{{- printf "%f" (div 1.0 3) -}},<br>
+    cmp2,{{- $cmp2 -}},<br>
+</div> 
+*/}}

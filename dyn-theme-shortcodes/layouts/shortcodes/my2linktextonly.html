@@ -1,0 +1,30 @@
+{{- if .Get "link" -}}
+<a href="{{- .Get "link" -}}" 
+   style="background-color:Gray; color:Tomato; border:50px; font-size:300%; border:5px MediumSeaGreen solid;"
+   rel="noopener noreferrer" 
+   target="_blank" 
+   > 
+   {{- $var_my2linktextonly := "99" -}}
+   {{- $currentLang := .Site.Language.Lang -}}
+
+   {{- if eq "en" $currentLang -}}
+   {{- $var_my2linktextonly = "1" -}}
+   {{- with .Get "en" -}}
+   {{- . -}}
+   {{- else -}}
+   the origin source link
+   {{- end -}}
+   {{- end -}}
+
+   {{- if eq "cn" $currentLang -}}
+   {{- $var_my2linktextonly = "2" -}}
+   {{- with .Get "cn" -}}
+   {{- . -}}
+   {{- else -}}
+   原始來源網址
+   {{- end -}}
+   {{- end -}}
+
+   {{- if eq $var_my2linktextonly "99" -}}{{- .Get "link" -}}{{- end -}}
+</a>
+{{- end -}}

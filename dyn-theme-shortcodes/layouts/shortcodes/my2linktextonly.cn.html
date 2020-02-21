@@ -1,8 +1,0 @@
-{{- if .Get "link" -}}
-<a href="{{ .Get "link" }}" 
-   style="background-color:Gray; color:Tomato; border:50px; font-size:300%; border:5px MediumSeaGreen solid;"
-   rel="noopener noreferrer" 
-   target="_blank" 
-   > {{- with .Get "cn" -}}{{ . }}
-   {{- else -}}{{- .Get "link" -}}{{- end -}} </a>
-{{ end }}

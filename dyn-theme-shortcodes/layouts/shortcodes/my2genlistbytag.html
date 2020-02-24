@@ -2,7 +2,7 @@
 <div>
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
     {{- range $key, $value := $taxonomy -}}
-    {{- if eq $key $para1 -}}
+    {{- if or (eq $key $para1) ( eq $key "" ) -}}
     {{- range $index, $element := $value.Pages -}}
 
     {{- $idx := mod $index 3 -}}

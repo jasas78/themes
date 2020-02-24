@@ -3,10 +3,18 @@
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
     {{- range $key, $value := $taxonomy -}}
     {{- if eq $key $para1 -}}
-    {{- range $value.Pages -}}
-    <div Width="100%" style="border:2px solid green;" >
-        <a href="{{- .Permalink -}}" rel="noopener noreferrer" target="_blank" > 
-            {{- .LinkTitle -}} </a> </div>
+    {{- range $index, $element := $value.Pages -}}
+
+    {{- $idx := mod $index 3 -}}
+    {{- if (eq $index 0) -}} <div Width="100%" style="border:2px solid green;" > {{- end -}}
+    {{- if (eq $index 1) -}} <div Width="100%" style="border:2px solid blue;" > {{- end -}}
+    {{- if (eq $index 2) -}} <div Width="100%" style="border:2px solid red;" > {{- end -}}
+
+        <a rel="noopener noreferrer" 
+           target="_blank" 
+           href="{{- .Permalink -}}" 
+           > 
+           {{- .LinkTitle -}} </a> </div>
     {{- end -}}
     {{- end -}}
     {{- end -}}

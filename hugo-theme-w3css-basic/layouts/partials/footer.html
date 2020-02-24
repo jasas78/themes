@@ -15,12 +15,6 @@
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
 
-    {{- if $.Site.Params.version }}
-    <div class="w3-col w3-third">
-      <h4>{{ $.Hugo.Version }}</h4>
-    </div> <!-- w3-col -->
-    {{- end }} {{/* if aboutUs */}}
-
     {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
       {{ `<!-- Site.Params.recentPosts  -->` | safeHTML }}
     {{- end}}
@@ -28,7 +22,8 @@
     {{- if $.Site.Params.recentPosts.enableFooter }}
     {{- if $.Site.Params.recentPosts.footerNumOfPosts }}
     <div class="w3-col w3-third">
-      <h4>{{ default `Posts` (i18n `recentPosts`) }}</h4>
+        <h4>{{ default `Posts` (i18n `recentPosts`) }} {{ $.Site.Params.version }} </h4>
+
       {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
         {{ `<!-- range first Site.Params.footerNumOfPosts .Site.RegularPages "Section" "blog" -->` | safeHTML }}
       {{- end}}

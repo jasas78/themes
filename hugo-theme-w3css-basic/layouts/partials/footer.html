@@ -15,6 +15,12 @@
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
 
+    {{- if $.Site.Params.version }}
+    <div class="w3-col w3-third">
+      <h4>{{ $.Hugo.Version }}</h4>
+    </div> <!-- w3-col -->
+    {{- end }} {{/* if aboutUs */}}
+
     {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
       {{ `<!-- Site.Params.recentPosts  -->` | safeHTML }}
     {{- end}}

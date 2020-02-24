@@ -4,7 +4,7 @@
     {{- range $key, $value := $taxonomy -}}
     {{- if eq $key $para1 -}}
     {{- range $value.Pages -}}
-    <div Width="100%" style="border:1px solid gray;" >
+    <div Width="100%" style="border:2px solid gray;" >
         <a href="{{- .Permalink -}}" rel="noopener noreferrer" target="_blank" > 
             {{- .LinkTitle -}} </a> </div>
     {{- end -}}

@@ -2,23 +2,36 @@
 {{- $paraN := len .Params -}}
 <div>
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
-    {{- range $key, $value := $taxonomy -}}
-    {{- if or (eq $key $para1) ( eq 0 $paraN ) -}}
-    {{- range $index, $element := $value.Pages -}}
+    {{- if eq 0 $paraN -}}
+    <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a> 
+        <ul>
+    {{- end }}
 
-    {{- $idx := mod $index 3 -}}
-    {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
-    {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
-    {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+            {{- range $key, $value := $taxonomy -}}
+            {{- if eq 0 $paraN -}}
+            <li> {{ $key }} </li>
+            {{- end }}
 
-        <a rel="noopener noreferrer" 
-           target="_blank" 
-           href="{{- .Permalink -}}" 
-           > 
-           {{ add $index 1 }} :
-           {{- .LinkTitle -}} </a> </div><br>
-   {{- end -}}
-   {{- end -}}
-   {{- end -}}
-   {{- end -}}
-    </div>
+                {{- if or ( and (eq $key $para1) ( ne 0 $paraN )) ( eq 0 $paraN ) -}}
+                        {{- range $index, $element := $value.Pages -}}
+    
+                        {{- $idx := mod $index 3 -}}
+                        {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
+                        {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
+                        {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+    
+                            <a rel="noopener noreferrer" 
+                               target="_blank" 
+                               href="{{- .Permalink -}}" 
+                               > 
+                               {{ add $index 1 }} :
+                               {{- .LinkTitle -}} </a> </div><br>
+                       {{- end -}}
+                {{- end -}}
+            {{- end -}}
+
+    {{- if eq 0 $paraN -}}
+        </ul>
+    {{- end }}
+    {{- end -}} 
+</div>

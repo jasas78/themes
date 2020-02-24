@@ -6,9 +6,9 @@
     {{- range $index, $element := $value.Pages -}}
 
     {{- $idx := mod $index 3 -}}
-    {{- if (eq $index 0) -}} <div Width="100%" style="border:2px solid green;" > {{- end -}}
-    {{- if (eq $index 1) -}} <div Width="100%" style="border:2px solid blue;" > {{- end -}}
-    {{- if (eq $index 2) -}} <div Width="100%" style="border:2px solid red;" > {{- end -}}
+    {{- if (eq $idx 0) -}} <div Width="100%" style="border:2px solid green;" > {{- end -}}
+    {{- if (eq $idx 1) -}} <div Width="100%" style="border:2px solid blue;" > {{- end -}}
+    {{- if (eq $idx 2) -}} <div Width="100%" style="border:2px solid red;" > {{- end -}}
 
         <a rel="noopener noreferrer" 
            target="_blank" 

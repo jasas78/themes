@@ -1,8 +1,9 @@
 {{- $para1 := .Get 0 -}}
+{{- $paraN := len .Params -}}
 <div>
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
     {{- range $key, $value := $taxonomy -}}
-    {{- if or (eq $key $para1) ( len .Params| eq 0) -}}
+    {{- if or (eq $key $para1) ( eq 0 $paraN ) -}}
     {{- range $index, $element := $value.Pages -}}
 
     {{- $idx := mod $index 3 -}}

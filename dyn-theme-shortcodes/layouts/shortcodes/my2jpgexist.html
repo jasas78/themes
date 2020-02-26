@@ -6,7 +6,7 @@
 {{- range $tBase3 -}}
 {{- $nowName := .Name -}}
 {{- if eq $nowName $cmp1 -}}
-<h1> &darr;&darr;&darr; 以下图片可以点击放大 &darr;&darr;&darr; </h1>
+<h1 style="color:red"> &darr;&darr;&darr; 以下图片可以点击放大 &darr;&darr;&darr; </h1>
 <a  href="{{ $nowName }}">
 <img src="{{ $nowName }}" style="max-width:99%; max-height:1000px;"></a>
 {{- end -}}

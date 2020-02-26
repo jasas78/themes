@@ -1,18 +1,67 @@
 {{- $para1 := .Get 0 -}}
 {{- $paraN := len .Params -}}
 <div>
+{{- if eq 0 $paraN -}}
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
-    {{- if eq 0 $paraN -}}
     <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a> 
         <ul>
-    {{- end }}
-
             {{- range $key, $value := $taxonomy -}}
-            {{- if eq 0 $paraN -}}
             <li> {{ $key }} </li>
-            {{- end }}
+                        {{- range $index, $element := $value.Pages -}}
+    
+                        {{- $idx := mod $index 3 -}}
+                        {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
+                        {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
+                        {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+    
+                            <a rel="noopener noreferrer" 
+                               target="_blank" 
+                               href="{{- .Permalink -}}" 
+                               > 
+                               {{ add $index 1 }} :
+                               {{- .LinkTitle -}} </a> </div><br>
+                       {{- end -}}
+            {{- end -}}
+        </ul>
+    {{- end -}} 
+{{- else -}} 
+{{- if eq $para1 "alltags" -}}
+    {{- $index := 0 -}}
+    {{- $yn := 0 -}}
+    {{- $year2 := time "0001-01-01" -}}
+    {{- range $nowpage := $.Site.RegularPages -}}
+        {{- $yn = 0 -}}
+        {{- $year1 := .Date -}}
+        {{- range $tagnow := .Params.tags -}}
+            {{- if (eq $tagnow "front") -}}
+                {{- $yn = 1 -}}
+            {{- end -}}
+            {{- if eq $year1 $year2 -}}
+                {{- $yn = 1 -}}
+            {{- end -}}
+        {{- end -}}
 
-                {{- if or ( and (eq $key $para1) ( ne 0 $paraN )) ( eq 0 $paraN ) -}}
+        {{- if (eq $yn 0) -}}
+    
+            {{- $idx := mod $index 3 -}}
+            {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
+            {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
+            {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+           
+                <a rel="noopener noreferrer" 
+                   target="_blank" 
+                   href="{{- .Permalink -}}" 
+                   > 
+                   {{ add $index 1 }} :
+                   {{- .LinkTitle -}} 
+                </a> </div><br>
+            {{- $index = add $index 1 -}}
+        {{- end -}}
+    {{- end -}}
+{{- else -}} 
+    {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
+            {{- range $key, $value := $taxonomy -}}
+                {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}
     
                         {{- $idx := mod $index 3 -}}
@@ -29,9 +78,7 @@
                        {{- end -}}
                 {{- end -}}
             {{- end -}}
-
-    {{- if eq 0 $paraN -}}
-        </ul>
-    {{- end }}
     {{- end -}} 
+{{- end -}} 
+{{- end -}} 
 </div>

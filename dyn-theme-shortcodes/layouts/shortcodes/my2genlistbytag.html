@@ -28,17 +28,16 @@
 {{- if eq $para1 "alltags" -}}
     {{- $index := 0 -}}
     {{- $yn := 0 -}}
-    {{- $year2 := time "0001-01-01" -}}
     {{- range $nowpage := $.Site.RegularPages -}}
         {{- $yn = 0 -}}
+
         {{- $year1 := .Date -}}
-        {{- range $tagnow := .Params.tags -}}
-            {{- if (eq $tagnow "front") -}}
-                {{- $yn = 1 -}}
-            {{- end -}}
-            {{- if eq $year1 $year2 -}}
-                {{- $yn = 1 -}}
-            {{- end -}}
+        {{- if $year1.IsZero -}}
+            {{- $yn = add $yn 1 -}}
+        {{- end -}}
+
+        {{- if eq (.Params.tags) nil -}}
+                {{- $yn = add $yn 200 -}}
         {{- end -}}
 
         {{- if (eq $yn 0) -}}
@@ -54,6 +53,10 @@
                    > 
                    {{ add $index 1 }} :
                    {{- .LinkTitle -}} 
+                   <!-- 
+                   "<==>" {{- $year1.UTC.Format "2006-01-02 T 15:04:05 -0700" -}}
+                   "<==>" {{- $year1.Local.Format "2006-01-02 T 15:04:05 -0700" -}}
+                   -->
                 </a> </div><br>
             {{- $index = add $index 1 -}}
         {{- end -}}

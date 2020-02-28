@@ -28,6 +28,7 @@
 {{- if eq $para1 "alltags" -}}
     {{- $index := 0 -}}
     {{- $yn := 0 -}}
+    {{- $nowName := "" -}}
     {{- range $nowpage := $.Site.RegularPages -}}
         {{- $yn = 0 -}}
 
@@ -54,6 +55,7 @@
                    {{ add $index 1 }} :
                    {{- .LinkTitle -}} 
                    <!-- 
+                   "<==>" {{- .Params.author -}}
                    "<==>" {{- $year1.UTC.Format "2006-01-02 T 15:04:05 -0700" -}}
                    "<==>" {{- $year1.Local.Format "2006-01-02 T 15:04:05 -0700" -}}
                    -->

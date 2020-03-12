@@ -70,7 +70,7 @@
 {{- $currentLang := .Site.Language.Lang -}}
 {{- if eq "cn" $currentLang -}}
 {{- $downshow1 = "点击下载原始视频文件" -}}
-{{- $downshow2 = "点击下载 jpg 文件:" -}}
+{{- $downshow2 = "点击下载 jpg 文件" -}}
 {{- $downshow4 = "如果部分手机显示不正常，" -}}
 {{- $downshow5 = "请横屏播放，或者全屏播放" -}}
 {{- end -}}
@@ -100,6 +100,8 @@
    href="{{- $cmp1 -}}"     
    title="{{- $cmp1 -}}"     
    > {{- $downshow1 -}} </a><br>
+{{ $downshow3 }}<br>
+
 
 <a rel="noopener noreferrer" 
    download 
@@ -108,8 +110,6 @@
    href="{{- $cmp2 -}}"     
    title="{{- $cmp2 -}}"     
    > {{- $downshow2 -}} </a><br>
-
-{{ $downshow3 }}<br>
 
 </div> 
 

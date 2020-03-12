@@ -77,10 +77,18 @@
 
 
 
-<div Width="100%" style="border:1px solid Blue;font-size:150%" >
-<video preload="none" controls style="margin-bottom:2px;Max-Width:100%"
+<div 
+    title = "{{ $downshow4 }} {{ $downshow5 }}"
+    Width="100%" 
+    style="border:1px solid Blue;font-size:150%" >
+<video 
+    preload="none" 
+    controls 
+    style="margin-bottom:2px;Max-Width:100%"
     poster="{{- $cmp2 -}}" >
-    <source type="video/mp4" src="{{- $cmp1 -}}">
+    <source 
+    type="video/mp4" 
+    src="{{- $cmp1 -}}">
     YN032 {{- $cmp1 -}}
 </video>
 
@@ -90,6 +98,7 @@
    download 
    target="_blank" 
    href="{{- $cmp1 -}}"     
+   title="{{- $cmp1 -}}"     
    > {{- $downshow1 -}} </a><br>
 
 <a rel="noopener noreferrer" 
@@ -97,11 +106,10 @@
    target="_blank" 
    style="border:none solid Blue;font-size:150%; background-color:Gray; "
    href="{{- $cmp2 -}}"     
+   title="{{- $cmp2 -}}"     
    > {{- $downshow2 -}} </a><br>
 
 {{ $downshow3 }}<br>
-{{ $downshow4 }}<br>
-{{ $downshow5 }}<br>
 
 </div> 
 

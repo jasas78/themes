@@ -1,30 +1,32 @@
 {{- if .Get "link" -}}
-<a href="{{- .Get "link" -}}" 
-   style="background-color:Gray; color:Tomato; border:50px; font-size:300%; border:5px MediumSeaGreen solid;"
-   rel="noopener noreferrer" 
-   target="_blank" 
-   > 
    {{- $var_my2linktextonly := "99" -}}
+   {{- $var_my2linktextShow := .Get "link" -}}
    {{- $currentLang := .Site.Language.Lang -}}
 
    {{- if eq "en" $currentLang -}}
    {{- $var_my2linktextonly = "1" -}}
-   {{- with .Get "en" -}}
-   {{- . -}}
+   {{- if .Get "en" -}}
+   {{- $var_my2linktextShow = .Get "en" -}}
    {{- else -}}
-   the origin source link
+   {{- $var_my2linktextShow = " the origin source link " -}}
    {{- end -}}
    {{- end -}}
 
    {{- if eq "cn" $currentLang -}}
    {{- $var_my2linktextonly = "2" -}}
-   {{- with .Get "cn" -}}
-   {{- . -}}
+   {{- if .Get "cn" -}}
+   {{- $var_my2linktextShow = .Get "cn" -}}
    {{- else -}}
-   原始來源網址
+   {{- $var_my2linktextShow = " 原始來源網址 " -}}
    {{- end -}}
    {{- end -}}
 
-   {{- if eq $var_my2linktextonly "99" -}}{{- .Get "link" -}}{{- end -}}
+<a href="{{- .Get "link" -}}" 
+   title="{{- .Get "link" -}}" 
+   style="background-color:Gray; color:Tomato; border:50px; font-size:300%; border:5px MediumSeaGreen solid;"
+   rel="noopener noreferrer" 
+   target="_blank" 
+   > 
+   {{- $var_my2linktextShow -}}
 </a>
 {{- end -}}

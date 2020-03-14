@@ -1,17 +1,23 @@
 {{- $cmp1 := .Get "mp4" -}}
+{{- $cmp1t := "mp4" -}}
+{{- with .Get "mp3" -}} {{- $cmp1 = . -}} {{- $cmp1t = "mp3" -}} {{- end -}}
+{{- with .Get "wav" -}} {{- $cmp1 = . -}} {{- $cmp1t = "wav" -}} {{- end -}}
+{{- with .Get "ogg" -}} {{- $cmp1 = . -}} {{- $cmp1t = "ogg" -}} {{- end -}}
+
+{{- with .Get "mp3" -}} {{- $cmp1 = .Get "mp3" -}} {{- $cmp1t = "mp3" -}} {{- end -}}
+{{- with .Get "wav" -}} {{- $cmp1 = .Get "wav" -}} {{- $cmp1t = "wav" -}} {{- end -}}
+{{- with .Get "ogg" -}} {{- $cmp1 = .Get "ogg" -}} {{- $cmp1t = "ogg" -}} {{- end -}}
+
 {{- if not $cmp1 -}}
 {{- errorf "\n\n No mp4 para exist. exit ." -}}
 {{- end -}}
 
 {{- $dealwithed := 1 -}}
 {{- $size1 := 0 -}}
-{{- $cmp2 := printf "%s.jpg" $cmp1 -}}
-
 
 {{- $tBase1 := path.Dir .Page.File -}}
 {{- $tBase20 := path.Join "content" $tBase1 -}}
 {{- $tBase3 := readDir $tBase20 -}}
-
 
 
 {{- range $tBase3 -}}
@@ -48,73 +54,43 @@
 
 
 
-{{- range $tBase3 -}}
-{{- $nowName := .Name -}}
-{{- if eq $nowName $cmp2 -}}
-{{- $dealwithed = 3 -}}
-{{/* got [{{- $cmp2 -}}],<br> */}}
-{{- end -}}
-{{- end -}}
-
-{{- if ne $dealwithed 3 -}}
-{{- errorf "\n\n file [%s] not found. exit ." $cmp2 -}}
-{{- end -}}
-
 {{- $downshow1 := "click to download video file" -}}
-{{- $downshow2 := "click to download jpg   file" -}}
 {{- $downshow3 := printf "%s , %s" $size8 $size9 -}}
-{{- $downshow4 := "If some phones display abnormally, " -}}
-{{- $downshow5 := "Please play in landscape or full screen" -}}
 
 
 {{- $currentLang := .Site.Language.Lang -}}
 {{- if eq "cn" $currentLang -}}
 {{- $downshow1 = "点击下载原始视频文件" -}}
-{{- $downshow2 = "点击下载 jpg 文件" -}}
-{{- $downshow4 = "如果部分手机显示不正常，" -}}
-{{- $downshow5 = "请横屏播放，或者全屏播放" -}}
 {{- end -}}
 
 
 
 <div 
-    title = "{{ $downshow4 }} {{ $downshow5 }}"
+    title = "{{ $cmp1 }} {{ $downshow3 }}"
     Width="100%" 
-    style="border:2px dotted Blue;font-size:150%" >
-<video 
+    style="border:2px dotted Red;font-size:150%" >
+<audio 
     preload="none" 
     controls 
-    style="margin-bottom:2px;Max-Width:100%"
-    poster="{{- $cmp2 -}}" >
+    style="margin-bottom:2px;Max-Width:100%;width: 100%;">
     <source 
-    type="video/mp4" 
+    type="audio/{{- $cmp1t -}}" 
     src="{{- $cmp1 -}}">
     YN032 {{- $cmp1 -}}
-</video>
+</audio>
 
-<br>
 <a rel="noopener noreferrer" 
-   style="border:none dotted Blue;font-size:150%; background-color:AliceBlue; "
+   style="border:none dotted Red;font-size:150%; background-color:AliceBlue; "
    download 
    target="_blank" 
    href="{{- $cmp1 -}}"     
    title="{{- $cmp1 -}}"     
    > {{- $downshow1 -}} </a><br>
 {{ $downshow3 }}
-<i style="font-size:60%;color:blue">{{- $cmp1 -}}</i>
-<br>
+<i style="font-size:70%;color:blue">{{- $cmp1 -}}</i>
 
 
-<a rel="noopener noreferrer" 
-   download 
-   target="_blank" 
-   style="border:none dotted Blue;font-size:112%; background-color:Gray; "
-   href="{{- $cmp2 -}}"     
-   title="{{- $cmp2 -}}"     
-   > {{- $downshow2 -}} </a><br>
 
-<i style="font-size:70%;color:red">{{- $downshow4 -}}</i>
-<i style="font-size:70%;color:green">{{- $downshow5 -}}</i>
 </div> 
 
 {{/*

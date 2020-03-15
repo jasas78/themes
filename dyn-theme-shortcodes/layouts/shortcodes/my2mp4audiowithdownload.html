@@ -54,13 +54,13 @@
 
 
 
-{{- $downshow1 := "click to download video file" -}}
+{{- $downshow1 := "download audio " -}}
 {{- $downshow3 := printf "%s , %s" $size8 $size9 -}}
 
 
 {{- $currentLang := .Site.Language.Lang -}}
 {{- if eq "cn" $currentLang -}}
-{{- $downshow1 = "点击下载原始视频文件" -}}
+{{- $downshow1 = "下载音频" -}}
 {{- end -}}
 
 
@@ -68,7 +68,7 @@
 <div 
     title = "{{ $cmp1 }} {{ $downshow3 }}"
     Width="100%" 
-    style="border:2px dotted Red;font-size:150%" >
+    style="border:2px dotted Red;font-size:100%" >
 <audio 
     preload="none" 
     controls 
@@ -80,13 +80,13 @@
 </audio>
 
 <a rel="noopener noreferrer" 
-   style="border:none dotted Red;font-size:150%; background-color:AliceBlue; "
+   style="border:none dotted Red;font-size:100%; background-color:AliceBlue; "
    download 
    target="_blank" 
    href="{{- $cmp1 -}}"     
    title="{{- $cmp1 -}}"     
-   > {{- $downshow1 -}} </a><br>
-{{ $downshow3 }}
+   > {{- $downshow1 -}} </a>
+<strong style="font-size:70%;color:blue">{{- $downshow3 -}}</strong>
 <i style="font-size:70%;color:blue">{{- $cmp1 -}}</i>
 
 

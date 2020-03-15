@@ -60,8 +60,8 @@
 {{- errorf "\n\n file [%s] not found. exit ." $cmp2 -}}
 {{- end -}}
 
-{{- $downshow1 := "click to download video file" -}}
-{{- $downshow2 := "click to download jpg   file" -}}
+{{- $downshow1 := "download video " -}}
+{{- $downshow2 := "download jpg " -}}
 {{- $downshow3 := printf "%s , %s" $size8 $size9 -}}
 {{- $downshow4 := "If some phones display abnormally, " -}}
 {{- $downshow5 := "Please play in landscape or full screen" -}}
@@ -69,10 +69,10 @@
 
 {{- $currentLang := .Site.Language.Lang -}}
 {{- if eq "cn" $currentLang -}}
-{{- $downshow1 = "点击下载原始视频文件" -}}
-{{- $downshow2 = "点击下载 jpg 文件" -}}
-{{- $downshow4 = "如果部分手机显示不正常，" -}}
-{{- $downshow5 = "请横屏播放，或者全屏播放" -}}
+{{- $downshow1 = "下载视频" -}}
+{{- $downshow2 = "下载 jpg " -}}
+{{- $downshow4 = "部分手机显示不正常，" -}}
+{{- $downshow5 = "请横屏播放，或全屏播放" -}}
 {{- end -}}
 
 

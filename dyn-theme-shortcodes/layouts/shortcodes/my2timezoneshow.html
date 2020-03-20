@@ -1,0 +1,35 @@
+{{- if .Get 0 -}}
+<div Width="100%" style="border:1px solid Tomato;font-size:200%" >
+    {{ range $elem_index, $elem_val := $.Params -}}
+    {{- if eq $elem_index 0 -}}
+    {{ . -}}
+    {{- else -}}
+    <br>
+    {{ . -}}
+    {{- end -}}
+    {{- end -}}
+</div> 
+    {{- end -}}
+
+
+
+
+<a id="PPPdynTime01"></a>
+<a id="PPPdynTime02"></a>
+<script>
+(function () {
+    function startTime() {
+        t = setTimeout(function () {
+            startTime()
+        }, 59000);
+
+        var dynTime00 = new Date();
+        document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
+        dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+        document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
+        dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
+    }
+    startTime();
+})();
+</script>
+

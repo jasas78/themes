@@ -9,6 +9,25 @@ table, th, td {
     border: 1px solid black;
 }
         </style>
+
+        <script>
+            (function () {
+                function startTime() {
+                    t = setTimeout(function () {
+                        startTime()
+                    }, 590 );
+
+                    var dynTime00 = new Date();
+                    document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
+                        dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+                    document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
+                        dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
+                }
+                startTime();
+            })();
+        </script>
+
+
     </head>
     <body>
 
@@ -29,6 +48,8 @@ table, th, td {
                     {{- $nowZone = $elem_2 -}}
                 </td>
                 {{- end }}
+
+                <td> <a id="TTTdynTime_{{- $elem_index -}}"> </a> </td>
             </tr>
             {{- end }}
         </table>
@@ -42,20 +63,3 @@ table, th, td {
 
 <a id="PPPdynTime01"></a>
 <a id="PPPdynTime02"></a>
-<script>
-    (function () {
-        function startTime() {
-            t = setTimeout(function () {
-                startTime()
-            }, 59000);
-
-            var dynTime00 = new Date();
-            document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
-                dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
-            document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
-                dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
-        }
-        startTime();
-    })();
-</script>
-

@@ -86,6 +86,8 @@ $(if $(testHugo1),$(eval UseHugoOnTop:=1),\
 	$(if $(testHugo3),$(eval UseInTheme:=1),$(error "not_fit_dir"))\
 	))
 
+pythonVersion:=$(shell python --version |awk '{printf $$2}'|awk -F. '{print $$1}')
+
 ############################################### UseHugoOnTop  start
 ############################################### UseHugoOnTop  start
 ############################################### UseHugoOnTop  start
@@ -151,10 +153,13 @@ hugo_version   :
 rvs  : regen_vh_s2    
 regen_vh_s2    : regen hugo_version server2
 
+pyHttp2:=SimpleHTTPServer
+pyHttp3:=http.server
+pyHttP:=$(pyHttp$(pythonVersion))
 s2: server2
 server2:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
-	cd public/ && python -m SimpleHTTPServer 33221
+	cd public/ && python -m $(pyHttP) 33221
 
 s3: server3
 server3:

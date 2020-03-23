@@ -6,13 +6,33 @@
     </head>
     <body>
 
-        {{/* my2timezoneshow */}}
-
-        xx__[{{ .Title }}]__yy1
-        <br>
-
-        xx__[{{/* .xxxyyy */}}]__yy2
-        <br>
+        {{ range $elem_index, $elem_val := .Params.timeZoneSetS }}
+        [{{$elem_index}}] , [{{$elem_val}}] <br>
+        {{ end }}
 
     </body>
 </html>
+
+
+
+
+
+<a id="PPPdynTime01"></a>
+<a id="PPPdynTime02"></a>
+<script>
+(function () {
+    function startTime() {
+        t = setTimeout(function () {
+            startTime()
+        }, 59000);
+
+        var dynTime00 = new Date();
+        document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
+        dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+        document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
+        dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
+    }
+    startTime();
+})();
+</script>
+

@@ -11,37 +11,32 @@ table, th, td {
         </style>
 
         <script>
-            (function () {
-                function TTTstartTime() {
-                    t = setTimeout(function () {
-                        TTTstartTime()
-                    }, 999 );
+            var TTTmyVar = setInterval(TTTmyTimer, 2700);
+function TTTmyTimer() {
 
-                    var TTTdynTime00 = new Date();
+    var TTTdynTime00 = new Date();
 
-                    {{  range $elem_index, $elem_val := .Params.timeZoneSetS -}}
-                    {{- $elem_25 := "" -}}
-                    {{- $elem_26 := "" -}}
-                    {{- range $elem_23, $elem_24 := split $elem_val "," -}}
-                    {{- if eq 0 $elem_23 -}}
-                    {{- $elem_25 = $elem_24 -}}
-                    {{- end -}}
-                    {{- if eq 1 $elem_23 -}}
-                    {{- $elem_26 = $elem_24 -}}
-                    {{- end -}}
-                    {{- end  }}
-                    document.getElementById('TTTdynTime_{{- $elem_index -}}').innerHTML = 
-                        TTTdynTime00.toLocaleString("en-US", {timeZone: {{- $elem_26 -}}});
-                    {{ end }}
+    {{  range $elem_index, $elem_val := .Params.timeZoneSetS -}}
+    {{- $elem_25 := "" -}}
+    {{- $elem_26 := "" -}}
+    {{- range $elem_23, $elem_24 := split $elem_val "," -}}
+    {{- if eq 0 $elem_23 -}}
+    {{- $elem_25 = $elem_24 -}}
+    {{- end -}}
+    {{- if eq 1 $elem_23 -}}
+    {{- $elem_26 = $elem_24 -}}
+    {{- end -}}
+    {{- end  }}
+    document.getElementById('TTTdynTime_{{- $elem_index -}}').innerHTML = 
+        TTTdynTime00.toLocaleString("en-US", {timeZone: {{- $elem_26 -}}});
+    {{ end }}
 
-                }
-                TTTstartTime();
-            })();
+}
         </script>
 
 
     </head>
-    <body>
+    <body onload="TTTmyTimer()">
 
         <table>
             <tr>

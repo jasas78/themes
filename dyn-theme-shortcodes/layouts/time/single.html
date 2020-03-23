@@ -15,18 +15,24 @@ table, th, td {
                 function TTTstartTime() {
                     t = setTimeout(function () {
                         TTTstartTime()
-                    }, 590 );
+                    }, 999 );
 
                     var TTTdynTime00 = new Date();
-                    document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
-                        TTTdynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
 
-
-                    {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
-                    {{- range $elem_2, $elem_2 := split $elem_val "," }}
-                    {{- end }}
-                    {{- end }}
-
+                    {{  range $elem_index, $elem_val := .Params.timeZoneSetS -}}
+                    {{- $elem_25 := "" -}}
+                    {{- $elem_26 := "" -}}
+                    {{- range $elem_23, $elem_24 := split $elem_val "," -}}
+                    {{- if eq 0 $elem_23 -}}
+                    {{- $elem_25 = $elem_24 -}}
+                    {{- end -}}
+                    {{- if eq 1 $elem_23 -}}
+                    {{- $elem_26 = $elem_24 -}}
+                    {{- end -}}
+                    {{- end  }}
+                    document.getElementById('TTTdynTime_{{- $elem_index -}}').innerHTML = 
+                        TTTdynTime00.toLocaleString("en-US", {timeZone: {{- $elem_26 -}}});
+                    {{ end }}
 
                 }
                 TTTstartTime();
@@ -45,13 +51,11 @@ table, th, td {
                 <th>localTime</th>
             </tr>
             {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
-            {{  $nowZone := "" }}
             <tr>
                 <td> {{$elem_index}} </td>
-                {{- range $elem_2, $elem_2 := split $elem_val "," }}
+                {{- range $elem_21, $elem_22 := split $elem_val "," }}
                 <td> 
-                    {{- $elem_2 -}} 
-                    {{- $nowZone = $elem_2 -}}
+                    {{- $elem_22 -}} 
                 </td>
                 {{- end }}
 
@@ -63,9 +67,3 @@ table, th, td {
     </body>
 </html>
 
-
-
-
-
-<a id="PPPdynTime01"></a>
-<a id="PPPdynTime02"></a>

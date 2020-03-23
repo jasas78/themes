@@ -12,18 +12,24 @@ table, th, td {
 
         <script>
             (function () {
-                function startTime() {
+                function TTTstartTime() {
                     t = setTimeout(function () {
-                        startTime()
+                        TTTstartTime()
                     }, 590 );
 
-                    var dynTime00 = new Date();
+                    var TTTdynTime00 = new Date();
                     document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
-                        dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
-                    document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
-                        dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
+                        TTTdynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+
+
+                    {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
+                    {{- range $elem_2, $elem_2 := split $elem_val "," }}
+                    {{- end }}
+                    {{- end }}
+
+
                 }
-                startTime();
+                TTTstartTime();
             })();
         </script>
 

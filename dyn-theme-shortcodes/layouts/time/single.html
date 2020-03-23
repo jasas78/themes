@@ -3,12 +3,35 @@
 
         <meta http-equiv="content-type"    content="text/html; charset=utf-8" />
 
+        <style>
+
+table, th, td {
+    border: 1px solid black;
+}
+        </style>
     </head>
     <body>
 
-        {{ range $elem_index, $elem_val := .Params.timeZoneSetS }}
-        [{{$elem_index}}] , [{{$elem_val}}] <br>
-        {{ end }}
+        <table>
+            <tr>
+                <th>idx</th>
+                <th>Name</th>
+                <th>TimeZone</th>
+                <th>localTime</th>
+            </tr>
+            {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
+            {{  $nowZone := "" }}
+            <tr>
+                <td> {{$elem_index}} </td>
+                {{- range $elem_2, $elem_2 := split $elem_val "," }}
+                <td> 
+                    {{- $elem_2 -}} 
+                    {{- $nowZone = $elem_2 -}}
+                </td>
+                {{- end }}
+            </tr>
+            {{- end }}
+        </table>
 
     </body>
 </html>
@@ -20,19 +43,19 @@
 <a id="PPPdynTime01"></a>
 <a id="PPPdynTime02"></a>
 <script>
-(function () {
-    function startTime() {
-        t = setTimeout(function () {
-            startTime()
-        }, 59000);
+    (function () {
+        function startTime() {
+            t = setTimeout(function () {
+                startTime()
+            }, 59000);
 
-        var dynTime00 = new Date();
-        document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
-        dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
-        document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
-        dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
-    }
-    startTime();
-})();
+            var dynTime00 = new Date();
+            document.getElementById('PPPdynTime01').innerHTML = "SFO:" +
+                dynTime00.toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+            document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
+                dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
+        }
+        startTime();
+    })();
 </script>
 

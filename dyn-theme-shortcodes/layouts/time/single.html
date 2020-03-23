@@ -48,6 +48,7 @@ table, th, td {
                 <th>idx</th>
                 <th>Name</th>
                 <th>TimeZone</th>
+                <th>city</th>
                 <th>localTime</th>
             </tr>
             {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
@@ -66,4 +67,13 @@ table, th, td {
 
     </body>
 </html>
+
+{{/* /usr/share/zoneinfo/Asia/Hong_Kong */}}
+{{/* 
+2 
+EDT 
+America/New_York 
+Washington_DC 
+3/23/2020, 5:21:24 AM 
+*/}}
 

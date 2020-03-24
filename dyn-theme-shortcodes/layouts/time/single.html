@@ -48,17 +48,21 @@ function TTTmyTimer() {
                 <th>localTime(now)</th>
             </tr>
             {{- range $elem_index, $elem_val := .Params.timeZoneSetS -}}
-            <tr>
-                <td> {{$elem_index}} </td>
-                {{- range $elem_21, $elem_22 := split $elem_val "," }}
-                <td> 
-                    {{- $elem_22 -}} 
-                </td>
-                {{- end }}
+            {{ if eq 2 ( mod $elem_index 3 ) }}
+            <tr  style="background: #f9d2d2">
+                {{ else }}
+                <tr>
+                    {{ end }}
+                    <td> {{$elem_index}} </td>
+                    {{- range $elem_21, $elem_22 := split $elem_val "," }}
+                    <td> 
+                        {{- $elem_22 -}} 
+                    </td>
+                    {{- end }}
 
-                <td> <a id="TTTdynTime_{{- $elem_index -}}"> </a> </td>
-            </tr>
-            {{- end }}
+                    <td> <a id="TTTdynTime_{{- $elem_index -}}"> </a> </td>
+                </tr>
+                {{- end }}
         </table>
 
     </body>

@@ -65,6 +65,7 @@ define help_textHU
 	s    -> server           : run hugo   server to test local
 	s2   -> server2          : run python server to test local 33221
 	s3   -> server3          : run python server to test local 33223
+	s5   -> server5          : run python server to test local 33225
 	vh   -> hugo_version     : show hugo version
 	gus  -> git_up_dusum     : ga gc  up ; du -sh .git ; sync
 	gusX -> git_up_dusumX    : ga gcX up ; du -sh .git ; sync
@@ -164,7 +165,12 @@ server2:
 s3: server3
 server3:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
-	cd public/ && python -m SimpleHTTPServer 33223
+	cd public/ && python -m $(pyHttP) 33223
+
+s5: server5
+server5:
+	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
+	cd public/ && python -m $(pyHttP) 33225
 
 
 export help_textHU
@@ -179,7 +185,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg rgt regen     s2 server2     s3 server3     s server rgX gcX v1 v2 v3 :
+rg rgt regen     s2 server2     s3 server3     s5 server5     s server rgX gcX v1 v2 v3 :
 	cd .. && make $@
 
 

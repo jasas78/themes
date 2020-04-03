@@ -139,6 +139,7 @@ regen: regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
 	$(rmXML)
 	$(updateMakefile)
+	make m3u
 
 s : server
 server:

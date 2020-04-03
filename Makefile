@@ -73,6 +73,7 @@ define help_textHU
 	v1   -> vim test file 01 for hugo
 	v2   -> vim test file 02 for hugo
 	v3   -> vim test file 03 for hugo
+	m3u  -> gen the m3u
 
 endef
 
@@ -172,6 +173,8 @@ server5:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
 	cd public/ && python -m $(pyHttP) 33225
 
+m3u  :
+	m3u_gen.sh https://`cat CNAME`/blog/ docs/all.m3u8 scripts.Hugo/content/blog/
 
 export help_textHU
 endif
@@ -185,7 +188,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg rgt regen     s2 server2     s3 server3     s5 server5     s server rgX gcX v1 v2 v3 :
+rg rgt regen     s2 server2     s3 server3     s5 server5     s server m3u rgX gcX v1 v2 v3 :
 	cd .. && make $@
 
 

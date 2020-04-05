@@ -175,9 +175,12 @@ server5:
 	cd public/ && python -m $(pyHttP) 33225
 
 m3u  :
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     docs/all.m3u8                       scripts.Hugo/content/blog
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8       scripts.Hugo/content/blog
-	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/all.m3u8   scripts.Hugo/content/blog
+#	m3u8_gen_01.sh https://`cat CNAME`/blog     docs/all.m3u8                                 scripts.Hugo/content/blog
+#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
+#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/all.m3u8             scripts.Hugo/content/blog
+#	mkdir -p scripts.Hugo/content/hot/endothers/
+#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/endothers/all.m3u8   scripts.Hugo/content/blog
+	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
 
 export help_textHU
 endif

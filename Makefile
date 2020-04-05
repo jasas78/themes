@@ -175,8 +175,9 @@ server5:
 	cd public/ && python -m $(pyHttP) 33225
 
 m3u  :
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     docs/all.m3u8                   scripts.Hugo/content/blog
-	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8   scripts.Hugo/content/blog
+#	m3u8_gen_01.sh https://`cat CNAME`/blog     docs/all.m3u8                       scripts.Hugo/content/blog
+#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8       scripts.Hugo/content/blog
+	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/all.m3u8   scripts.Hugo/content/blog
 
 export help_textHU
 endif
@@ -262,8 +263,8 @@ all:
 	@echo "$${help_text9}"
 
 export sed01XXX1:=<div>\
-	{{< my2m3uexist "single.m3u8" "red" >}} \
-	{{< my2m3uexist "single.xspf" "blue" >}} \
+	{{< my2m3uexist "music.m3u8" "red" >}} \
+	{{< my2m3uexist "music.xspf" "blue" >}} \
 	=== VLC , IPTV <\/div>
 
 xxxxxxx:=\

@@ -136,10 +136,10 @@ regenTestVersion: regenBaseCheck
 
 rg:regen
 regen: regenBaseCheck
+	make m3u
 	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
 	$(rmXML)
 	$(updateMakefile)
-	make m3u
 
 s : server
 server:

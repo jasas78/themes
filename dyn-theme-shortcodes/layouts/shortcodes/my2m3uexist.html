@@ -1,13 +1,19 @@
 {{- if ( .Get 0 ) -}}
 {{- $cmp1 := .Get 0 -}}
+{{- $color01 := .Get 1 -}}
+{{- $color02 := .Get 2 -}}
 {{- $tBase1 := path.Dir .Page.File -}}
 {{- $tBase20 := path.Join "content" $tBase1 -}}
 {{- $tBase3 := readDir $tBase20 -}}
 {{- range $tBase3 -}}
 {{- $nowName := .Name -}}
-{{- if eq $nowName $cmp1 -}}
-<a  href="{{ $nowName }}">
+{{- if eq $nowName $cmp1 }}
+<a href="{{ $nowName }}"
+   style="background-color:Gray; color:{{ $color02 }}; font-size:120%; border:5px {{ $color01 }} dotted;"
+   rel="noopener noreferrer"
+    > 
+    &nbsp; {{ $nowName }} &nbsp; 
+</a>
+{{ end -}}
 {{- end -}}
 {{- end -}}
-{{- end -}}
-<a  href="xxxyyyzzz nowName ">

@@ -1,0 +1,13 @@
+{{- if ( .Get 0 ) -}}
+{{- $cmp1 := .Get 0 -}}
+{{- $tBase1 := path.Dir .Page.File -}}
+{{- $tBase20 := path.Join "content" $tBase1 -}}
+{{- $tBase3 := readDir $tBase20 -}}
+{{- range $tBase3 -}}
+{{- $nowName := .Name -}}
+{{- if eq $nowName $cmp1 -}}
+<a  href="{{ $nowName }}">
+{{- end -}}
+{{- end -}}
+{{- end -}}
+<a  href="xxxyyyzzz nowName ">

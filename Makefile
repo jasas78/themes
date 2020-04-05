@@ -260,3 +260,20 @@ myCodeCopy02:
 
 all:
 	@echo "$${help_text9}"
+
+export sed01XXX1:=<div>\
+	{{< my2m3uexist "single.m3u8" "red" >}} \
+	{{< my2m3uexist "single.xspf" "blue" >}} \
+	=== VLC , IPTV <\/div>
+
+xxxxxxx:=\
+
+
+sed01:
+	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
+		tac $${aa1} | sed -e \
+		'0,/^---/ s/^---/\n$(sed01XXX1)\n\n&/' \
+		| tac > /tmp/sed01.tmp.txt ; \
+		cat /tmp/sed01.tmp.txt > $${aa1} ; \
+		done
+

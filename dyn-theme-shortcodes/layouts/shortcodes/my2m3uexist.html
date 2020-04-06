@@ -2,6 +2,7 @@
 {{- $cmp1 := .Get 0 -}}
 {{- $color01 := .Get 1 -}}
 {{- $color02 := .Get 2 -}}
+{{- $name2 := .Get 2 -}}
 {{- $tBase1 := path.Dir .Page.File -}}
 {{- $tBase20 := path.Join "content" $tBase1 -}}
 {{- $tBase3 := readDir $tBase20 -}}
@@ -12,7 +13,7 @@
    style="background-color:Gray; color:{{ $color02 }}; font-size:120%; border:5px {{ $color01 }} dotted;"
    rel="noopener noreferrer"
     > 
-    &nbsp; {{ $nowName }} &nbsp; 
+    &nbsp; {{ $name2 }} &nbsp; 
 </a>
 {{ end -}}
 {{- end -}}

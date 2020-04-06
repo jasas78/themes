@@ -2,10 +2,11 @@
 {{- $nowName := .Get 0 -}}
 {{- $color01 := .Get 1 -}}
 {{- $color02 := .Get 2 }}
+{{- $text2   := .Get 3 }}
 <a href="{{ $nowName }}"
    style="background-color:Gray; color:{{ $color02 }}; font-size:120%; border:5px {{ $color01 }} dotted;"
    rel="noopener noreferrer"
     > 
-    &nbsp; {{ $nowName }} &nbsp; 
+    &nbsp; {{ $text2 }} &nbsp; 
 </a>
 {{ end -}}

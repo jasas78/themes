@@ -265,19 +265,25 @@ myCodeCopy02:
 all:
 	@echo "$${help_text9}"
 
-export sed01XXX1:=<div>\
-	{{< my2m3uexist "music.m3u8" "red" >}} \
-	{{< my2m3uexist "music.xspf" "blue" >}} \
-	=== VLC , IPTV <\/div>
+export sed01XXX1:=\
+	{{< my2m3uexist "music.m3u8" "red"  "blue" >}} \
+	{{< my2m3uexist "music.xspf" "blue" "red"  >}} \
+	{{< my2span "<<<=== IPTV 播放器或者 VLC 播放器 " >}} \
+	{{< my2m3uforce "/all.m3u8" "red"  "blue" "M" >}} \
+	{{< my2m3uforce "/all.xspf" "blue" "red"  "X" >}} \
 
-xxxxxxx:=\
-
+sed01XXX2:={{< my2m3uexist "music.m3u8"
 
 sed01:
 	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
-		tac $${aa1} | sed -e \
-		'0,/^---/ s/^---/\n$(sed01XXX1)\n\n&/' \
-		| tac > /tmp/sed01.tmp.txt ; \
-		cat /tmp/sed01.tmp.txt > $${aa1} ; \
+		echo $${aa1} ; \
+		sed -i \
+		-e \
+		'/$(sed01XXX2)/d' \
+		$${aa1} ; \
+		sed -i \
+		-e \
+		'$$a $(sed01XXX1)' \
+		$${aa1} ; \
 		done
 

@@ -266,8 +266,8 @@ all:
 	@echo "$${help_text9}"
 
 export sed01XXX1:=\
-	{{< my2m3uexist "music.m3u8" "red"  "blue" >}} \
-	{{< my2m3uexist "music.xspf" "blue" "red"  >}} \
+	{{< my2m3uexist "music.m3u8" "red"  "blue" "m3u8" >}} \
+	{{< my2m3uexist "music.xspf" "blue" "red"  "xspf" >}} \
 	{{< my2span "<<<=== IPTV 播放器或者 VLC 播放器 " >}} \
 	{{< my2m3uforce "/all.m3u8" "red"  "blue" "M" >}} \
 	{{< my2m3uforce "/all.xspf" "blue" "red"  "X" >}} \

@@ -267,10 +267,10 @@ all:
 	@echo "$${help_text9}"
 
 export sed01XXX1:=\
-	{{< my2m3uexist "music.xspf" "blue" "red"  "xspf" >}} \
-	{{< my2span " IPTV 或 VLC 播放器 " >}} \
-	{{< my2m3uforce "/all.xspf"      "blue" "red"   "X" >}} \
-	{{< my2m3uforce "/hot/helpxspf/" "red"  "black" "H" >}} \
+	{{< my2m3uexist "music.xspf"        "blue"  "red"    "xspf" >}} \
+	{{< my2m3uforce "/all.xspf"         "blue"  "red"    "X" >}} \
+	{{< my2m3uforce "/hot/helpxspf/"    "red"   "black"  " 播放器 " >}} \
+	{{< my2m3uforce "/hot/endothers/"   "black" "green"  " 目录 " >}} \
 
 sed01XXX2:={{< my2m3uexist "music.xspf"
 

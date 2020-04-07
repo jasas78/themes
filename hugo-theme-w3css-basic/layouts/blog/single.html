@@ -5,13 +5,4 @@
   {{ partial `blog.qusdis-button.html` .  }}
   {{/* partial `blog.privacy.qusdis.html` . */}}
   {{/* template "_internal/qusdis.html" . */}}
-<script>
-    function copy2clipboard(text) {
-        if (!navigator.clipboard) {
-            fallbackCopyTextToClipboard(text);
-            return;
-        }
-        navigator.clipboard.writeText(text)
-    }
-</script>
 {{ end }}

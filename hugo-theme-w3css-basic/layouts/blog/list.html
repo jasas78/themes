@@ -1,5 +1,11 @@
 {{ define `title` }}
   {{ .Site.Title }} - Blog
+{{ end }}
+
+{{ define `headline` }}
+{{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
+{{- `<!-- blog/list.html (headline) -->` | safeHTML }}
+{{- end}}
 <script>
     function copy2clipboard(text) {
         if (!navigator.clipboard) {
@@ -9,12 +15,6 @@
         navigator.clipboard.writeText(text)
     }
 </script>
-{{ end }}
-
-{{ define `headline` }}
-{{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
-{{- `<!-- blog/list.html (headline) -->` | safeHTML }}
-{{- end}}
   <div class='w3-card-4 w3-center w3-round-xxlarge {{ default `w3-theme-d1` ($.Site.Param `colorBlogListCard`)}}'>
     <h2>{{if $.Site.Params.blog.icon }}<i class='{{ $.Site.Params.blog.icon }} '></i>{{ end }} {{.Site.Params.blog.title}}
       <span style="float:right;">

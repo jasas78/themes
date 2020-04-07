@@ -7,8 +7,10 @@
 
 <button 
     type="button"
-    style="background-color:Gray; color:{{ $colorfg }}; font-size:120%; border:5px {{ $colorbg }} dotted;"
+    style="background-color:lightgray; color:{{ $colorfg }}; font-size:120%; border:5px {{ $colorbg }} dotted;"
     onclick="copypath2clipboard('{{ $path1 }}')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightgray'"
     > 
     &nbsp; {{ $text4 }} &nbsp; 
 </button>

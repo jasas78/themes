@@ -277,10 +277,10 @@ export sed01XXX11:=\
 export sed01XXX12:=\
 	{{< my2buttoncopy2clip "music.xspf"        "blue"   "red"    " 单曲"  "复制 VLC 播放器使用的链接：单曲" >}} \
 	{{< my2buttoncopy2clip "/all.xspf"         "green"  "black"  " 全部"  "复制 VLC 播放器使用的链接：全部" >}} \
-	{{< my2buttongoto      "/hot/helpxspf/"    "blue"   "red"    " 播放器" "如何使用 VLC 播放器或者 IPTV 播放器的教程" >}} \
-	{{< my2buttongoto      "/hot/endothers/"   "green"  "blue"   " 目录"   "转到总目录" >}} \
 	{{< my2buttoncopy2clip "music.m3u8"        "blue"   "red"    " M1 "    "复制 IPTV 播放器使用的链接：单曲" >}} \
-	{{< my2buttoncopy2clip "/all.m3u8"         "green"  "black"  " M2 "    "复制 IPTV 播放器使用的链接：全部" >}} \
+	{{< my2buttongoto      "/hot/helpxspf/"    "green"  "blue"   " 播放器" "如何使用 VLC 播放器或者 IPTV 播放器的教程" >}} \
+	{{< my2buttongoto      "/hot/endothers/"   "blue"   "red"    " 月份"   "转到月份总目录" >}} \
+	{{< my2buttongoto      "/hot/alltags/"     "green"  "blue"   " 列表"   "转到文章总列表" >}} \
 
 sed01XXX21:={{< my2m3uexist "music.xspf"
 sed01XXX22:={{< my2buttoncopy2clip "music.xspf"

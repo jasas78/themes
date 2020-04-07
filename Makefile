@@ -266,7 +266,7 @@ myCodeCopy02:
 all:
 	@echo "$${help_text9}"
 
-export sed01XXX1:=\
+export sed01XXX11:=\
 	{{< my2m3uexist "music.xspf"        "blue"   "red"    " V单曲 " >}} \
 	{{< my2m3uforce "/all.xspf"         "green"  "black"  " V全部 " >}} \
 	{{< my2m3uforce "/hot/helpxspf/"    "blue"   "red"    " 播放器 " >}} \
@@ -274,18 +274,27 @@ export sed01XXX1:=\
 	{{< my2m3uexist "music.m3u8"        "blue"   "red"    " M1 " >}} \
 	{{< my2m3uforce "/all.m3u8"         "green"  "black"  " M2 " >}} \
 
-sed01XXX2:={{< my2m3uexist "music.xspf"
+export sed01XXX12:=\
+	{{< my2buttoncopy2clip "music.xspf"        "blue"   "red"    " V单曲 " >}} \
+	{{< my2buttoncopy2clip "/all.xspf"         "green"  "black"  " V全部 " >}} \
+	{{< my2buttoncopy2clip "/hot/helpxspf/"    "blue"   "red"    " 播放器 " >}} \
+	{{< my2buttoncopy2clip "/hot/endothers/"   "green"  "blue"   " 目录 " >}} \
+	{{< my2buttoncopy2clip "music.m3u8"        "blue"   "red"    " M1 " >}} \
+	{{< my2buttoncopy2clip "/all.m3u8"         "green"  "black"  " M2 " >}} \
+
+sed01XXX21:={{< my2m3uexist "music.xspf"
+sed01XXX22:={{< my2buttoncopy2clip "music.xspf"
 
 sed01:
 	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
 		echo $${aa1} ; \
+		\
 		sed -i \
-		-e \
-		'/$(sed01XXX2)/d' \
+		-e '/$(sed01XXX21)/d' \
+		-e '/$(sed01XXX22)/d' \
 		$${aa1} ; \
-		sed -i \
-		-e \
-		'$$a $(sed01XXX1)' \
-		$${aa1} ; \
+		\
+		sed -i -e '$$a $(sed01XXX12)'  $${aa1} ; \
+		\
 		done
 

@@ -1,0 +1,15 @@
+{{- if ( .Get 3 ) -}}
+
+{{- $path1   := .Get 0 -}}
+{{- $colorbg := .Get 1 -}}
+{{- $colorfg := .Get 2 -}}
+{{- $text4   := .Get 3  }}
+
+<a href="{{ $path1 }}"
+   style="background-color:Gray; color:{{ $colorfg }}; font-size:120%; border:5px {{ $colorbg }} dotted;"
+   rel="noopener noreferrer"
+    > 
+    &nbsp; {{ $text4 }} &nbsp; 
+</a>
+
+{{ end -}}

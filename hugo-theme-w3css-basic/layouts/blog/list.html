@@ -2,6 +2,16 @@
   {{ .Site.Title }} - Blog
 {{ end }}
 
+<script>
+    function copy2clipboard(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text)
+    }
+</script>
+
 {{ define `headline` }}
 {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
 {{- `<!-- blog/list.html (headline) -->` | safeHTML }}

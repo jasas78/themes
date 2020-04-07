@@ -1,0 +1,18 @@
+{{- if ( .Get 3 ) -}}
+
+{{- $path1   := .Get 0 -}}
+{{- $colorbg := .Get 1 -}}
+{{- $colorfg := .Get 2 -}}
+{{- $text4   := .Get 3  }}
+
+<button 
+    type="button"
+    style="color:{{ $colorfg }}; font-size:120%; border:5px {{ $colorbg }} dotted;"
+    onclick="gotopath4('{{ $path1 }}')"
+    onMouseOver="this.style.backgroundColor='lightpink'"
+    onMouseOut="this.style.backgroundColor='lightgray'"
+    > 
+    &nbsp; {{ $text4 }} &nbsp; 
+</button>
+
+{{ end -}}

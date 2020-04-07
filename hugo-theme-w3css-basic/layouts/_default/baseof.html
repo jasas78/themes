@@ -149,16 +149,16 @@
     }
     startTime();
 })();
-</script>
     <!-- mytime12 end -->
-<script>
-    function copy2clipboard(text) {
-        if (!navigator.clipboard) {
-            fallbackCopyTextToClipboard(text);
-            return;
-        }
-        navigator.clipboard.writeText(text)
+
+function copy2clipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
     }
+    navigator.clipboard.writeText(text)
+}
+
 </script>
 
 

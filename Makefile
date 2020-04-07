@@ -288,7 +288,7 @@ sed01XXX22:={{< my2buttoncopy2clip "music.xspf"
 sed00:
 	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
 		\
-		sed -i -e '$$a '  $${aa1} ; \
+		sed -i -e '$$a \n'  $${aa1} ; \
 		\
 		done
 

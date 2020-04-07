@@ -5,11 +5,12 @@
 {{- $colorfg := .Get 2 -}}
 {{- $text4   := .Get 3  }}
 
-<a href="{{ $path1 }}"
-   style="background-color:Gray; color:{{ $colorfg }}; font-size:120%; border:5px {{ $colorbg }} dotted;"
-   rel="noopener noreferrer"
+<button 
+    type="button"
+    style="background-color:Gray; color:{{ $colorfg }}; font-size:120%; border:5px {{ $colorbg }} dotted;"
+    onclick="copypath2clipboard('{{ $path1 }}')"
     > 
     &nbsp; {{ $text4 }} &nbsp; 
-</a>
+</button>
 
 {{ end -}}

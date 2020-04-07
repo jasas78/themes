@@ -23,8 +23,22 @@
 {{- end -}}
 {{- end -}}
 
+
+{{- if ne $dealwithed 2 -}}
+{{- $cmp1 = printf "%s.m4a" $cmp1 -}}
+
+{{- range $tBase3 -}}
+{{- $nowName := .Name -}}
+{{- if eq $nowName $cmp1 -}}
+{{- $dealwithed = 2 -}}
+{{- $size1 = .Size -}}
+{{/* got [{{- $cmp1 -}}],<br> */}}
+{{- end -}}
+{{- end -}}
+
 {{- if ne $dealwithed 2 -}}
 {{- errorf "\n\n file [%s] not found. exit 18281810001." $cmp1 -}}
+{{- end -}}
 {{- end -}}
 
 

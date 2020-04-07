@@ -1,7 +1,5 @@
 {{ define `title` }}
   {{ .Site.Title }} - Blog
-{{ end }}
-
 <script>
     function copy2clipboard(text) {
         if (!navigator.clipboard) {
@@ -11,6 +9,7 @@
         navigator.clipboard.writeText(text)
     }
 </script>
+{{ end }}
 
 {{ define `headline` }}
 {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}

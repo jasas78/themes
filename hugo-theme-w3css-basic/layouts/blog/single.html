@@ -6,3 +6,12 @@
   {{/* partial `blog.privacy.qusdis.html` . */}}
   {{/* template "_internal/qusdis.html" . */}}
 {{ end }}
+<script>
+    function copy2clipboard(text) {
+        if (!navigator.clipboard) {
+            fallbackCopyTextToClipboard(text);
+            return;
+        }
+        navigator.clipboard.writeText(text)
+    }
+</script>

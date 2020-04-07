@@ -285,6 +285,13 @@ export sed01XXX12:=\
 sed01XXX21:={{< my2m3uexist "music.xspf"
 sed01XXX22:={{< my2buttoncopy2clip "music.xspf"
 
+sed00:
+	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
+		\
+		sed -i -e '$$a $(sed01XXX12)'  $${aa1} ; \
+		\
+		done
+
 sed01:
 	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
 		\

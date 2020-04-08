@@ -160,6 +160,8 @@ function copy2clipboard(text) {
         var result = document.execCommand('copy');
         document.body.removeChild(inputvar001);
 
+        <!-- alert("I am an alert box!"); -->
+
         return;
     }
     navigator.clipboard.writeText(text)

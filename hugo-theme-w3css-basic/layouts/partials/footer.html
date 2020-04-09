@@ -29,7 +29,7 @@
       {{- end}}
       {{- range first $.Site.Params.recentPosts.footerNumOfPosts (where .Site.RegularPages `Section` `blog`) }}
 
-        <div class="w3-container ">
+        <div class="w3-container " style="border:1px dotted Tomato;" >
           <a class="no-decoration" target="_blank" href='{{ .RelPermalink }}'>
 
           {{- $myImgClass  := `w3-image w3-left w3-round w3-hover-opacity` }}

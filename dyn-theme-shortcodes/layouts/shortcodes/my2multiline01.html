@@ -1,5 +1,5 @@
 {{- if .Get 0 -}}
-<div Width="100%" style="border:1px solid Tomato;font-size:200%" >
+<div Width="100%" style="border:1px dotted Tomato;font-size:200%" >
     {{ range $elem_index, $elem_val := $.Params -}}
     {{- if eq $elem_index 0 -}}
     {{ . -}}

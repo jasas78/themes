@@ -3,10 +3,12 @@
 {{- with .Get "mp3" -}} {{- $cmp1 = . -}} {{- $cmp1t = "mp3" -}} {{- end -}}
 {{- with .Get "wav" -}} {{- $cmp1 = . -}} {{- $cmp1t = "wav" -}} {{- end -}}
 {{- with .Get "ogg" -}} {{- $cmp1 = . -}} {{- $cmp1t = "ogg" -}} {{- end -}}
+{{- with .Get "m4a" -}} {{- $cmp1 = . -}} {{- $cmp1t = "m4a" -}} {{- end -}}
 
 {{- with .Get "mp3" -}} {{- $cmp1 = .Get "mp3" -}} {{- $cmp1t = "mp3" -}} {{- end -}}
 {{- with .Get "wav" -}} {{- $cmp1 = .Get "wav" -}} {{- $cmp1t = "wav" -}} {{- end -}}
 {{- with .Get "ogg" -}} {{- $cmp1 = .Get "ogg" -}} {{- $cmp1t = "ogg" -}} {{- end -}}
+{{- with .Get "m4a" -}} {{- $cmp1 = .Get "m4a" -}} {{- $cmp1t = "m4a" -}} {{- end -}}
 
 {{- if not $cmp1 -}}
 {{- errorf "\n\n No mp4 para exist. exit ." -}}
@@ -78,6 +80,8 @@
     src="{{- $cmp1 -}}">
     YN032 {{- $cmp1 -}}
 </audio>
+
+{{ with .Get "text" }} {{ . }} {{ end }}
 
 <a rel="noopener noreferrer" 
    style="border:none dotted Red;font-size:100%; background-color:AliceBlue; "

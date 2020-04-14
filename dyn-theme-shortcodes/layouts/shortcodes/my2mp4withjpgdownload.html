@@ -1,4 +1,5 @@
 {{- $cmp1 := .Get "mp4" -}}
+{{- $nojpg := .Get "nojpg" -}}
 {{- if not $cmp1 -}}
 {{- errorf "\n\n No mp4 para exist. exit ." -}}
 {{- end -}}
@@ -70,7 +71,7 @@
 {{- end -}}
 {{- end -}}
 
-{{- if not .Get "nojpg" -}}
+{{- if ne $nojpg "" -}}
 {{- if ne $dealwithed 3 -}}
 {{- errorf "\n\n file [%s] not found. exit 18281810002." $cmp2 -}}
 {{- end -}}
@@ -98,10 +99,13 @@
     Width="100%" 
     style="border:2px dotted Blue;font-size:100%" >
 <video 
-    preload="none" 
     controls 
     style="margin-bottom:2px;Max-Width:100%"
-    poster="{{- $cmp2 -}}" >
+{{ if ne $nojpg "" }}
+    preload="none" 
+    poster="{{- $cmp2 -}}" 
+{{ end }}
+    >
     <source 
     type="video/mp4" 
     src="{{- $cmp1 -}}">
@@ -124,6 +128,7 @@
 <br>
 
 
+{{ if ne $nojpg "" }}
 <a rel="noopener noreferrer" 
    download 
    target="_blank" 
@@ -131,6 +136,7 @@
    href="{{- $cmp2 -}}"     
    title="{{- $cmp2 -}}"     
    > {{- $downshow2 -}} </a>
+{{ end }}
 
 <strong style="font-size:70%;color:red">{{- $downshow4 -}}</strong>
 <strong style="font-size:70%;color:green">{{- $downshow5 -}}</strong>

@@ -74,6 +74,7 @@ define help_textHU
 	v2   -> vim test file 02 for hugo
 	v3   -> vim test file 03 for hugo
 	m3u  -> gen the m3u
+	wav  -> deal with 22.wav
 
 endef
 
@@ -144,7 +145,7 @@ um update_makefile :
 	(cd scripts.Hugo/themes/ && git pull  && cat Makefile > ../Makefile )
 
 rg:regen
-regen: m3u sed01 regen_pure
+regen: wav m3u sed01 regen_pure
 
 s : server
 server:
@@ -187,6 +188,9 @@ m3u  :
 #	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/endothers/all.m3u8   scripts.Hugo/content/blog
 	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
 
+wav:
+	wav_gen_22_wav_list.sh    https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8      scripts.Hugo/content/blog
+
 export help_textHU
 endif
 ############################################### UseHugoOnTop  end
@@ -199,7 +203,7 @@ endif
 ifdef    UseHugoUnderScript
 $(info using    UseHugoUnderScript )
 
-rg rgt regen     s2 server2     s3 server3     s5 server5     s server m3u rgX gcX v1 v2 v3 :
+rg rgt regen     s2 server2     s3 server3     s5 server5     s server m3u wav rgX gcX v1 v2 v3 :
 	cd .. && make $@
 
 

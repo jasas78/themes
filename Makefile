@@ -283,6 +283,7 @@ export sed01XXX12:=\
 	{{< my2buttoncopy2clip "music.xspf"        "blue"   "red"    " 单曲 "  "复制 VLC 播放器使用的链接：单曲" >}} \
 	{{< my2buttoncopy2clip "/all.xspf"         "green"  "black"  " 全部 "  "复制 VLC 播放器使用的链接：全部" >}} \
 	{{< my2buttoncopy2clip "music.m3u8"        "blue"   "red"    " M3U  "    "复制 M3U 播放器使用的链接：单曲" >}} \
+	{{< mybr2 >}} \
 	{{< my2buttoncopy2clip ""                  "green"  "black"  " 本页 "    "复制 本页的网址 " >}} \
 	{{< my2buttoncopy2clip "/"                 "black"  "red"    " 主站 "    "复制 主站的网址 " >}} \
 	{{< mybr2 >}} \

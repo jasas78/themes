@@ -1,0 +1,29 @@
+{{ $title01 := .Get 0 }}
+
+{{ $now01 := now }}
+
+<h1> {{ $title01 }} </h1>
+<table style="border: 1px solid black;" >
+    <tr style="border: 1px solid red;" >
+        <td style="border: 1px solid black;" > {{ $now01.Unix }} </td>
+        <td style="border: 1px solid black;" > year 年</td>
+        <td style="border: 1px solid black;" > month 月 </td>
+        <td style="border: 1px solid black;" > day 日 </td>
+        <td style="border: 1px solid black;" > hour 时 </td>
+        <td style="border: 1px solid black;" > minute 分 </td>
+        <td style="border: 1px solid black;" > second 秒 </td>
+        <td style="border: 1px solid black;" > unix </td>
+    </tr>
+
+        <tr style="border: 1px solid black;" >
+            <td style="border: 1px solid black;" > San_Francisco </td>
+            <td style="border: 1px solid black;" > {{ $now01.Year }} </td>
+            <td style="border: 1px solid black;" > {{ $now01.Month }} </td>
+            <td style="border: 1px solid black;" > {{ $now01.Day }} </td>
+            <td style="border: 1px solid black;" > {{ $now01.Hour }} </td>
+            <td style="border: 1px solid black;" > {{ $now01.Minute }} </td>
+            <td style="border: 1px solid black;" > {{ $now01.Second }} </td>
+            <td style="border: 1px solid black;" > {{ $now01.Unix }} </td>
+        </tr>
+
+</table>

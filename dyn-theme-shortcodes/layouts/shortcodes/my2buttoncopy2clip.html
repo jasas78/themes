@@ -4,15 +4,16 @@
 {{- $colorbg := .Get 1 -}}
 {{- $colorfg := .Get 2 -}}
 {{- $text4   := .Get 3  }}
+{{- $texthelp:= .Get 4  }}
 
 &nbsp;
 <button 
     type="button"
     style="background-color:lightblue; color:{{ $colorfg }}; font-size:112%; border:5px {{ $colorbg }} dotted;"
-    onclick="copypath2clipboard('{{ $path1 }}','{{ $text4 }}')"
+    onclick="copypath2clipboard('{{ $path1 }}','{{ $texthelp }}')"
     onMouseOver="this.style.backgroundColor='lightpink'"
     onMouseOut="this.style.backgroundColor='lightblue'"
-    {{ with .Get 4 }} title="{{ . }}" {{ end }}
+    {{ if ne $texthelp "" }} title="{{ $texthelp }}" {{ end }}
     > 
     {{ $text4 }} 
 </button> 

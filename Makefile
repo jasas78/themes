@@ -141,7 +141,7 @@ regen_pure : regenBaseCheck
 	$(updateMakefile)
 
 um update_makefile :
-	cd scripts.Hugo/themes/ && git pull  && cat Makefile > ../Makefile
+	(cd scripts.Hugo/themes/ && git pull  && cat Makefile > ../Makefile )
 
 rg:regen
 regen: m3u sed01 regen_pure

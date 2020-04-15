@@ -5,14 +5,14 @@
 <h1> {{ $title01 }} </h1>
 <table style="border: 1px solid black;" >
     <tr style="border: 1px solid red;" >
-        <td style="border: 1px solid black;" > {{ $now01.Unix }} </td>
+        <td style="border: 1px solid black;" > </td>
         <td style="border: 1px solid black;" > year 年</td>
         <td style="border: 1px solid black;" > month 月 </td>
         <td style="border: 1px solid black;" > day 日 </td>
         <td style="border: 1px solid black;" > hour 时 </td>
         <td style="border: 1px solid black;" > minute 分 </td>
         <td style="border: 1px solid black;" > second 秒 </td>
-        <td style="border: 1px solid black;" > unix </td>
+        <td style="border: 1px solid black;" > {{ dateFormat "MST" $now01.Local }} </td>
     </tr>
 
         <tr style="border: 1px solid black;" >

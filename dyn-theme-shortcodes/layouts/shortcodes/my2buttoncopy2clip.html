@@ -9,7 +9,7 @@
 <button 
     type="button"
     style="background-color:lightblue; color:{{ $colorfg }}; font-size:112%; border:5px {{ $colorbg }} dotted;"
-    onclick="copypath2clipboard('{{ $path1 }}')"
+    onclick="copypath2clipboard('{{ $path1 }}','{{ $text4 }}')"
     onMouseOver="this.style.backgroundColor='lightpink'"
     onMouseOut="this.style.backgroundColor='lightblue'"
     {{ with .Get 4 }} title="{{ . }}" {{ end }}

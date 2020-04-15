@@ -169,8 +169,9 @@ function copy2clipboard(text) {
 function abspath2(path2) {
     return new URL( path2 , window.location.href ).href;
 }
-function copypath2clipboard(text3) {
+function copypath2clipboard(text3,h03) {
     copy2clipboard( abspath2(text3) )
+    alert( h03 + ":\n" + text3 );
 }
 function gotopath4(goto4) {
     window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);

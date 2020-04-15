@@ -71,7 +71,7 @@
 {{- end -}}
 {{- end -}}
 
-{{- if ne $nojpg "" -}}
+{{- if ne $nojpg "1" -}}
 {{- if ne $dealwithed 3 -}}
 {{- errorf "\n\n file [%s] not found. exit 18281810002." $cmp2 -}}
 {{- end -}}
@@ -101,9 +101,9 @@
 <video 
     controls 
     style="margin-bottom:2px;Max-Width:100%"
+{{ if ne $nojpg "1" }}
     preload="none" 
     poster="{{- $cmp2 -}}" 
-{{ if ne $nojpg "" }}
 {{ end }}
     >
     <source 
@@ -128,7 +128,7 @@
 <br>
 
 
-{{ if ne $nojpg "" }}
+{{ if ne $nojpg "1" }}
 <a rel="noopener noreferrer" 
    download 
    target="_blank" 

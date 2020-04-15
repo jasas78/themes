@@ -170,8 +170,9 @@ function abspath2(path2) {
     return new URL( path2 , window.location.href ).href;
 }
 function copypath2clipboard(text3,h03) {
+    alert( "11001:" + h03 + ":\n" + text3 );
     copy2clipboard( abspath2(text3) )
-    alert( h03 + ":\n" + text3 );
+    alert( "11002:" + h03 + ":\n" + text3 );
 }
 function gotopath4(goto4) {
     window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);

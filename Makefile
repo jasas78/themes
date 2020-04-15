@@ -190,7 +190,7 @@ m3u  :
 
 wav:
 	wav_gen_22_wav_list.sh    https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8      scripts.Hugo/content/blog
-	[ $(find content/ -name 22.wav |wc -l) -ne 0 ] \
+	[ $$(find content/ -name 22.wav |wc -l) -ne 0 ] \
 		&& echo \
 		&& find content/ -name 22.wav \
 		&& echo \

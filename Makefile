@@ -137,11 +137,11 @@ regenTestVersion: regenBaseCheck
 rgp : regen_pure 
 regen_pure : regenBaseCheck
 	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
+	$(rmXML)
+	$(updateMakefile)
 
 rg:regen
 regen: m3u sed01 regen_pure
-	$(rmXML)
-	$(updateMakefile)
 
 s : server
 server:

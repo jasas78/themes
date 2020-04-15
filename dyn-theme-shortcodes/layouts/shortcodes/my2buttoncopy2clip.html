@@ -5,6 +5,7 @@
 {{- $colorfg := .Get 2 -}}
 {{- $text4   := .Get 3  }}
 
+&nbsp;
 <button 
     type="button"
     style="background-color:lightblue; color:{{ $colorfg }}; font-size:112%; border:5px {{ $colorbg }} dotted;"
@@ -14,6 +15,7 @@
     {{ with .Get 4 }} title="{{ . }}" {{ end }}
     > 
     {{ $text4 }} 
-</button>
+</button> 
+&nbsp;
 
 {{ end -}}

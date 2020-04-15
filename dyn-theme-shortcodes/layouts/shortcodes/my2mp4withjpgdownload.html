@@ -94,6 +94,7 @@
 
 
 
+<br><br>
 <div 
     title = "{{ $downshow4 }} {{ $downshow5 }}"
     Width="100%" 
@@ -112,35 +113,39 @@
     YN032 {{- $cmp1 -}}
 </video>
 
-<br>
+<br> <br>
 
 {{ .Get "text" }}
+<br> <br>
 
 <a rel="noopener noreferrer" 
-   style="border:none dotted Blue;font-size:100%; background-color:AliceBlue; "
+   style="border:none dotted Blue;font-size:200%; background-color:AliceBlue; "
    download 
    target="_blank" 
    href="{{- $cmp1 -}}"     
    title="{{- $cmp1 -}}"     
    > {{- $downshow1 -}} </a>
-<strong style="font-size:70%;color:red">{{- $downshow3 -}}</strong>
-<i style="font-size:70%;color:blue">{{- $cmp1 -}}</i>
-<br>
+<strong style="font-size:140%;color:red">{{- $downshow3 -}}</strong>
+<i style="font-size:140%;color:blue">{{- $cmp1 -}}</i>
+
+<br><br><br>
 
 
 {{ if ne $nojpg "1" }}
 <a rel="noopener noreferrer" 
    download 
    target="_blank" 
-   style="border:none dotted Blue;font-size:100%; background-color:Gray; "
+   style="border:none dotted Blue;font-size:200%; background-color:Gray; "
    href="{{- $cmp2 -}}"     
    title="{{- $cmp2 -}}"     
    > {{- $downshow2 -}} </a>
+<br><br><br>
 {{ end }}
 
-<strong style="font-size:70%;color:red">{{- $downshow4 -}}</strong>
-<strong style="font-size:70%;color:green">{{- $downshow5 -}}</strong>
+<strong style="font-size:140%;color:red">{{- $downshow4 -}}</strong>
+<strong style="font-size:140%;color:green">{{- $downshow5 -}}</strong>
 </div> 
+<br><br>
 
 {{/*
 <div> 

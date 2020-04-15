@@ -58,6 +58,7 @@
 
 {{- $downshow1 := "download audio " -}}
 {{- $downshow3 := printf "%s , %s" $size8 $size9 -}}
+{{- $downshow4 := "上一行是播放条，它的左上角的小三角形是播放按钮" -}}
 
 
 {{- $currentLang := .Site.Language.Lang -}}
@@ -67,6 +68,7 @@
 
 
 
+<br><br>
 <div 
     title = "{{ $cmp1 }} {{ $downshow3 }}"
     Width="100%" 
@@ -79,23 +81,28 @@
     type="audio/{{- $cmp1t -}}" 
     src="{{- $cmp1 -}}">
     YN032 {{- $cmp1 -}}
-</audio>
+</audio> 
+<text style="font-size:70%;color:blue">{{- $downshow4 -}}</text>
+
+<br><br>
 
 {{ with .Get "text" }} {{ . }} {{ end }}
 
 <a rel="noopener noreferrer" 
-   style="border:none dotted Red;font-size:100%; background-color:AliceBlue; "
+   style="border:none dotted Red;font-size:200%; background-color:AliceBlue; "
    download 
    target="_blank" 
    href="{{- $cmp1 -}}"     
    title="{{- $cmp1 -}}"     
    > {{- $downshow1 -}} </a>
-<strong style="font-size:70%;color:red">{{- $downshow3 -}}</strong>
-<strong style="font-size:70%;color:blue">{{- $cmp1 -}}</strong>
+<br><br>
+<strong style="font-size:140%;color:red">{{- $downshow3 -}}</strong>
+<strong style="font-size:140%;color:blue">{{- $cmp1 -}}</strong>
 
 
 
 </div> 
+<br><br>
 
 {{/*
 <div> 

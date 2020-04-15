@@ -6,8 +6,10 @@
 {{- range $tBase3 -}}
 {{- $nowName := .Name -}}
 {{- if eq $nowName $cmp1 -}}
+<br>
 <a  href="{{ $nowName }}">
 <img src="{{ $nowName }}" style="max-width:99%; max-height:1000px;"></a>
+<br>
 {{- end -}}
 {{- end -}}
 {{- end -}}

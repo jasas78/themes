@@ -1,14 +1,16 @@
 {{- $para1 := .Get 0 -}}
 {{- $paraN := len .Params -}}
-<div>
+<div style="font-size:150%;">
 {{- if eq 0 $paraN -}}
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
+    <br>
     <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a> 
         <ul>
             {{- range $key, $value := $taxonomy -}}
             <li> {{ $key }} </li>
                         {{- range $index, $element := $value.Pages -}}
     
+                        <br>
                         {{- $idx := mod $index 3 -}}
                         {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
                         {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
@@ -19,7 +21,7 @@
                                href="{{- .Permalink -}}" 
                                > 
                                {{ add $index 1 }} :
-                               {{- .LinkTitle -}} </a> </div><br>
+                               {{- .LinkTitle -}} </a> </div><br><br>
                        {{- end -}}
             {{- end -}}
         </ul>
@@ -43,6 +45,7 @@
 
         {{- if (eq $yn 0) -}}
     
+            <br>
             {{- $idx := mod $index 3 -}}
             {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
             {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
@@ -59,7 +62,7 @@
                    "<==>" {{- $year1.UTC.Format "2006-01-02 T 15:04:05 -0700" -}}
                    "<==>" {{- $year1.Local.Format "2006-01-02 T 15:04:05 -0700" -}}
                    -->
-                </a> </div><br>
+                </a> </div><br><br>
             {{- $index = add $index 1 -}}
         {{- end -}}
     {{- end -}}
@@ -69,6 +72,7 @@
                 {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}
     
+                        <br>
                         {{- $idx := mod $index 3 -}}
                         {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
                         {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
@@ -79,7 +83,7 @@
                                href="{{- .Permalink -}}" 
                                > 
                                {{ add $index 1 }} :
-                               {{- .LinkTitle -}} </a> </div><br>
+                               {{- .LinkTitle -}} </a> </div><br><br>
                        {{- end -}}
                 {{- end -}}
             {{- end -}}

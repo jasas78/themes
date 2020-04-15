@@ -151,7 +151,7 @@
 })();
     <!-- mytime12 end -->
 
-function copy2clipboard(text02,h02) {
+function copy2clipboard(text02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
         inputvar001.innerHTML = text02;
@@ -162,10 +162,10 @@ function copy2clipboard(text02,h02) {
 
         <!-- alert("I am an alert box!"); -->
 
-        return h02 + ":\n" + text02 ;
+        return text02 ;
     }
     navigator.clipboard.writeText(text02)
-    return h02 + ":\n" + text02 ;
+    return text02 ;
 }
 function abspath2(path05) {
     return new URL( path05 , window.location.href ).href;
@@ -173,7 +173,10 @@ function abspath2(path05) {
 function copypath2clipboard(text3,h03) {
     <!-- alert( "11001:" + h03 + ":\n" + text3 ); -->
     alert( 
-    copy2clipboard( abspath2(text3) , h03)
+        "以下内容已经复制到粘贴板 : \n" +
+        copy2clipboard( abspath2(text3) ) 
+        + "\n" 
+        + h03
         );
 }
 function gotopath4(goto04) {

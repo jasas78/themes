@@ -149,9 +149,8 @@
     }
     startTime001();
 })();
-    <!-- mytime12 end -->
 
-function copy2clipboard(text02) {
+function copy2clipboard(text02, warn02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
         inputvar001.innerHTML = text02;
@@ -160,26 +159,17 @@ function copy2clipboard(text02) {
         var result = document.execCommand('copy');
         document.body.removeChild(inputvar001);
 
-        <!-- alert("I am an alert box!"); -->
-
         return ;
     }
-    navigator.clipboard.writeText(text02)
-    return ;
+    navigator.clipboard.writeText(text02) ;
 }
 function abspath2(path05) {
     return new URL( path05 , window.location.href ).href;
 }
 function copypath2clipboard(text3,h03) {
-    <!-- alert( "11001:" + h03 + ":\n" + text3 ); -->
     var fullpath03 = abspath2(text3) ; 
-    alert( 
-        "以下内容已经复制到粘贴板 : \n" 
-        + fullpath03
-        + "\n" 
-        + h03
-        );
-    copy2clipboard( fullpath03 ) ;
+    var warn03 =  "以下内容已经复制到粘贴板 : \n" + fullpath03 + "\n" + h03;  
+    copy2clipboard( fullpath03 , warn03) ;
 }
 function gotopath4(goto04) {
     window.setTimeout(function(){window.top.location=abspath2(goto04)} , 1000);

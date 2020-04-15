@@ -136,9 +136,9 @@
 <a id="PPPdynTime02"></a>
 <script>
 (function () {
-    function startTime() {
+    function startTime001() {
         t = setTimeout(function () {
-            startTime()
+            startTime001()
         }, 59000);
 
         var dynTime00 = new Date();
@@ -147,14 +147,14 @@
         document.getElementById('PPPdynTime02').innerHTML = "_HK:" +
         dynTime00.toLocaleString("en-US", {timeZone: "Asia/Hong_Kong"});
     }
-    startTime();
+    startTime001();
 })();
     <!-- mytime12 end -->
 
-function copy2clipboard(text) {
+function copy2clipboard(text02,h02) {
     if (!navigator.clipboard) {
         var inputvar001 = document.createElement('textarea');
-        inputvar001.innerHTML = text;
+        inputvar001.innerHTML = text02;
         document.body.appendChild(inputvar001);
         inputvar001.select();
         var result = document.execCommand('copy');
@@ -162,20 +162,22 @@ function copy2clipboard(text) {
 
         <!-- alert("I am an alert box!"); -->
 
-        return;
+        return h02 + ":\n" + text02 ;
     }
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text02)
+    return h02 + ":\n" + text02 ;
 }
-function abspath2(path2) {
-    return new URL( path2 , window.location.href ).href;
+function abspath2(path05) {
+    return new URL( path05 , window.location.href ).href;
 }
 function copypath2clipboard(text3,h03) {
-    alert( "11001:" + h03 + ":\n" + text3 );
-    copy2clipboard( abspath2(text3) )
-    alert( "11002:" + h03 + ":\n" + text3 );
+    <!-- alert( "11001:" + h03 + ":\n" + text3 ); -->
+    alert( 
+    copy2clipboard( abspath2(text3) , h03)
+        );
 }
-function gotopath4(goto4) {
-    window.setTimeout(function(){window.top.location=abspath2(goto4)} , 1000);
+function gotopath4(goto04) {
+    window.setTimeout(function(){window.top.location=abspath2(goto04)} , 1000);
 }
 
 </script>

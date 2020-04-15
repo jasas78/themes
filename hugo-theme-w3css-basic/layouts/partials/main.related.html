@@ -8,11 +8,13 @@
 {{ $related := .Site.RegularPages.Related . | first ( default 5 $.Site.Params.related.limitTo ) }}
 {{ with $related }}
   <div class='w3-card-4 w3-round-large w3-margin-top w3-margin-bottom {{ default `w3-theme-l3` ($.Site.Param `colorRelatedBar`)}} '>
+        <br>
     <div class="w3-container w3-padding-small ">
       <h3>{{default "See Also" (i18n "seeAlso")}}</h3>
       <ul>
         {{- range . }}
           <li style="border:1px dotted dodgerblue;" ><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <br>
         {{- end }}
       </ul>
     </div>

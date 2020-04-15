@@ -30,30 +30,30 @@ gitX:
 
 up:
 	pwd
-	nice -n 19 git push -u origin master
+	nice -n 17 git push -u origin master
 e:
 	vim Makefile.env
 m:
 	vim Makefile
 gs:
-	nice -n 19 git status
+	nice -n 17 git status
 gc:
-	nice -n 19 git commit -a
+	nice -n 17 git commit -a
 
 gcXmmm:=$(shell (LC_ALL=C date +"%Y%m%d_%H%M%p" ; cat /etc/timezone )|tr "/\r\n-" _)
 gcX:
-	nice -n 19 git commit -m $(gcXmmm)
+	nice -n 17 git commit -m $(gcXmmm)
 	
 
 gd :
-	nice -n 19 git diff
+	nice -n 17 git diff
 
 ga :
-	nice -n 19 git add .
+	nice -n 17 git add .
 rp:
-	@echo nice -n 19 git repack -a -d --window-memory 10m --max-pack-size 20m
-	nice -n 19 git config pack.windowMemory 10m
-	nice -n 19 git config pack.packSizeLimit 20m
+	@echo nice -n 17 git repack -a -d --window-memory 10m --max-pack-size 20m
+	nice -n 17 git config pack.windowMemory 10m
+	nice -n 17 git config pack.packSizeLimit 20m
 
 
 
@@ -129,14 +129,14 @@ updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Make
 
 rgt:regenTestVersion
 regenTestVersion: regenBaseCheck
-	cd scripts.Hugo/ && nice -n 19 hugo.testing         && hugo.testing version
+	cd scripts.Hugo/ && nice -n 17 hugo.testing         && hugo.testing version
 	$(rmXML)
 	$(updateMakefile)
 
 
 rgp : regen_pure 
 regen_pure : regenBaseCheck
-	cd scripts.Hugo/ && nice -n 19 hugo       && hugo version
+	cd scripts.Hugo/ && nice -n 17 hugo       && hugo version
 	$(rmXML)
 	$(updateMakefile)
 
@@ -149,7 +149,7 @@ regen: m3u sed01 regen_pure
 s : server
 server:
 	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_41 file <scripts.Hugo/config.toml> exist ?" ; exit 41 )
-	cd scripts.Hugo/ && nice -n 19 hugo server --disableFastRender
+	cd scripts.Hugo/ && nice -n 17 hugo server --disableFastRender
 
 # hddps://themes.gohugo.io/
 # hddps://gohugo.io/themes/

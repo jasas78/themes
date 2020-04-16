@@ -196,6 +196,8 @@ wav:
 		&& ls -l `find content/ -name 22.wav` \
 		&& echo \
 		&& echo "check why does 22.wav exist ?" \
+		&& echo "nice -n 19 ffmpeg -i " \
+		&& echo "                        -vn -ac 1  22.wav" \
 		&& echo \
 		&& exit 78 \
 		)

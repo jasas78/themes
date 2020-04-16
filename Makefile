@@ -191,6 +191,7 @@ m3u  :
 wav:
 	wav_gen_22_wav_list.sh    https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8      scripts.Hugo/content/blog
 	[ $$(find content/ -name 22.wav |wc -l) -eq 0 ] \
+		&& echo "22.wav check ok" \
 		|| ( echo \
 		&& find content/ -name 22.wav \
 		&& echo \

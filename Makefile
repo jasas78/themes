@@ -266,6 +266,8 @@ $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 
 gus:  git_up_dusum 
 gusX: git_up_dusumX
+gusXt: git_up_dusumX
+	make -C scripts.Hugo/themes/    gusX 
 git_up_dusum  : ga gc  up 
 	du -sh .git 
 	pwd

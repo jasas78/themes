@@ -193,7 +193,7 @@ wav:
 	[ $$(find content/ -name 22.wav |wc -l) -eq 0 ] \
 		&& echo "22.wav check ok" \
 		|| ( echo \
-		&& find content/ -name 22.wav \
+		&& ls -l `find content/ -name 22.wav` \
 		&& echo \
 		&& echo "check why does 22.wav exist ?" \
 		&& echo \

@@ -60,21 +60,23 @@ rp:
 
 define help_textHU
 
-	rg   -> regen            : regen all hugo
-	rgt  -> regenTestVersion : regen all hugo use test version of hugo
-	s    -> server           : run hugo   server to test local
-	s2   -> server2          : run python server to test local 33221
-	s3   -> server3          : run python server to test local 33223
-	s5   -> server5          : run python server to test local 33225
-	vh   -> hugo_version     : show hugo version
-	gus  -> git_up_dusum     : ga gc  up ; du -sh .git ; sync
-	gusX -> git_up_dusumX    : ga gcX up ; du -sh .git ; sync
-	rvs  -> regen_vh_s2      : regen hugo_version server2
-	v1   -> vim test file 01 for hugo
-	v2   -> vim test file 02 for hugo
-	v3   -> vim test file 03 for hugo
-	m3u  -> gen the m3u
-	wav  -> deal with 22.wav
+	rg    -> regen            : regen all hugo
+	rgt   -> regenTestVersion : regen all hugo use test version of hugo
+	s     -> server           : run hugo   server to test local
+	s2    -> server2          : run python server to test local 33221
+	s3    -> server3          : run python server to test local 33223
+	s5    -> server5          : run python server to test local 33225
+	vh    -> hugo_version     : show hugo version
+	gus   -> git_up_dusum     : ga gc  up ; du -sh .git ; sync
+	gusX  -> git_up_dusumX    : ga gcX up ; du -sh .git ; sync
+	gusXt -> gusX_for_theme   : 
+	X     -> um rg gusX   
+	rvs   -> regen_vh_s2      : regen hugo_version server2
+	v1    -> vim test file 01 for hugo
+	v2    -> vim test file 02 for hugo
+	v3    -> vim test file 03 for hugo
+	m3u   -> gen the m3u
+	wav   -> deal with 22.wav
 
 endef
 
@@ -266,7 +268,10 @@ $(eval $(foreach aa1,$(myCodehtml_list01),$(call myCodeTP01,$(aa1))))
 
 gus:  git_up_dusum 
 gusX: git_up_dusumX
-gusXt: git_up_dusumX
+
+X : um rg gusX   
+
+gusXt gusX_for_theme : scripts.Hugo/themes/Makefile    
 	make -C scripts.Hugo/themes/    gusX 
 git_up_dusum  : ga gc  up 
 	du -sh .git 

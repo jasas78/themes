@@ -1,4 +1,10 @@
-<div Width="100%" style="border:1px dotted blue;font-size:150%" >
+<div Width="100%" 
+     {{ with .Get "bg" }} 
+     style="border:1px dotted blue;font-size:150%;background-color:{{- . -}}" 
+     {{ else }}
+     style="border:1px dotted blue;font-size:150%" 
+     {{ end }}
+     >
 
 
 <a href="{{ with .Get "link" }}{{ . }}{{ end }}" rel="noopener noreferrer" target="_blank" 

@@ -8,6 +8,7 @@
 {{- with .Get "webm" -}} {{- $cmp1 = .   -}} {{- $cmp1t = "webm" -}} {{- end -}}
 
 {{- $nojpg := .Get "nojpg" -}}
+{{- $nocheckmp4 := .Get "nocheckmp4" -}}
 
 {{- if not $cmp1 -}}
 {{- errorf "\n\n No mp4 para exist. exit ." -}}
@@ -46,8 +47,10 @@
 {{- end -}}
 {{- end -}}
 
+{{- if ne $nocheckmp4 "1" -}}
 {{- if ne $dealwithed 2 -}}
 {{- errorf "\n\n file [%s] not found. exit 18281810001." $cmp1 -}}
+{{- end -}}
 {{- end -}}
 {{- end -}}
 

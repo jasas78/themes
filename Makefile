@@ -91,7 +91,16 @@ $(if $(testHugo1),$(eval UseHugoOnTop:=1),\
 	$(if $(testHugo3),$(eval UseInTheme:=1),$(error "not_fit_dir"))\
 	))
 
-pythonVersion:=$(shell python --version |awk '{printf $$2}'|awk -F. '{print $$1}')
+
+#pythonVersion:=$(shell python --version |awk '{printf $$2}'|awk -F. '{print $$1}')
+pythonVersion3exist:=$(shell which python3)
+ifeq (,$(pythonVersion3exist))
+pythonVersion:=2
+pyBin:=python2
+else
+pythonVersion:=3
+pyBin:=python3
+endif
 
 ############################################### UseHugoOnTop  start
 ############################################### UseHugoOnTop  start
@@ -170,17 +179,17 @@ pyHttP:=$(pyHttp$(pythonVersion))
 s2: server2
 server2:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
-	cd public/ && python -m $(pyHttP) 33221
+	cd public/ && $(pyBin) -m $(pyHttP) 33221
 
 s3: server3
 server3:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
-	cd public/ && python -m $(pyHttP) 33223
+	cd public/ && $(pyBin) -m $(pyHttP) 33223
 
 s5: server5
 server5:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
-	cd public/ && python -m $(pyHttP) 33225
+	cd public/ && $(pyBin) -m $(pyHttP) 33225
 
 m3u  :
 #	m3u8_gen_01.sh https://`cat CNAME`/blog     docs/all.m3u8                                 scripts.Hugo/content/blog

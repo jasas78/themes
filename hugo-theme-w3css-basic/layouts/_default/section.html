@@ -17,16 +17,21 @@ table, td, th {
         {{- $tBase20 := path.Join "public" .Section -}}
         {{- $tBase3 := readDir $tBase20 -}}
 
-        {{- range $tBase3 -}}
+        {{- range $index, $element := $tBase3 -}}
         {{ if .IsDir }}
 
-        <div class="red">
-            {{- $nowName := .Name -}}
-            <a href="{{- $nowName -}}"> {{- $nowName -}} </a>
-        </div><br>
+        {{- $idx := mod $index 3 -}}
+        {{- if (eq $idx 0) -}} <div Width="100%" style="border:2px dotted green;" > {{- end -}}
+            {{- if (eq $idx 1) -}} <div Width="100%" style="border:2px dotted blue;" > {{- end -}}
+                {{- if (eq $idx 2) -}} <div Width="100%" style="border:2px dotted red;" > {{- end -}}
 
-        {{- end -}}
-        {{- end -}}
+
+                    {{- $nowName := .Name -}}
+                    <a href="{{- $nowName -}}"> {{- $idx -}} &nbsp; : &nbsp; &nbsp; &nbsp; {{- $nowName -}} </a>
+                </div><br>
+
+                {{- end -}}
+                {{- end -}}
 
     </body>
 </html>

@@ -60,6 +60,7 @@ rp:
 
 define help_textHU
 
+	um    -> update_makefile  : git pull  && cat Makefile --- ../Makefile 
 	rg    -> regen            : regen all hugo
 	rgt   -> regenTestVersion : regen all hugo use test version of hugo
 	s     -> server           : run hugo   server to test local

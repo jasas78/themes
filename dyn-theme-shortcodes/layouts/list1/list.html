@@ -1,0 +1,16 @@
+{{- range $nowpage := $.Site.RegularPages -}}
+{{- $yn := 0 -}}
+
+{{- $year1 := .Date -}}
+{{- if $year1.IsZero -}}
+{{- $yn = add $yn 1 -}}
+{{- end -}}
+
+{{- if eq (.Params.tags) nil -}}
+{{- $yn = add $yn 200 -}}
+{{- end -}}
+
+{{- if (eq $yn 0)  }}
+{{  .Permalink  }} 
+{{- end  }}
+{{- end -}}

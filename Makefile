@@ -77,6 +77,7 @@ define help_textHU
 	v2    -> vim test file 02 for hugo
 	v3    -> vim test file 03 for hugo
 	m3u   -> gen the m3u
+	byauthor   -> gen the byauthor
 	wav   -> deal with 22.wav
 
 endef
@@ -199,6 +200,9 @@ m3u  :
 #	mkdir -p scripts.Hugo/content/hot/endothers/
 #	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/endothers/all.m3u8   scripts.Hugo/content/blog
 	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
+
+byauthor  :
+	genHugoAuthor.sh
 
 wav:
 	wav_gen_22_wav_list.sh    https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8      scripts.Hugo/content/blog

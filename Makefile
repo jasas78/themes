@@ -158,7 +158,7 @@ um update_makefile :
 	(cd scripts.Hugo/themes/ && git pull  && cat Makefile > ../Makefile )
 
 rg:regen
-regen: wav m3u sed01 regen_pure
+regen: byauthor wav m3u sed01 regen_pure
 
 s : server
 server:

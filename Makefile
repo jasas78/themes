@@ -134,8 +134,11 @@ regenBaseCheck:
 	@[ -L scripts.Hugo/public ] || ln -s ../public/ scripts.Hugo/
 	rm -fr public/*
 	rm -fr scripts.Hugo/resources/_gen/*
-	cp CNAME public/
-	@[ -f public/CNAME ] || ( echo "why_no_38 file <public/CNAME> exist ?" ; exit 38 )
+	rm -f public/CNAME
+	if [ -f CNAME ] ; then \
+		cp CNAME public/ ; \
+		[ -f public/CNAME ] || exit 32 ; \
+		fi \
 
 rmXML := rm -f docs/sitemap.xml docs/images/favicons/browserconfig.xml docs/resources/images/favicons/browserconfig.xml `find docs/ -name index.xml`
 updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Makefile ] || \

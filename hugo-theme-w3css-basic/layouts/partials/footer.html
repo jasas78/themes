@@ -60,7 +60,7 @@
       <div class="notranslate">{{- $.Site.Params.address | markdownify -}}</div><br/>
       {{ if $.Site.Param `footerContactButton` }}
         {{ with ($.Site.GetPage `page` ($.Site.Param `footerContactButton`)) }}
-      <a target="_blank" href='{{ .Permalink | relURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}' class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '>{{ default `contact` (i18n `contactGoTo`) }}</a>
+      <a target="_blank" href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}' class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '>{{ default `contact` (i18n `contactGoTo`) }}</a>
         {{end}}
       {{end}}
     </div>

@@ -3649,7 +3649,7 @@
             "a"
           ],
           "Aliases": [
-            "relURL"
+            "absURL"
           ],
           "Examples": []
         },

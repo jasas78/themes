@@ -4,7 +4,7 @@
 {{- if .IsHome }}
 {{- end }}
 {{- $assetBusting := not .Site.Params.disableJSAssetsBusting }}
-<script src='{{ `js/custom.top.js`                         | relURL }}{{ if $assetBusting }}?1567486951{{ end }}'></script>
+<script src='{{ `js/custom.top.js`                         | absURL }}{{ if $assetBusting }}?1567486951{{ end }}'></script>
 {{- range .Site.Params.custom_js_top }}
-<script src='{{ .                                          | relURL }}{{ if $assetBusting }}?1567486952{{ end }}'></script>
+<script src='{{ .                                          | absURL }}{{ if $assetBusting }}?1567486952{{ end }}'></script>
 {{- end }}

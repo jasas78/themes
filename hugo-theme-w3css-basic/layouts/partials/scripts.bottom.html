@@ -4,7 +4,7 @@
 
 {{- $assetBusting := not .Site.Params.disableJSAssetsBusting }}
 
-<script src='{{ `/vendor/jquery/jquery-3.5.0.slim.min.js` | relURL }}'></script> <!-- used by owl.carousel, setStyleSheet  -->
+<script src='{{ `./vendor/jquery/jquery-3.5.0.slim.min.js` | absURL }}'></script> <!-- used by owl.carousel, setStyleSheet  -->
 {{- if $.Site.Params.menutopbar.themeColorSelectorEnable }}
   <script>
     function setStyleSheet(id){
@@ -18,8 +18,8 @@
 {{- end }}
 
 {{- if .IsHome }}
-<script src='{{ `/vendor/OwlCarousel2/owl.carousel.min.js` | relURL }}{{ if $assetBusting }}?1567486861{{ end }}'></script>
-<script src='{{ `/js/front.min.js`                         | relURL }}{{ if $assetBusting }}?1567486862{{ end }}'></script> <!-- patches owl.carousel  -->
+<script src='{{ `./vendor/OwlCarousel2/owl.carousel.min.js` | absURL }}{{ if $assetBusting }}?1567486861{{ end }}'></script>
+<script src='{{ `./js/front.min.js`                         | absURL }}{{ if $assetBusting }}?1567486862{{ end }}'></script> <!-- patches owl.carousel  -->
 {{- end }}
 
 {{- if isset $.Site.Params (lower `options` ) }}
@@ -27,7 +27,7 @@
 {{- end}}
 {{- end}}
 
-<script src='{{ `/js/custom.bottom.js`                     | relURL }}{{ if $assetBusting }}?1567486865{{ end }}'></script>
+<script src='{{ `./js/custom.bottom.js`                     | absURL }}{{ if $assetBusting }}?1567486865{{ end }}'></script>
 {{- range .Site.Params.custom_js_bottom }}
-<script src='{{ .                                          | absURL }}{{ if $assetBusting }}?1567486866{{ end }}'></script>
+<script src='{{ .                                           | absURL }}{{ if $assetBusting }}?1567486866{{ end }}'></script>
 {{- end }}

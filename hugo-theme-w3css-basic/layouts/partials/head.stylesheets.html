@@ -3,24 +3,24 @@
 {{- end}}
 
 {{- $assetBusting := not .Site.Params.disableCSSAssetsBusting }}
-<link rel="stylesheet" href='{{ relURL `vendor/fontawesome/5.9.0/css/all.css`                            }}' />
-<link rel="stylesheet" href='{{ relURL `vendor/daneden.github.io/animate.css/animate.min.css`            }}{{ if $assetBusting }}?1567485631{{ end }}' />
-<link rel="stylesheet" href='{{ relURL `vendor/OwlCarousel2/assets/owl.carousel.min.css`                 }}{{ if $assetBusting }}?1567485632{{ end }}' />
-<link rel="stylesheet" href='{{ relURL `vendor/OwlCarousel2/assets/owl.theme.default.min.css`            }}{{ if $assetBusting }}?1567485633{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `vendor/fontawesome/5.9.0/css/all.css`                            }}' />
+<link rel="stylesheet" href='{{ absURL `vendor/daneden.github.io/animate.css/animate.min.css`            }}{{ if $assetBusting }}?1567485631{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `vendor/OwlCarousel2/assets/owl.carousel.min.css`                 }}{{ if $assetBusting }}?1567485632{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `vendor/OwlCarousel2/assets/owl.theme.default.min.css`            }}{{ if $assetBusting }}?1567485633{{ end }}' />
 
-<link rel="stylesheet" href='{{ relURL `vendor/w3css/4/4.13/w3.css`                                      }}' />
+<link rel="stylesheet" href='{{ absURL `vendor/w3css/4/4.13/w3.css`                                      }}' />
 {{- /* if and (isset $.Site.Params (lower `w3css_color_theme` )) $.Site.Params.w3css_color_theme */}}
 {{- if $.Site.Params.w3cssColorTheme }}
-<link rel="stylesheet" id="theme-colors" href='{{ relURL $.Site.Params.w3cssColorTheme }}{{ if $assetBusting }}?1567485634{{ end }}' />
+<link rel="stylesheet" id="theme-colors" href='{{ absURL "."}}{{ $.Site.Params.w3cssColorTheme }}{{ if $assetBusting }}?1567485634{{ end }}' />
 {{- else }}
-  <link rel="stylesheet" id="theme-colors" href='{{ relURL `vendor/w3css/4/w3-theme-red.css` }}{{ if $assetBusting }}?1567485635{{ end }}' />
+  <link rel="stylesheet" id="theme-colors" href='{{ absURL `vendor/w3css/4/w3-theme-red.css` }}{{ if $assetBusting }}?1567485635{{ end }}' />
 {{- end }}
 
-<link rel="stylesheet" href='{{ relURL `css/syntax.min.css`       }}{{ if $assetBusting }}?1567485636{{ end }}' />
-<link rel="stylesheet" href='{{ relURL `css/w3css-basic.min.css`  }}{{ if $assetBusting }}?1567485637{{ end }}' />
-<link rel="stylesheet" href='{{ relURL `css/res-gallery.min.css`  }}{{ if $assetBusting }}?1567485638{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `css/syntax.min.css`       }}{{ if $assetBusting }}?1567485636{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `css/w3css-basic.min.css`  }}{{ if $assetBusting }}?1567485637{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `css/res-gallery.min.css`  }}{{ if $assetBusting }}?1567485638{{ end }}' />
 
-<link rel="stylesheet" href='{{ relURL `css/custom.css`           }}{{ if $assetBusting }}?1567485639{{ end }}' />
+<link rel="stylesheet" href='{{ absURL `css/custom.css`           }}{{ if $assetBusting }}?1567485639{{ end }}' />
 {{- range .Site.Params.custom_css }}
-<link rel="stylesheet" href='{{ . | relURL                        }}{{ if $assetBusting }}?1567485630{{ end }}' />
+<link rel="stylesheet" href='{{ . | absURL                        }}{{ if $assetBusting }}?1567485630{{ end }}' />
 {{- end }}

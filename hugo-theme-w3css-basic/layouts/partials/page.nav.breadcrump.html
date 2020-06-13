@@ -23,7 +23,7 @@
   {{- if .mySite.Params.options.navbreadcrumptitle -}}
     <a href="{{ .p1.Permalink }}">{{.p1.Title | markdownify | emojify | safeHTML }}/</a>
   {{- else }}
-    <a href="{{ .p1.Permalink }}">{{replaceRE ".*/" "" ( (urls.Parse .p1.Permalink).Path | relURL | strings.TrimSuffix "/")  | humanize }}/</a>
+    <a href="{{ .p1.Permalink }}">{{replaceRE ".*/" "" ( (urls.Parse .p1.Permalink).Path | absURL | strings.TrimSuffix "/")  | humanize }}/</a>
   {{- end }}
   </div>
 {{- else }}

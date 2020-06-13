@@ -672,7 +672,7 @@ consectetuer adipiscing
 [params.favicon]
   # you may want to use hddps://realfavicongenerator.net to generate your files
   # used in layouts/partials/head.favicon.html
-  # relURL is applied to path
+  # absURL is applied to path
   enable                 = true
   path                   = "/images/favicons"
   version                = "gH2ZthzW"

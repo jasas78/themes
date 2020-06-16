@@ -196,17 +196,17 @@ server5:
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
 	cd public/ && $(pyBin) -m $(pyHttP) 33225
 
-m3u  :
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     docs/all.m3u8                                 scripts.Hugo/content/blog
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/all.m3u8             scripts.Hugo/content/blog
-#	mkdir -p scripts.Hugo/content/hot/endothers/
-#	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/hot/endothers/all.m3u8   scripts.Hugo/content/blog
-	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
 
+
+ifeq ($(wildcard scripts.Hugo/content/blog),)
+m3u  :
+wav:
+byauthor  :
+else
 byauthor  :
 	genHugoAuthor.sh
-
+m3u  :
+	m3u8_gen_01.sh https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8                 scripts.Hugo/content/blog
 wav:
 	wav_gen_22_wav_list.sh    https://`cat CNAME`/blog     scripts.Hugo/content/all.m3u8      scripts.Hugo/content/blog
 	[ $$(find content/ -name 22.wav |wc -l) -eq 0 ] \
@@ -220,6 +220,7 @@ wav:
 		&& echo \
 		&& exit 78 \
 		)
+endif
 
 export help_textHU
 endif

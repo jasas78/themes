@@ -11,21 +11,59 @@ table, th, td {
         </style>
     </head>
     <body>
-        <h1>{{- .Title -}}</h1>
-        <table>
-            <th> dirName 目录 </th>
-            <th> content 内容 </th>
 
-            {{ range .Pages }}
-            <tr>
-                <td>
-                    {{.Permalink}} 
-                </td>
-                <td>
-                    <a href="{{.Permalink}}">{{.Title}}</a>
-                </td>
-            </tr>
-            {{ end }}
-        </table>
+        <div style="border:2px dotted blue;font-size:300%;color:red;" >
+            {{ .Site.Params.recentPosts.title }}
+        </div>
+
+
+
+
+            {{ $now01 := now }}
+            <table style="border: 1px solid black;" >
+                <tr style="border: 1px solid red;" >
+                    <td style="border: 1px solid black;" > Year <br> 年</td>
+                    <td style="border: 1px solid black;" > Mon <br> 月 </td>
+                    <td style="border: 1px solid black;" > Day <br> 日 </td>
+                    <td style="border: 1px solid black;" > Hour <br> 时 </td>
+                    <td style="border: 1px solid black;" > Min <br> 分 </td>
+                    <td style="border: 1px solid black;" > Sec <br> 秒 </td>
+                </tr>
+                    <tr style="border: 1px solid black;" >
+                        <td style="border: 1px solid black;" > {{ $now01.Year }} </td>
+                        <td style="border: 1px solid black;" > {{ $now01.Month }} </td>
+                        <td style="border: 1px solid black;" > {{ $now01.Day }} </td>
+                        <td style="border: 1px solid black;" > {{ $now01.Hour }} </td>
+                        <td style="border: 1px solid black;" > {{ $now01.Minute }} </td>
+                        <td style="border: 1px solid black;" > {{ $now01.Second }} </td>
+                    </tr>
+                        <tr style="border: 1px solid black;" >
+                            <td style="border: 1px solid black;" colspan="2" > San_Francisco </td>
+                            <td style="border: 1px solid black;" > {{ dateFormat "MST" $now01.Local }} </td>
+                            <td style="border: 1px solid black;" colspan="3" > {{ $now01.Unix }} </td>
+                        </tr>
+
+            </table>
+
+
+
+
+
+                <h1>{{- .Title -}}</h1>
+                <table>
+                    <th> dirName 目录 </th>
+                    <th> content 内容 </th>
+
+                    {{ range .Pages }}
+                    <tr>
+                        <td>
+                            {{.Permalink}} 
+                        </td>
+                        <td>
+                            <a href="{{.Permalink}}">{{.Title}}</a>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </table>
     </body>
 </html>

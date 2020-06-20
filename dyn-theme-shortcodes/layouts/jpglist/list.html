@@ -6,21 +6,19 @@
 
         <style>
 
+table, th, td {
+    border: 1px solid black;
+}
         </style>
-        <!--
-            table, th, td {
-            border: 1px solid black;
-            }
-        -->
 
         <style>
 @media all and (orientation: portrait) {
-    div.tbL { display: none;         }
-    div.tbP { display: inline-block; }
+    div.tbL { display: none;         text-align: center; }
+    div.tbP { display: inline-block; text-align: center; }
 }
 @media all and (orientation: landscape) {
-    div.tbL { display: inline-block; }
-    div.tbP { display: none;         }
+    div.tbL { display: inline-block; text-align: center; }
+    div.tbP { display: none;         text-align: center; }
 }
         </style>
 
@@ -34,101 +32,112 @@
 
         -->
 
-
-
-        {{ $divHorigin := 400 }} 
-        {{ $divWorigin := 300 }}
-        {{ $divH := "" }} 
-        {{ $divW := "" }}
-        {{ with .Params.indexHeight }} {{ $divHorigin = . }} {{ end }}
-        {{ with .Params.indexWidth  }} {{ $divWorigin = . }} {{ end }}
-        {{- $TDamount := len .Params.indexSET }}
-        {{- $tmaxOrigin := 3 -}}
-        {{- $tmax := 3 -}}
-        {{- $tbClass := "tbL" -}}
-        {{- if .Params.tableMax -}} {{- $tmaxOrigin = .Params.tableMax -}} {{- end -}}
-        {{- $indexSET := .Params.indexSET }}
-
-        {{- range $tbIdx, $tbValue := (slice 1 2) }}
-        {{- if eq $tbIdx 0 }}
-        {{- $tmax = $tmaxOrigin }}
-        {{- $tbClass = "tbP" }}
-        {{- $divH = add $divHorigin $divHorigin }}
-        {{- $divW = add $divWorigin $divWorigin }}
-        {{- else }}
-        {{- $tmax = add $tmaxOrigin $tmaxOrigin }}
-        {{- $tbClass = "tbL" }}
-        {{- $divH = $divHorigin }}
-        {{- $divW = $divWorigin }}
-        {{- end }}
-        <div
-            class="{{ $tbClass }}"
-            >
         <table 
-               style="border: 5px solid red; table-layout:fixed; float:center; "
-               align="center" 
-               >
-               <tr >
-                   <td style="text-align:center; "  >
-                       {{- $ee1:="" -}} {{- $ee2:="" -}} {{- $ee3:="" -}}
-                       {{- $tidx := 1 -}}
-                       {{- $TDidx := 1 }}
+                   style="width:99%; table-layout:fixed; float:center; "
+                   align="center"
+                   >
 
 
-                       {{- range $elem_index, $elem_val := $indexSET }}
+                   {{ $divHorigin := 400 }} 
+                   {{ $divWorigin := 300 }}
+                   {{ $divH := "" }} 
+                   {{ $divW := "" }}
+                   {{ with .Params.indexHeight }} {{ $divHorigin = . }} {{ end }}
+                   {{ with .Params.indexWidth  }} {{ $divWorigin = . }} {{ end }}
+                   {{- $TDamount := len .Params.indexSET }}
+                   {{- $tmaxOrigin := 3 -}}
+                   {{- $tmax := 3 -}}
+                   {{- $tbClass := "tbL" -}}
+                   {{- if .Params.tableMax -}} {{- $tmaxOrigin = .Params.tableMax -}} {{- end -}}
+                   {{- $indexSET := .Params.indexSET }}
 
-                       {{- $arr1 := split $elem_val "," -}}
+                   {{- range $tbIdx, $tbValue := (slice 1 2) }}
+                   {{- if eq $tbIdx 0 }}
+                   {{- $tmax = $tmaxOrigin }}
+                   {{- $tbClass = "tbP" }}
+                   {{- $divH = add $divHorigin $divHorigin }}
+                   {{- $divW = add $divWorigin $divWorigin }}
+                   {{- $divW = "98%" }}
+                   {{- $divW = "98%" }}
+                   {{- else }}
+                   {{- $tmax = add $tmaxOrigin $tmaxOrigin }}
+                   {{- $tbClass = "tbL" }}
+                   {{- $divH = $divHorigin }}
+                   {{- $divH = $divHorigin }}
+                   {{- $divW = "50%" }}
+                   {{- $divW = "50%" }}
+                   {{- end }}
+                   <tr><td style=" text-align:center; " >
+                           <div
+                               class="{{ $tbClass }}"
+                               style="border: 5px solid blue; width:99%; text-align:center; "
+                               align="center"
+                               >
+                               <table 
+                               style="border: 1px solid red; table-layout:fixed; float:center; "
+                               align="center" 
+                               >
+                               <tr >
+                                   <td style="text-align:center; width:25%; "  >
+                                       {{- $ee1:="" -}} {{- $ee2:="" -}} {{- $ee3:="" -}}
+                                       {{- $tidx := 1 -}}
+                                       {{- $TDidx := 1 }}
 
-                       {{- if len $arr1 | eq 3 }}
-                       {{- $ee1 = index $arr1 0 -}}
-                       {{- $ee2 = index $arr1 1 -}}
-                       {{- $ee3 = index $arr1 2 -}}
-                       <img 
-                       title="{{ $ee1 }} : {{ $ee3 }}" 
-                       alt="{{ $ee2 }}"
-                       src="{{ $ee2 }}"
-                       style="max-width:{{ $divW }}; "
-                       onclick="window.open(
-                       '{{ $ee3 }}'
-                       , '_blank');"
-                       />
-                       {{- end }}
+
+                                       {{- range $elem_index, $elem_val := $indexSET }}
+
+                                       {{- $arr1 := split $elem_val "," -}}
+
+                                       {{- if len $arr1 | eq 3 }}
+                                       {{- $ee1 = index $arr1 0 -}}
+                                       {{- $ee2 = index $arr1 1 -}}
+                                       {{- $ee3 = index $arr1 2 -}}
+                                       <img 
+                                       title="{{ $ee1 }} : {{ $ee3 }}" 
+                                       alt="{{ $ee2 }}"
+                                       src="{{ $ee2 }}"
+                                       onclick="window.open(
+                                       '{{ $ee3 }}'
+                                       , '_blank');"
+                                       style=" width:100%; "
+                                       />
+                                       {{- end }}
 
 
-                       {{- if len $arr1 | eq 2 -}}
-                       {{- $ee1 = index $arr1 0 -}}
-                       {{- $ee2 = index $arr1 1 -}}
-                       <a 
-                       href="{{ $ee2 }}"
-                       >
-                       <table 
-                       style="max-width:{{ $divW }}; "
-                       align="center"
-                       >
-                       <caption> {{$ee1 }} </caption>
-                       <tr><td style="text-align:center; "  >
-                               {{ $ee2 }}
+                                       {{- if len $arr1 | eq 2 -}}
+                                       {{- $ee1 = index $arr1 0 -}}
+                                       {{- $ee2 = index $arr1 1 -}}
+                                       <a 
+                                       href="{{ $ee2 }}"
+                                       >
+                                       <table 
+                                       align="center"
+                                       >
+                                       <caption> {{$ee1 }} </caption>
+                                       <tr><td style="text-align:center; "  >
+                                               {{ $ee2 }}
+                                           </td></tr>
+                                       </table>
+                                       </a>
+                                   {{- end }}
+
+                                   {{ if eq $TDamount $TDidx }} </td>
+                               </tr>
+                               {{- else }}
+                               {{ if eq $tmax $tidx }} </td>
+                       <tr>
+                           <td style="text-align:center; width:25% "  > {{ $tidx = 1 }}
+                               {{ else }} </td>
+                           <td style="text-align:center; width:25% "  > {{ $tidx = add $tidx  1 }}
+                               {{- end }}
+                               {{- end }}
+                               {{- $TDidx = add $TDidx 1 }}
+
+                               {{ end }}
+                               </table>
+                           </div>
                            </td></tr>
-                       </table>
-                       </a>
-                   {{- end }}
-
-                   {{ if eq $TDamount $TDidx }} </td>
-               </tr>
-               {{- else }}
-               {{ if eq $tmax $tidx }} </td>
-           <tr>
-               <td style="text-align:center; "  > {{ $tidx = 1 }}
-                   {{ else }} </td>
-               <td style="text-align:center; "  > {{ $tidx = add $tidx  1 }}
-                   {{- end }}
-                   {{- end }}
-                   {{- $TDidx = add $TDidx 1 }}
-
-                   {{ end }}
-        </table>
-        </div>
-                   {{ end }}
+                           {{ end }}
 
     </body>
 </html>

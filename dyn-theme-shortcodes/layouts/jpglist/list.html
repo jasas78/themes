@@ -13,12 +13,12 @@ table, th, td {
 
         <style>
 @media all and (orientation: portrait) {
-    table.tbL { display: none; }
-    table.tbP { display: block; }
+    table.tbL { display: none;  border: 5px solid red; }
+    table.tbP { display: block; border: 5px solid red; }
 }
 @media all and (orientation: landscape) {
-    table.tbL { display: block; }
-    table.tbP { display: none; }
+    table.tbL { display: block; border: 5px solid red; }
+    table.tbP { display: none;  border: 5px solid red; }
 }
         </style>
 
@@ -34,6 +34,8 @@ table, th, td {
 
 
 
+        {{ $divHorigin := 400 }} 
+        {{ $divWorigin := 300 }}
         {{ $divH := 800 }} 
         {{ $divW := 600 }}
         {{ with .Params.indexHeight }} {{ $divH = . }} {{ end }}
@@ -49,13 +51,16 @@ table, th, td {
         {{- if eq $tbIdx 0 }}
         {{- $tmax = $tmaxOrigin }}
         {{- $tbClass = "tbP" }}
+        {{- $divH = add $divHorigin $divHorigin }}
+        {{- $divW = add $divWorigin $divWorigin }}
         {{- else }}
         {{- $tmax = add $tmaxOrigin $tmaxOrigin }}
         {{- $tbClass = "tbL" }}
+        {{- $divH = $divHorigin }}
+        {{- $divW = $divWorigin }}
         {{- end }}
         <table 
                class="{{ $tbClass }}"
-               style=" border: 5px solid red; "
                align="center" 
                >
                <tr >

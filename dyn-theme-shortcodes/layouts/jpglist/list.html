@@ -11,6 +11,17 @@ table, th, td {
 }
         </style>
 
+        <style>
+@media all and (orientation: portrait) {
+    table.tbL { display: none; }
+    table.tbP { display: block; }
+}
+@media all and (orientation: landscape) {
+    table.tbL { display: block; }
+    table.tbP { display: none; }
+}
+        </style>
+
     </head>
     <body>
 
@@ -18,75 +29,80 @@ table, th, td {
             <h1 style="text-align:center" > {{ .Params.title }} </h1>
         -->
 
+        <table class="tbP"><tr><td>tbP</td></tr></table>
+        <table class="tbL"><tr><td>tbL</td></tr></table>
+
+
+
         {{ $divH := 800 }} 
         {{ $divW := 600 }}
         {{ with .Params.indexHeight }} {{ $divH = . }} {{ end }}
         {{ with .Params.indexWidth  }} {{ $divW = . }} {{ end }}
 
         <table 
-                style=" border: 5px solid red; "
-                align="center" >
-                <tr >
-                    <td style="text-align:center; "  >
-                        {{- $ee1:="" -}} {{- $ee2:="" -}} {{- $ee3:="" -}}
-                        {{- $tmax := 3 -}}
-                        {{- $tidx := 1 -}}
-                        {{- $TDamount := len .Params.indexSET }}
-                        {{- $TDidx := 1 }}
+               style=" border: 5px solid red; "
+               align="center" >
+               <tr >
+                   <td style="text-align:center; "  >
+                       {{- $ee1:="" -}} {{- $ee2:="" -}} {{- $ee3:="" -}}
+                       {{- $tmax := 3 -}}
+                       {{- $tidx := 1 -}}
+                       {{- $TDamount := len .Params.indexSET }}
+                       {{- $TDidx := 1 }}
 
-                        {{- if .Params.tableMax -}} {{- $tmax = .Params.tableMax -}} {{- end -}}
+                       {{- if .Params.tableMax -}} {{- $tmax = .Params.tableMax -}} {{- end -}}
 
-                        {{- range $elem_index, $elem_val := .Params.indexSET }}
+                       {{- range $elem_index, $elem_val := .Params.indexSET }}
 
-                        {{- $arr1 := split $elem_val "," -}}
+                       {{- $arr1 := split $elem_val "," -}}
 
-                        {{- if len $arr1 | eq 3 }}
-                        {{- $ee1 = index $arr1 0 -}}
-                        {{- $ee2 = index $arr1 1 -}}
-                        {{- $ee3 = index $arr1 2 -}}
-                        <img 
-                        title="{{ $ee1 }} : {{ $ee3 }}" 
-                        alt="{{ $ee2 }}"
-                        src="{{ $ee2 }}"
-                        style="max-width:{{ $divW }}; max-height:{{ $divH }}; "
-                        onclick="window.open(
-                        '{{ $ee3 }}'
-                        , '_blank');"
-                        />
-                        {{- end }}
+                       {{- if len $arr1 | eq 3 }}
+                       {{- $ee1 = index $arr1 0 -}}
+                       {{- $ee2 = index $arr1 1 -}}
+                       {{- $ee3 = index $arr1 2 -}}
+                       <img 
+                       title="{{ $ee1 }} : {{ $ee3 }}" 
+                       alt="{{ $ee2 }}"
+                       src="{{ $ee2 }}"
+                       style="max-width:{{ $divW }}; max-height:{{ $divH }}; "
+                       onclick="window.open(
+                       '{{ $ee3 }}'
+                       , '_blank');"
+                       />
+                       {{- end }}
 
 
-                        {{- if len $arr1 | eq 2 -}}
-                        {{- $ee1 = index $arr1 0 -}}
-                        {{- $ee2 = index $arr1 1 -}}
-                        <a 
-                        href="{{ $ee2 }}"
-                        >
-                        <table 
-                        style="max-width:{{ $divW }}; max-height:{{ $divH }}; "
-                        align="center"
-                        >
-                        <caption> {{$ee1 }} </caption>
-                        <tr><td style="text-align:center; "  >
-                                {{ $ee2 }}
-                            </td></tr>
-                        </table>
-                        </a>
-                    {{- end }}
+                       {{- if len $arr1 | eq 2 -}}
+                       {{- $ee1 = index $arr1 0 -}}
+                       {{- $ee2 = index $arr1 1 -}}
+                       <a 
+                       href="{{ $ee2 }}"
+                       >
+                       <table 
+                       style="max-width:{{ $divW }}; max-height:{{ $divH }}; "
+                       align="center"
+                       >
+                       <caption> {{$ee1 }} </caption>
+                       <tr><td style="text-align:center; "  >
+                               {{ $ee2 }}
+                           </td></tr>
+                       </table>
+                       </a>
+                   {{- end }}
 
-                    {{ if eq $TDamount $TDidx }} </td>
-                </tr>
-                {{- else }}
-                {{ if eq $tmax $tidx }} </td>
-            <tr>
-                <td style="text-align:center; "  > {{ $tidx = 1 }}
-                    {{ else }} </td>
-                <td style="text-align:center; "  > {{ $tidx = add $tidx  1 }}
-                    {{- end }}
-                    {{- end }}
-                    {{- $TDidx = add $TDidx 1 }}
+                   {{ if eq $TDamount $TDidx }} </td>
+               </tr>
+               {{- else }}
+               {{ if eq $tmax $tidx }} </td>
+           <tr>
+               <td style="text-align:center; "  > {{ $tidx = 1 }}
+                   {{ else }} </td>
+               <td style="text-align:center; "  > {{ $tidx = add $tidx  1 }}
+                   {{- end }}
+                   {{- end }}
+                   {{- $TDidx = add $TDidx 1 }}
 
-                    {{ end }}
+                   {{ end }}
         </table>
 
     </body>

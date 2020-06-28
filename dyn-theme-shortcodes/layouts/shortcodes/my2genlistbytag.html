@@ -29,7 +29,7 @@
     {{- $index := 0 -}}
     {{- $yn := 0 -}}
     {{- $nowName := "" -}}
-    {{- range $nowpage := ($.Site.RegularPages).Reverse -}}
+    {{- range $nowpage := $.Site.RegularPages -}}
         {{- $yn = 0 -}}
 
         {{- $year1 := .Date -}}
@@ -40,6 +40,18 @@
         {{- if eq (.Params.tags) nil -}}
                 {{- $yn = add $yn 200 -}}
         {{- end -}}
+
+        {{ if in .Permalink "/hot/" }} 
+                {{- $yn = add $yn 300 -}}
+        {{ end }}
+
+        {{ if in .Permalink "/m3u8/" }} 
+                {{- $yn = add $yn 400 -}}
+        {{ end }}
+
+        {{ if in .Permalink "/time/" }} 
+                {{- $yn = add $yn 500 -}}
+        {{ end }}
 
         {{- if (eq $yn 0) -}}
     

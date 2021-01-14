@@ -29,7 +29,7 @@
 
                      
             {{- $tPath1 := path.Dir .Path -}}
-            <a href="{{ .Site.Title }}/{{- $tPath1 -}}/index.html"
+            <a href="{{ .Site.Title }}/{{.Site.BaseURL}}/{{- $tPath1 -}}/index.html"
            title="{{ .Site.Title }}"
            style="background-color:Gray; color:Tomato; font-size:60%; border:2px MediumSeaGreen dotted;"
            rel="noopener noreferrer"

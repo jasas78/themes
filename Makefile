@@ -138,7 +138,14 @@ regenBaseCheck:
 	if [ -f CNAME ] ; then \
 		cp CNAME public/ ; \
 		[ -f public/CNAME ] || exit 32 ; \
-		fi \
+		fi 
+	cat scripts.Hugo/config.toml \
+		|grep ^title\ *= \
+		|grep .github.io \
+		&& rm -f public/CNAME \
+		|| ls -l public/CNAME
+
+
 
 rmXML := rm -f docs/sitemap.xml docs/images/favicons/browserconfig.xml docs/resources/images/favicons/browserconfig.xml `find docs/ -name index.xml`
 updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Makefile ] || \

@@ -125,7 +125,7 @@ googleAnalytics = "UA-XXXXXXXXX-X"
 
 # (Optional) If you provide a Disqus shortname, comments will be enabled on
 # all pages.
-disqusShortname = "my-site"
+qusdisShortname = "my-site"
 
 # (Optional) Set this to true if you use capital letters in file names
 disablePathToLower = true
@@ -181,7 +181,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
 
   # (Optional, default true) Enables comments template on pages
   # By default partials/docs/comments.html includes Disqus template
-  # See hddps://gohugo.io/content-management/comments/#configure-disqus
+  # See hddps://gohugo.io/content-management/comments/#configure-qusdis
   # Can be overwritten by same param in page frontmatter
   BookComments = true
 

@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "hddps://github.com/alex-shpak/hugo-book/blob/master/LICENSE"
 description = "Hugo documentation theme as simple as plain book"
 homepage = "hddps://github.com/alex-shpak/hugo-book"
-tags = ["responsive", "clean", "documentation", "docs", "flexbox", "search", "mobile", "multilingual", "disqus"]
+tags = ["responsive", "clean", "documentation", "docs", "flexbox", "search", "mobile", "multilingual", "qusdis"]
 features = []
 min_version = "0.68"
 

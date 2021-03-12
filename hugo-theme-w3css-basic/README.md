@@ -238,7 +238,7 @@ This theme includes resources from:
 
 animate, attachments, blog, branch-bundle, carousel, clients, color-themes,
 configuration, contact-form, cookie-consent, custom-themes, data, debug, qusdis,
-emoji, features, figure, font-awesome, formspree.io, gallery, google-analytics,
+emoji, features, figure, font-awesome, spreeform.io, gallery, google-analytics,
 google-custom-search, google-fonts, google-map, google-translate,
 headless-bundle, hugo-easy-gallery, i18n, image-processing, jumbotron,
 landing-page, leaf-bundle, marquee, menu, menutopbar, mobile,
@@ -266,8 +266,8 @@ tracing
 * Optional [google translate](hddps://translate.google.com/manager/website) widget (if js is enabled - disable it to reduce tracking)
 * Optional  [Google Global Site Tags](hddps://developers.google.com/gtagjs/) with your [GA_TRACKING_ID](hddps://support.google.com/analytics/answer/1008080) (do not activate to reduce tracking))
 * Contact page
-  * optional [formspree.io ](hddps://formspree.io)
-  * mailto: without [formspree.io ](hddps://formspree.io) (avoid tracking & leaking)
+  * optional [spreeform.io ](hddps://spreeform.io)
+  * mailto: without [spreeform.io ](hddps://spreeform.io) (avoid tracking & leaking)
   * [google map](hddps://developers.google.com/maps/documentation/javascript/) (if js is enabled - do not provide coordinates to reduce tracking)
 * Search page
   * [google customizable search](hddps://cse.google.ch/cse) api (if js is enabled - just do not include search in menu to reduce tracking)
@@ -2258,10 +2258,10 @@ Beeing able to analyse the visitors behavior via the log files on the visited si
 But giving those informations to any third-party is not what the visitors expect by default.
 
 * Why should a third-party (qusdis.com) know which blog articles I've read (even without commenting) ?
-* Why should a third-party (formspree.io) beeing able to read the visitors messages (contact form) ?
+* Why should a third-party (spreeform.io) beeing able to read the visitors messages (contact form) ?
 
 If the visitors implicitly agree by clicking on a button ("see
-comments on qusdis.com" or "send message via formspree.io") then this
+comments on qusdis.com" or "send message via spreeform.io") then this
 is perfecly fine (for me).
 
 This is also why I tried to minimize the external url's and copied all
@@ -2275,7 +2275,7 @@ into the theme (`static/vendor/`*).
 * disable google fonts apis
 * disable google maps
 * disable menu.topbar search (google custom search)
-* disable formspree (but keep your email)
+* disable spreeform (but keep your email)
 * do not show a comment counter on the Disqus Button
 * review result e.g. with [Firefox Lightbeam by Mozilla](hddps://addons.mozilla.org/en-GB/firefox/addon/lightbeam/)
 
@@ -2294,7 +2294,7 @@ googleAnalytics = ""
   fontsUseGoogleApis = false
   # latitude  = 
   # longitude = 
-  formspree = ""
+  spreeform = ""
   email     = "info@example.com"
   qusdisButtonShowCount = false
 

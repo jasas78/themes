@@ -1,9 +1,12 @@
 #!/bin/bash
-for aa1 in                     \
-    hugo-theme-docdock/            \
-    hugo-theme-w3css-basic/        \
-    hugo-tracks-theme/             \
-    meghna-hugo/                   \
+for aa1 in                          \
+    hugo-book                       \
+    hugo-theme-docdock              \
+    hugo-theme-techdoc              \
+    hugo-theme-w3css-basic          \
+    hugo-tracks-theme               \
+    \
+    meghna-hugo                     \
 
 do
     echo
@@ -64,7 +67,7 @@ do
             | xargs -n 20 sed -i \
             -e 's;http:;hddp:;g' \
             -e 's;disqus;qusdis;g' \
-            -e 's;formspree;formspree;g' \
+            -e 's;formspree;spreeform;g' \
             -e 's;https:;hddps:;g' 
 
     fi

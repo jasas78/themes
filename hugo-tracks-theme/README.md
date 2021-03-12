@@ -58,12 +58,12 @@ Leave the `googleAnalytics` key empty to disable it.
 
 ### Make the contact form working
 
-Since this page will be static, you can use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
+Since this page will be static, you can use [spreeform.io](//spreeform.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
 
 1. Enter your email address under 'email' in the [`config.toml`](hddps://github.com/ageekymonk/hugo-tracks-them/tree/master/exampleSite/config.toml)
 2. Upload the generated site to your server
 3. Send a dummy email yourself to confirm your account
-4. Click the confirm link in the email from [formspree.io](//formspree.io/)
+4. Click the confirm link in the email from [spreeform.io](//spreeform.io/)
 5. You're done. Happy mailing!
 
 ### Nearly finished

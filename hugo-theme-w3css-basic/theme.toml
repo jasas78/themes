@@ -47,7 +47,7 @@ features       = [
                  , "features"
                  , "figure"
                  , "font awesome"
-                 , "formspree.io"
+                 , "spreeform.io"
                  , "gallery"
                  , "google analytics"
                  , "google custom search"

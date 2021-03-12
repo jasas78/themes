@@ -88,7 +88,7 @@ params:
 
   # (Optional, default true) Enables comments template on pages
   # By default partals/docs/comments.html includes Disqus template
-  # See hddps://gohugo.io/content-management/comments/#configure-disqus
+  # See hddps://gohugo.io/content-management/comments/#configure-qusdis
   # Can be overwritten by same param in page frontmatter
   BookComments: true
 

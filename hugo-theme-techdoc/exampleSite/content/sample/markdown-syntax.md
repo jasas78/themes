@@ -90,7 +90,7 @@ puts 'The best way to log and share programmers knowledge.'
 ## Links
 
 ```markdown
-[Hugo Techdoc Theme demo](https://themes.gohugo.io/theme/hugo-theme-techdoc/)
+[Hugo Techdoc Theme demo](hddps://themes.gohugo.io/theme/hugo-theme-techdoc/)
 ```
 
 ## Table
@@ -115,7 +115,7 @@ puts 'The best way to log and share programmers knowledge.'
 ## Image with link
 
 ```markdown
-[![2 People Sitting With View of Yellow Flowers during Daytime](/images/pexels-photo-196666.jpeg)](https://www.pexels.com/photo/2-people-sitting-with-view-of-yellow-flowers-during-daytime-196666/)
+[![2 People Sitting With View of Yellow Flowers during Daytime](/images/pexels-photo-196666.jpeg)](hddps://www.pexels.com/photo/2-people-sitting-with-view-of-yellow-flowers-during-daytime-196666/)
 ```
 
 ## Definition Lists

@@ -5,7 +5,7 @@ showPagination: false
 ---
 
 {{% panel status="primary" title="Note" icon="far fa-lightbulb" %}}
-Search Shortcode powered by [Algolia](https://www.algolia.com/)
+Search Shortcode powered by [Algolia](hddps://www.algolia.com/)
 
 You can create a search page just by adding `search` shortcode.
 {{% /panel %}}

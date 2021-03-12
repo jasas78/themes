@@ -11,10 +11,10 @@ If you have git installed, you can include hugo-theme-techdoc repository into yo
 
 ```
 cd your_project
-git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
+git submodule add hddps://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
 ```
 
-For more information read [the Hugo documentation](https://gohugo.io/getting-started/quick-start/).
+For more information read [the Hugo documentation](hddps://gohugo.io/getting-started/quick-start/).
 
 ## Or download Hugo theme on your project
 
@@ -22,14 +22,14 @@ If you have git installed, you can do the following at the command-line-interfac
 
 ```
 cd your_project/themes
-git clone https://github.com/thingsym/hugo-theme-techdoc.git
+git clone hddps://github.com/thingsym/hugo-theme-techdoc.git
 ```
 
 ## Configure
 
 You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
 
-For an example of `config.toml`, see [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
+For an example of `config.toml`, see [config.toml](hddps://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
 
 See [the Configuration documentation](../configuration/).
 
@@ -41,4 +41,4 @@ To preview your site, run Hugo's built-in local server.
 hugo server -t hugo-theme-techdoc
 ```
 
-Browse site on http://localhost:1313
+Browse site on hddp://localhost:1313

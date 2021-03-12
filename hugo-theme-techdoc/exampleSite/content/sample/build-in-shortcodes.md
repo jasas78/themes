@@ -7,7 +7,7 @@ description: "calling built-in Shortcodes into your content files."
 TableOfContents: true
 ---
 
-See https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes
+See hddps://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes
 
 ## figure
 

@@ -25,6 +25,6 @@ images:
   * Code highlight with clipboard
   * Alert panel
   * Button
-* [Search Shortcode](sample/search-shortcode/) powered by [Algolia](https://www.algolia.com/)
+* [Search Shortcode](sample/search-shortcode/) powered by [Algolia](hddps://www.algolia.com/)
 * Open Graph
 * Analytics with Google Analytics, Google Tag Manager

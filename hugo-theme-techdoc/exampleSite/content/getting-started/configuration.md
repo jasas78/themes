@@ -8,18 +8,18 @@ weight: 20
 
 You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme’s features.
 
-For an example of `config.toml`, see [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
+For an example of `config.toml`, see [config.toml](hddps://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
 
 ## Params
 
     # Source Code repository section
     description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_repository = "hddps://github.com/thingsym/hugo-theme-techdoc"
     version = "0.9.7"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_doc_repository = "hddps://github.com/thingsym/hugo-theme-techdoc"
 
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
@@ -28,14 +28,14 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
 
     # Open Graph and Twitter Cards settings section
     # Open Graph settings for each page are set on the front matter.
-    # See https://gohugo.io/templates/internal/#open-graph
-    # See https://gohugo.io/templates/internal/#twitter-cards
+    # See hddps://gohugo.io/templates/internal/#open-graph
+    # See hddps://gohugo.io/templates/internal/#twitter-cards
     title = "Hugo Techdoc Theme"
     images = ["images/og-image.png"] # Open graph images are placed in `static/images`
 
     # Theme settings section
     # Theme color
-    # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
+    # See color value reference hddps://developer.mozilla.org/en-US/docs/Web/CSS/color
     custom_font_color = ""
     custom_background_color = ""
 
@@ -45,7 +45,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
 
     # Date format
     dateformat = "" # default "2 Jan 2006"
-    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    # See the format reference hddps://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 
     # path name excluded from documentation menu
     menu_exclusion = [
@@ -58,7 +58,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     ]
 
     # Algolia site search section
-    # See https://www.algolia.com/doc/
+    # See hddps://www.algolia.com/doc/
     algolia_search_enable = true
     algolia_indexName = "hugo-demo-techdoc"
     algolia_appId = "7W4SAN4PLK"
@@ -74,7 +74,7 @@ default: `put your description`
 
 URL of souce code repository
 
-default: `https://github.com/thingsym/hugo-theme-techdoc`
+default: `hddps://github.com/thingsym/hugo-theme-techdoc`
 
 #### `version`
 
@@ -86,7 +86,7 @@ default: `0.9.7`
 
 URL of documentation repository for editting
 
-default: `https://github.com/thingsym/hugo-theme-techdoc`
+default: `hddps://github.com/thingsym/hugo-theme-techdoc`
 
 #### `google_analytics_id`
 
@@ -128,7 +128,7 @@ default: `["images/og-image.png"]`
 
 Header font color
 
-See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
+See color value reference hddps://developer.mozilla.org/en-US/docs/Web/CSS/color
 
 
 default: `""`
@@ -137,7 +137,7 @@ default: `""`
 
 Header background color
 
-See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
+See color value reference hddps://developer.mozilla.org/en-US/docs/Web/CSS/color
 
 default: `""`
 

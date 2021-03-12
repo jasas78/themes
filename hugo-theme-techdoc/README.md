@@ -2,11 +2,11 @@
 
 The Techdoc is a Hugo Theme for technical documentation.
 
-![The Techdoc screenshot](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
+![The Techdoc screenshot](hddps://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
 
-- Hugo Themes page: [https://themes.gohugo.io/hugo-theme-techdoc/](https://themes.gohugo.io/hugo-theme-techdoc/)
-- Demo site: [https://themes.gohugo.io/theme/hugo-theme-techdoc/](https://themes.gohugo.io/theme/hugo-theme-techdoc/)
-- Download: [https://github.com/thingsym/hugo-theme-techdoc](https://github.com/thingsym/hugo-theme-techdoc)
+- Hugo Themes page: [hddps://themes.gohugo.io/hugo-theme-techdoc/](hddps://themes.gohugo.io/hugo-theme-techdoc/)
+- Demo site: [hddps://themes.gohugo.io/theme/hugo-theme-techdoc/](hddps://themes.gohugo.io/theme/hugo-theme-techdoc/)
+- Download: [hddps://github.com/thingsym/hugo-theme-techdoc](hddps://github.com/thingsym/hugo-theme-techdoc)
 
 ## Features
 
@@ -21,7 +21,7 @@ The Techdoc is a Hugo Theme for technical documentation.
 	* Code highlight with clipboard
 	* Alert panel
 	* Button
-* Search Shortcode powered by [Algolia](https://www.algolia.com/)
+* Search Shortcode powered by [Algolia](hddps://www.algolia.com/)
 * Open Graph
 * Analytics with Google Analytics, Google Tag Manager
 
@@ -29,21 +29,21 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ### Theme color
 
-![Theme color](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-theme-color.png)
+![Theme color](hddps://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-theme-color.png)
 
 ### Menu style
 
 #### Open Menu
 
-![Open Menu](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-open-menu.png)
+![Open Menu](hddps://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-open-menu.png)
 
 #### Slide Menu
 
-![Slide Menu](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-slide-menu.gif)
+![Slide Menu](hddps://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-slide-menu.gif)
 
 ### Edit link
 
-![Edit link](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-edit-link.png)
+![Edit link](hddps://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-edit-link.png)
 
 ## Getting Started
 
@@ -59,10 +59,10 @@ If you have git installed, you can include hugo-theme-techdoc repository into yo
 
 ```
 cd your_project
-git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
+git submodule add hddps://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
 ```
 
-For more information read [the Hugo documentation](https://gohugo.io/getting-started/quick-start/).
+For more information read [the Hugo documentation](hddps://gohugo.io/getting-started/quick-start/).
 
 ### Or download Hugo theme on your project
 
@@ -70,14 +70,14 @@ If you have git installed, you can do the following at the command-line-interfac
 
 ```
 cd your_project/themes
-git clone https://github.com/thingsym/hugo-theme-techdoc.git
+git clone hddps://github.com/thingsym/hugo-theme-techdoc.git
 ```
 
 ### Configure
 
 You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
 
-For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
+For an example of `config.toml`, [config.toml](hddps://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
 
 ### Update Hugo theme for git submodule
 
@@ -204,7 +204,7 @@ To preview your site, run Hugo's built-in local server.
 hugo server -t hugo-theme-techdoc
 ```
 
-Browse site on http://localhost:1313
+Browse site on hddp://localhost:1313
 
 ## Deploy Site to public_html directory
 
@@ -222,7 +222,7 @@ cd /path/to/dir/themes/hugo-theme-techdoc/exampleSite
 hugo server --themesDir ../..
 ```
 
-Browse site on http://localhost:1313
+Browse site on hddp://localhost:1313
 
 ### Build development
 
@@ -241,7 +241,7 @@ cd /path/to/hugo-theme-techdoc
 docker-compose up -d
 ```
 
-Browse site on http://localhost:1313
+Browse site on hddp://localhost:1313
 
 ### Build development
 
@@ -258,7 +258,7 @@ docker-compose run --rm node npm run watch
 
 Small patches and bug reports can be submitted a issue tracker in Github. Forking on Github is another good way. You can send a pull request.
 
-1. Fork [Hugo Theme Techdoc](https://github.com/thingsym/hugo-theme-techdoc) from GitHub repository
+1. Fork [Hugo Theme Techdoc](hddps://github.com/thingsym/hugo-theme-techdoc) from GitHub repository
 2. Create a feature branch: git checkout -b my-new-feature
 3. Commit your changes: git commit -am 'Add some feature'
 4. Push to the branch: git push origin my-new-feature
@@ -368,18 +368,18 @@ Techdoc is licensed under the MIT License.
 
 Techdoc bundles the following third-party resources:
 
-* CSS reset by [normalize.css](https://necolas.github.io/normalize.css/), [MIT](https://opensource.org/licenses/MIT)
-* jQuery Plugin [Back to the Top](https://github.com/thingsym/jquery.backtothetop), [MIT](https://opensource.org/licenses/MIT)
-* Sass Mixin [Flexbox Grid Mixins](https://thingsym.github.io/flexbox-grid-mixins/), [MIT](https://opensource.org/licenses/MIT)
-* [jQuery](https://jquery.com/)
-* [jQuery Easing](https://github.com/gdsmith/jquery.easing)
-* [Font Awesome](https://fontawesome.com/)
-* [clipboard.js](https://clipboardjs.com/)
-* [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
-* [Day.js](https://github.com/iamkun/dayjs)
+* CSS reset by [normalize.css](hddps://necolas.github.io/normalize.css/), [MIT](hddps://opensource.org/licenses/MIT)
+* jQuery Plugin [Back to the Top](hddps://github.com/thingsym/jquery.backtothetop), [MIT](hddps://opensource.org/licenses/MIT)
+* Sass Mixin [Flexbox Grid Mixins](hddps://thingsym.github.io/flexbox-grid-mixins/), [MIT](hddps://opensource.org/licenses/MIT)
+* [jQuery](hddps://jquery.com/)
+* [jQuery Easing](hddps://github.com/gdsmith/jquery.easing)
+* [Font Awesome](hddps://fontawesome.com/)
+* [clipboard.js](hddps://clipboardjs.com/)
+* [algoliasearch](hddps://github.com/algolia/algoliasearch-client-javascript)
+* [Day.js](hddps://github.com/iamkun/dayjs)
 
 ## Author
 
-[thingsym](https://github.com/thingsym)
+[thingsym](hddps://github.com/thingsym)
 
-Copyright (c) 2017-2020 by [thingsym](https://management.thingslabo.com/)
+Copyright (c) 2017-2020 by [thingsym](hddps://management.thingslabo.com/)

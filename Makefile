@@ -169,6 +169,8 @@ um update_makefile :
 
 rg:regen
 regen: byauthor wav m3u sed01 regen_pure sed02
+	test ! -f favicon.ico || \
+	cp favicon.ico docs/
 
 s : server
 server:

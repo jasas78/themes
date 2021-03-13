@@ -133,7 +133,7 @@ regenBaseCheck:
 	@[ -L public ] || ln -s docs/ public
 	@[ -L scripts.Hugo/public ] || ln -s ../public/ scripts.Hugo/
 	rm -fr public/*
-	rm -fr scripts.Hugo/resources/_gen/*
+	# rm -fr scripts.Hugo/resources/_gen/*
 	rm -f public/CNAME
 	if [ -f CNAME ] ; then \
 		cp CNAME public/ ; \

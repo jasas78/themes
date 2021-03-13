@@ -32,7 +32,7 @@ See hddps://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcod
 
 ## tweet
 
-{{< tweet 877500564405444608 >}}
+<!-- { { < tweet 877500564405444608 > } } -->
 
 ## vimeo
 {{< vimeo 146022717 >}}

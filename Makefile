@@ -205,7 +205,8 @@ server5:
 
 
 
-ifeq ($(wildcard scripts.Hugo/content/blog),)
+#ifeq ($(wildcard scripts.Hugo/content/blog),)
+ifeq ($(wildcard scripts.Hugo/content/hot/byauthor.md),)
 m3u  :
 wav:
 byauthor  :

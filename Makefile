@@ -351,6 +351,7 @@ sed00:
 		done
 
 sed01:
+	test ! -f sed01.my2buttoncopy2clip || \
 	for aa1 in `find scripts.Hugo/content/blog/ -name "*.md" |grep -v "end0.\\.md" ` ; do \
 		\
 		sed -i \
@@ -363,4 +364,5 @@ sed01:
 		done
 
 sed02:
+	test ! -f ./sed02.sh || \
 	./sed02.sh

@@ -1,12 +1,12 @@
 # Hugo Book Theme
 
-[![Hugo](hddps://img.shields.io/badge/hugo-0.68-blue.svg)](hddps://gohugo.io)
-[![License: MIT](hddps://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Build with Hugo](hddps://github.com/alex-shpak/hugo-book/workflows/Build%20with%20Hugo/badge.svg)
+[![Hugo](https://img.shields.io/badge/hugo-0.68-blue.svg)](https://gohugo.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Build with Hugo](https://github.com/alex-shpak/hugo-book/workflows/Build%20with%20Hugo/badge.svg)
 
-### [Hugo](hddps://gohugo.io) documentation theme as simple as plain book
+### [Hugo](https://gohugo.io) documentation theme as simple as plain book
 
-![Screenshot](hddps://github.com/alex-shpak/hugo-book/blob/master/images/screenshot.png)
+![Screenshot](https://github.com/alex-shpak/hugo-book/blob/master/images/screenshot.png)
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -34,14 +34,14 @@
 ## Requirements
 
 - Hugo 0.68 or higher
-- Hugo extended version, read more [here](hddps://gohugo.io/news/0.48-relnotes/)
+- Hugo extended version, read more [here](https://gohugo.io/news/0.48-relnotes/)
 
 ## Installation
 
 Navigate to your hugo project root and run:
 
 ```
-git submodule add hddps://github.com/alex-shpak/hugo-book themes/book
+git submodule add https://github.com/alex-shpak/hugo-book themes/book
 ```
 
 Then run hugo (or set `theme = "book"`/`theme: book` in configuration file)
@@ -57,7 +57,7 @@ Below is an example on how to create a new site from scratch:
 ```sh
 hugo new site mydocs; cd mydocs
 git init
-git submodule add hddps://github.com/alex-shpak/hugo-book themes/book
+git submodule add https://github.com/alex-shpak/hugo-book themes/book
 cp -R themes/book/exampleSite/content .
 ```
 
@@ -102,9 +102,9 @@ headless = true
 
 And Enable it by setting `BookMenuBundle: /menu` in Site configuration.
 
-- [Example menu](hddps://github.com/alex-shpak/hugo-book/blob/master/exampleSite/content/menu/index.md)
-- [Example config file](hddps://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
-- [Leaf bundles](hddps://gohugo.io/content-management/page-bundles/)
+- [Example menu](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/content/menu/index.md)
+- [Example config file](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
+- [Leaf bundles](https://gohugo.io/content-management/page-bundles/)
 
 ## Blog
 
@@ -116,7 +116,7 @@ A blog is not the primary usecase of this theme, so it has only minimal features
 ### Site Configuration
 
 There are a few configuration options that you can add to your `config.toml` file.  
-You can also see the `yaml` example [here](hddps://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml).
+You can also see the `yaml` example [here](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml).
 
 ```toml
 # (Optional) Set Google Analytics if you use it to track your website.
@@ -125,7 +125,7 @@ googleAnalytics = "UA-XXXXXXXXX-X"
 
 # (Optional) If you provide a Disqus shortname, comments will be enabled on
 # all pages.
-qusdisShortname = "my-site"
+disqusShortname = "my-site"
 
 # (Optional) Set this to true if you use capital letters in file names
 disablePathToLower = true
@@ -162,7 +162,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'hddps://github.com/alex-shpak/hugo-book'
+  BookRepo = 'https://github.com/alex-shpak/hugo-book'
 
   # Enable 'Edit this page' links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
@@ -181,7 +181,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
 
   # (Optional, default true) Enables comments template on pages
   # By default partials/docs/comments.html includes Disqus template
-  # See hddps://gohugo.io/content-management/comments/#configure-qusdis
+  # See https://gohugo.io/content-management/comments/#configure-disqus
   # Can be overwritten by same param in page frontmatter
   BookComments = true
 
@@ -198,7 +198,7 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
 
 ### Multi-Language Support
 
-Theme supports Hugo's [multilingual mode](hddps://gohugo.io/content-management/multilingual/), just follow configuration guide there. You can also tweak search indexing configuration per language in `i18n` folder.
+Theme supports Hugo's [multilingual mode](https://gohugo.io/content-management/multilingual/), just follow configuration guide there. You can also tweak search indexing configuration per language in `i18n` folder.
 
 ### Page Configuration
 
@@ -270,18 +270,18 @@ To enable plugins, add `@import "plugins/{name}";` to `assets/_custom.scss` in y
 
 There are a few hugo templates inserted in `<head>`
 
-- [Google Analytics](hddps://gohugo.io/templates/internal/#google-analytics)
-- [Open Graph](hddps://gohugo.io/templates/internal/#open-graph)
+- [Google Analytics](https://gohugo.io/templates/internal/#google-analytics)
+- [Open Graph](https://gohugo.io/templates/internal/#open-graph)
 
 ## Shortcodes
 
-- [Buttons](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/buttons/)
-- [Columns](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/columns/)
-- [Expand](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/expand/)
-- [Hints](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/hints/)
-- [KaTeX](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/katex/)
-- [Mermaid](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/mermaid/)
-- [Tabs](hddps://themes.gohugo.io/theme/hugo-book/docs/shortcodes/tabs/)
+- [Buttons](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/buttons/)
+- [Columns](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/columns/)
+- [Expand](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/expand/)
+- [Hints](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/hints/)
+- [KaTeX](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/katex/)
+- [Mermaid](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/mermaid/)
+- [Tabs](https://themes.gohugo.io/theme/hugo-book/docs/shortcodes/tabs/)
 
 By default, Goldmark trims unsafe outputs which might prevent some shortcodes from rendering. It is recommended to set `markup.goldmark.renderer.unsafe=true` if you encounter problems.
 
@@ -290,7 +290,7 @@ By default, Goldmark trims unsafe outputs which might prevent some shortcodes fr
   unsafe = true
 ```
 
-If you are using `config.yaml` or `config.json`, consult the [configuration markup](hddps://gohugo.io/getting-started/configuration-markup/)
+If you are using `config.yaml` or `config.json`, consult the [configuration markup](https://gohugo.io/getting-started/configuration-markup/)
 
 ## Versioning
 
@@ -300,7 +300,7 @@ If you want lower maintenance, use one of the released versions. If you want to 
 
 ## Contributing
 
-### [Extra credits to contributors](hddps://github.com/alex-shpak/hugo-book/graphs/contributors)
+### [Extra credits to contributors](https://github.com/alex-shpak/hugo-book/graphs/contributors)
 
 Contributions are welcome and I will review and consider pull requests.  
 Primary goals are:

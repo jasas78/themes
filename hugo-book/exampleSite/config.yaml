@@ -1,6 +1,6 @@
-# hugo server --minify --themesDir ... --baseURL=hddp://0.0.0.0:1313/theme/hugo-book/
+# hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL: hddps://example.com/
+baseURL: https://example.com/
 title: Hugo Book
 theme: hugo-book
 
@@ -18,8 +18,8 @@ markup:
 
 # Multi-lingual mode config
 # There are different options to translate files
-# See hddps://gohugo.io/content-management/multilingual/#translation-by-filename
-# And hddps://gohugo.io/content-management/multilingual/#translation-by-content-directory
+# See https://gohugo.io/content-management/multilingual/#translation-by-filename
+# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
 languages:
   en:
     languageName: English
@@ -38,10 +38,10 @@ menu:
   # before: []
   after:
     - name: "Github"
-      url: "hddps://github.com/alex-shpak/hugo-book"
+      url: "https://github.com/alex-shpak/hugo-book"
       weight: 10
     - name: "Hugo Themes"
-      url: "hddps://themes.gohugo.io/hugo-book/"
+      url: "https://themes.gohugo.io/hugo-book/"
       weight: 20
 
 params:
@@ -63,13 +63,13 @@ params:
   # BookMenuBundle: /menu
 
   # (Optional, default docs) Specify root page to render child pages as menu.
-  # Page is resoled by .GetPage function: hddps://gohugo.io/functions/getpage/
+  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
   # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
   BookSection: docs
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo: hddps://github.com/alex-shpak/hugo-book
+  BookRepo: https://github.com/alex-shpak/hugo-book
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
@@ -88,7 +88,7 @@ params:
 
   # (Optional, default true) Enables comments template on pages
   # By default partals/docs/comments.html includes Disqus template
-  # See hddps://gohugo.io/content-management/comments/#configure-qusdis
+  # See https://gohugo.io/content-management/comments/#configure-disqus
   # Can be overwritten by same param in page frontmatter
   BookComments: true
 

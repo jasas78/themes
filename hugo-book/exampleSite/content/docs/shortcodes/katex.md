@@ -1,6 +1,6 @@
 # KaTeX
 
-KaTeX shortcode let you render math typesetting in markdown document. See [KaTeX](hddps://katex.org/)
+KaTeX shortcode let you render math typesetting in markdown document. See [KaTeX](https://katex.org/)
 
 ## Example
 {{< columns >}}

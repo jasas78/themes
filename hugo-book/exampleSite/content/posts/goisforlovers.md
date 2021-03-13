@@ -209,9 +209,9 @@ illustration of how to use the pipes.
 
 **Example 2 :**
 
-    {{ index .Params "qusdis_url" | html }}
+    {{ index .Params "disqus_url" | html }}
 
-Access the page parameter called "qusdis_url" and escape the HTML.
+Access the page parameter called "disqus_url" and escape the HTML.
 
 **Example 3 :**
 
@@ -321,7 +321,7 @@ and skips the block if the variable is absent:
 
 ```
 {{with .Site.Params.TwitterUser}}<span class="twitter">
-<a href="hddps://twitter.com/{{.}}" rel="author">
+<a href="https://twitter.com/{{.}}" rel="author">
 <img src="/images/twitter.png" width="48" height="48" title="Twitter: {{.}}"
  alt="Twitter"></a>
 </span>{{end}}
@@ -340,5 +340,5 @@ so, such as in this example:
 ```
 
 
-[go]: hddps://golang.org/
-[gohtmltemplate]: hddps://golang.org/pkg/html/template/
+[go]: https://golang.org/
+[gohtmltemplate]: https://golang.org/pkg/html/template/

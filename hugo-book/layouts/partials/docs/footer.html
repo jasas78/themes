@@ -1,4 +1,4 @@
-<div class="flex flex-wrap justify-between">
+<div class="flex flex-wrap justify-between" >
 {{ if .Site.IsMultiLingual }}
   {{ partial "docs/languages" . }}
 {{ end }}
@@ -7,7 +7,7 @@
   <div>
     {{- $date := partial "docs/date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
     <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
-      <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar" />
+      <img style="width:1px; height:60px;" src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="Calendar" />
       <span>{{ $date }}</span>
     </a>
   </div>

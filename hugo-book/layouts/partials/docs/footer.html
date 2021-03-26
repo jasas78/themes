@@ -21,4 +21,28 @@
     </a>
   </div>
 {{ end }}
+
+{{ if .Site.Params.donate }}
+{{ if .Site.Params.paypal }}
+  <div>
+    <a class="flex align-center" 
+        href="{{ .Site.Params.paypal }}"
+        target="_blank" rel="noopener noreferrer">
+      <img src="{{ "png/paypal.png" | relURL }}" class="book-icon" alt="Donate" />
+      <span>{{ "Paypal" }}</span>
+    </a>
+  </div>
+{{ end }}
+{{ if .Site.Params.gofundme }}
+  <div>
+    <a class="flex align-center" 
+        href="{{ .Site.Params.gofundme }}"
+        target="_blank" rel="noopener noreferrer">
+      <img src="{{ "png/gofundme.png" | relURL }}" class="book-icon" alt="Donate" />
+      <span>{{ "Paypal" }}</span>
+    </a>
+  </div>
+{{ end }}
+{{ end }}
+
 </div>

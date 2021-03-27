@@ -22,14 +22,25 @@
         {{ template "header" . }} <!-- Mobile layout header -->
       </header>
 
+
+      <footer1 class="book-footer">
+        {{ template "footer" . }} <!-- Footer under page content -->
+        {{ partial "docs/inject/footer" . }}
+      </footer1>
+
+
+
       {{ partial "docs/inject/content-before" . }}
       {{ template "main" . }} <!-- Page Content -->
       {{ partial "docs/inject/content-after" . }}
 
-      <footer class="book-footer">
+
+      <footer2 class="book-footer">
         {{ template "footer" . }} <!-- Footer under page content -->
         {{ partial "docs/inject/footer" . }}
-      </footer>
+      </footer2>
+
+
 
       {{ template "comments" . }} <!-- Comments block -->
 

@@ -24,7 +24,7 @@
 
 
       <footer1 class="book-footer">
-        {{ template "footer" . }} <!-- Footer under page content -->
+        {{ template "footer1" . }} <!-- Footer under page content -->
         {{ partial "docs/inject/footer" . }}
       </footer1>
 
@@ -36,7 +36,7 @@
 
 
       <footer2 class="book-footer">
-        {{ template "footer" . }} <!-- Footer under page content -->
+        {{ template "footer2" . }} <!-- Footer under page content -->
         {{ partial "docs/inject/footer" . }}
       </footer2>
 
@@ -77,6 +77,14 @@
 
 {{ define "footer" }}
   {{ partial "docs/footer" . }}
+{{ end }}
+
+{{ define "footer1" }}
+  {{ partial "docs/footer1" . }}
+{{ end }}
+
+{{ define "footer2" }}
+  {{ partial "docs/footer2" . }}
 {{ end }}
 
 {{ define "comments" }}

@@ -34,7 +34,7 @@
         <a class="flex align-center" 
            href="{{ .Site.Params.paypal }}"
            target="_blank" rel="noopener noreferrer">
-            <img style="width:160px;height:60px;" src="{{ "png/paypal.png" | relURL }}" class="book-icon" alt="Paypal_Donate" />
+            <img style="width:160px;height:60px;" src="{{ .Site.Params.paypal_img | relURL }}" class="book-icon" alt="Paypal_Donate" />
         </a>
     </div>
     {{ end }}
@@ -43,7 +43,7 @@
         <a class="flex align-center" 
            href="{{ .Site.Params.gofundme }}"
            target="_blank" rel="noopener noreferrer">
-            <img style="width:160px;height:60px;" src="{{ "png/gofundme.png" | relURL }}" class="book-icon" alt="GoFundMe_Donate" />
+            <img style="width:160px;height:60px;" src="{{ .Site.Params.gofundme_img | relURL }}" class="book-icon" alt="GoFundMe_Donate" />
         </a>
     </div>
     {{ end }}

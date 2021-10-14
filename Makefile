@@ -172,8 +172,11 @@ regen: byauthor wav m3u sed01 regen_pure sed02
 	test ! -f favicon.ico || \
 	cp favicon.ico docs/
 
+list_ip:
+	ip a |grep inet |awk '{print $$2}'
+
 s : server
-server:
+server: list_ip
 	@[ -f scripts.Hugo/config.toml ] || ( echo "why_no_41 file <scripts.Hugo/config.toml> exist ?" ; exit 41 )
 	cd scripts.Hugo/ && nice -n 17 hugo server --disableFastRender
 
@@ -191,17 +194,17 @@ pyHttp2:=SimpleHTTPServer
 pyHttp3:=http.server
 pyHttP:=$(pyHttp$(pythonVersion))
 s2: server2
-server2:
+server2: list_ip
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
 	cd public/ && $(pyBin) -m $(pyHttP) 33221
 
 s3: server3
-server3:
+server3: list_ip
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
 	cd public/ && $(pyBin) -m $(pyHttP) 33223
 
 s5: server5
-server5:
+server5: list_ip
 	[ -f scripts.Hugo/config.toml ] || ( echo "why_no_51 file <scripts.Hugo/config.toml> exist ?" ; exit 51 )
 	cd public/ && $(pyBin) -m $(pyHttP) 33225
 

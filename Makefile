@@ -173,7 +173,7 @@ regen: byauthor wav m3u sed01 regen_pure sed02
 	cp favicon.ico docs/
 
 list_ip:
-	ip a |grep inet |awk '{print $$2}'
+	ip a |grep inet |awk '{print $$2}'|awk -F/ '{print $$1}'
 
 s : server
 server: list_ip

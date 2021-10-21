@@ -30,7 +30,9 @@ gitX:
 
 up:
 	pwd
-	nice -n 17 git push -u origin master
+	nice -n 17 git push -u origin main  \
+		|| nice -n 17 git push -u origin master \
+		|| nice -n 17 git push 
 e:
 	vim Makefile.env
 m:

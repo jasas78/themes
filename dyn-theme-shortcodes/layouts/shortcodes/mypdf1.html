@@ -1,0 +1,28 @@
+<br>
+<div Width="100%" style="border:1px dotted Tomato; font-size:150%;">
+
+
+
+<object 
+{{ with .Get "pdf" }}
+data="{{ . }}"
+type="application/pdf" width="100%"
+{{ end }}
+>
+
+{{ with .Get "text" }}
+<div Width="100%" >
+{{ . }}
+</div>
+{{ end }}
+
+</object>
+
+{{ with .Get "link" }}
+<div Width="100%" >
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+</div>
+{{ end }}
+
+</div>
+<br>

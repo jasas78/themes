@@ -12,6 +12,11 @@
     <div class="w3-col w3-third">
       <h4>{{ default `About` (i18n `aboutUs`) }}</h4>
       <div class="notranslate">{{- $.Site.Params.aboutUs | markdownify }}</div>
+      {{ if $.Site.Param `footerAboutButton` }}
+          {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}
+          <a target="_blank" 
+          </a>
+      {{end}}
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
 

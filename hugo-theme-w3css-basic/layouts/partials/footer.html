@@ -28,7 +28,7 @@
     {{- if $.Site.Params.recentPosts.enableFooter }}
     {{- if $.Site.Params.recentPosts.footerNumOfPosts }}
     <div class="w3-col w3-third">
-        <h4>{{ default `Posts最近更新` (i18n `recentPosts`) }} : <a>{{ hugo.Version }} </a></h4>
+        <a>{{ default `Posts最近更新` (i18n `recentPosts`) }} : </a><a>{{ hugo.Version }} </a></h4>
 
       {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
         {{ `<!-- range first Site.Params.footerNumOfPosts .Site.RegularPages "Section" "blog" -->` | safeHTML }}

@@ -15,6 +15,8 @@
       {{ if $.Site.Param `footerAboutButton` }}
           {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}
           <a target="_blank" 
+             >
+              {{ default `contact` (i18n `contactGoTo`) }}
           </a>
       {{end}}
     </div> <!-- w3-col -->

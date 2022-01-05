@@ -16,7 +16,7 @@
       <a target="_blank" 
           href='{{ $.Site.Params.footerAboutButton | absURL }}'
           class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
-          >{{ default `contact` (i18n `contactGoTo`) }}</a>
+          >{{ default `About` (i18n `AboutGoTo`) }}</a>
       {{ end }}
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}

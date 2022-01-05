@@ -18,11 +18,15 @@ type="application/pdf" width="100%"
 
 </object>
 
+<div Width="100%" Height="600px">
 {{- with .Get "link" }}
-<div Width="100%" >
 <a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
-</div>
+{{- else }}
+{{- with .Get "pdf" }}
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
 {{- end }}
+{{- end }}
+</div>
 
 </div>
 <br>

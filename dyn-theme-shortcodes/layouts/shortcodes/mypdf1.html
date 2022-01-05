@@ -4,25 +4,25 @@
 
 
 <object 
-{{ with .Get "pdf" }}
+{{- with .Get "pdf" }}
 data="{{ . }}"
 type="application/pdf" width="100%"
-{{ end }}
+{{- end }}
 >
 
-{{ with .Get "text" }}
+{{- with .Get "text" }}
 <div Width="100%" >
 {{ . }}
 </div>
-{{ end }}
+{{- end }}
 
 </object>
 
-{{ with .Get "link" }}
+{{- with .Get "link" }}
 <div Width="100%" >
 <a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
 </div>
-{{ end }}
+{{- end }}
 
 </div>
 <br>

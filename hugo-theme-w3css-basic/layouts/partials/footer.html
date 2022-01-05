@@ -12,9 +12,12 @@
     <div class="w3-col w3-third">
       <h4>{{ default `About` (i18n `aboutUs`) }}</h4>
       <div class="notranslate">{{- $.Site.Params.aboutUs | markdownify }}</div>
+      {{ if $.Site.Params.footerAboutButton }}
       <a target="_blank" 
           href='{{ $.Site.Params.footerAboutButton | absURL }}'
-          class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '>{{ default `contact` (i18n `contactGoTo`) }}</a>
+          class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
+          >{{ default `contact` (i18n `contactGoTo`) }}</a>
+      {{ end }}
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
 

@@ -20,7 +20,7 @@
               target="_blank" 
               class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
               >
-              kk{{- $.Site.Params.aboutUs | markdownify }}
+              {{- $.Site.Params.aboutUs | markdownify }}
           </a></div>
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
@@ -78,7 +78,7 @@
            {{end}}
            target="_blank" 
            class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
-           >dd{{- $.Site.Params.address | markdownify -}}</a></div><br/>
+           >{{- $.Site.Params.address | markdownify -}}</a></div><br/>
     </div>
     {{- end }}
 

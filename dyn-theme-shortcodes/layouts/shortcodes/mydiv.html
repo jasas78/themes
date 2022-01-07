@@ -21,7 +21,9 @@
 {{ with .Get "linktext" }}
 {{- . }}
 {{- else }}
+{{- with .Get "link" }}
 {{- . }}
+{{- end -}}
 {{- end -}}
 </a>
 </div>

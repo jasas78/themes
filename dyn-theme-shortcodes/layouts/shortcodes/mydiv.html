@@ -17,7 +17,13 @@
 
 {{ with .Get "link" }}
 <div Width="100%" >
-<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >{{ . }}</a>
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" >
+{{ with .Get "linktext" }}
+{{- . }}
+{{- else }}
+{{- . }}
+{{- end -}}
+</a>
 </div>
 {{ end }}
 

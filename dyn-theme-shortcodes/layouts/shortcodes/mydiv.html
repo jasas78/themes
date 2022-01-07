@@ -18,13 +18,7 @@
 {{ with .Get "link" }}
 <div Width="100%" >
 <a href="{{ . }}" rel="noopener noreferrer" target="_blank" >
-{{ with .Get "linktext" }}
 {{ . }}
-{{ else }}
-{{ with .Get "link" }}
-{{ . }}
-{{ end }}
-{{ end }}
 </a>
 </div>
 {{ end }}

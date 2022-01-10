@@ -5,7 +5,11 @@
 {{- with .Get "pdf" }}
 data="{{ . }}"
 type="application/pdf" 
+{{- with .Get "width" }}
                   Width="1100px" 
+{{- else -}}
+                  Width="1100px" 
+{{- end -}}
                   Height="1080px" 
 {{- end -}}
 >

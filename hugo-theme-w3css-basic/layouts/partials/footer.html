@@ -26,12 +26,11 @@
                 </td><td>
 
           {{- if isset $.Site.Params (lower `footerLogo` ) }}
-          <div id="footerLogo" class="w3-col w3-third">
+          <a href="{{ .Get $.Site.Param `footerAboutButton` }}">
             <img src="{{- $.Site.Params.footerLogo | markdownify -}}"
             alt="footerLogo"
             width="300" 
-            height="300">
-          </div>
+            height="300"></a>
           {{- end }} {{/* footerLogo */}}
                 </td></tr></table>
 

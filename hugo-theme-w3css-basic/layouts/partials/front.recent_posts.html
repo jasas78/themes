@@ -9,17 +9,12 @@
     <div class='w3-card-4 w3-center w3-round-xxlarge w3-margin-bottom {{ default `w3-theme-l2` ($.Site.Param `colorFrontRecentPostsTitleCard`)}} '>
       <h2 id="recent_posts_title">
           {{ $.Site.Params.recentPosts.title }}
-              <a
-              {{ if $.Site.Param `footerAboutButton` }}
-              {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}
-              href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
-              {{end}}
-              {{end}}
-              target="_blank" 
-              class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
-              >
-              {{- $.Site.Params.aboutUs | markdownify }}
-          </a>
+           <a href="{{ $.Site.Params.recentPosts.alltagslink }}"
+           title="{{ $.Site.Params.recentPosts.alltagslink }}"
+           style="background-color:Gray; color:Tomato; font-size:80%; border:2px MediumSeaGreen dotted;"
+           rel="noopener noreferrer"
+           target="_blank"
+           > all Posts </a>
       </h2>
       <div class="w3-small">
         {{- $.Site.Params.recentPosts.subtitle | markdownify }}

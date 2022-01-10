@@ -22,6 +22,16 @@
               >
               {{- $.Site.Params.aboutUs | markdownify }}
           </a></div>
+
+          {{- if isset $.Site.Params (lower `footerLogo` ) }}
+          <div id="footerLogo" class="w3-col w3-third">
+            <img src="{{- $.Site.Params.footerLogo | markdownify -}}"
+            alt="footerLogo"
+            width="200" 
+            height="200">
+          </div>
+          {{- end }} {{/* footerLogo */}}
+
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
 
@@ -101,8 +111,8 @@
     <div id="footerLogo" class="w3-col w3-third">
       <img src="{{- $.Site.Params.footerLogo | markdownify -}}"
       alt="footerLogo"
-      width="400" 
-      height="400">
+      width="200" 
+      height="200">
     </div>
     {{- end }} {{/* footerLogo */}}
 

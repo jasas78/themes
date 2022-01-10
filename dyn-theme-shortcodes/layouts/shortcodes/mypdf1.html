@@ -7,9 +7,9 @@ data="{{ . }}"
 type="application/pdf" 
                   {{- with .Get "width" }}
                   Width="{{ . }}" 
-                  {{- else -}}
+                  {{- else }}
                   Width="1100px" 
-                  {{- end -}}
+                  {{- end }}
                   Height="1080px" 
 {{- end -}}
 >

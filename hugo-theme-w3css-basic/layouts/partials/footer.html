@@ -10,6 +10,7 @@
     {{- end}}
     {{- if $.Site.Params.aboutUs }}
     <div class="w3-col w3-third">
+        <table><tr><td>
       <h4>{{ default `About` (i18n `aboutUs`) }}</h4>
       <div class="notranslate"><a
               {{ if $.Site.Param `footerAboutButton` }}
@@ -22,6 +23,7 @@
               >
               {{- $.Site.Params.aboutUs | markdownify }}
           </a></div>
+                </td><td>
 
           {{- if isset $.Site.Params (lower `footerLogo` ) }}
           <div id="footerLogo" class="w3-col w3-third">
@@ -31,6 +33,7 @@
             height="200">
           </div>
           {{- end }} {{/* footerLogo */}}
+                </td></tr></table>
 
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
@@ -106,15 +109,6 @@
            >{{- $.Site.Params.donate | markdownify -}}</a></div><br/>
     </div>
     {{- end }} {{/* donate */}}
-
-    {{- if isset $.Site.Params (lower `footerLogo` ) }}
-    <div id="footerLogo" class="w3-col w3-third">
-      <img src="{{- $.Site.Params.footerLogo | markdownify -}}"
-      alt="footerLogo"
-      width="200" 
-      height="200">
-    </div>
-    {{- end }} {{/* footerLogo */}}
 
   </div>  <!-- w3-row -->
 </div>  <!-- w3-container -->

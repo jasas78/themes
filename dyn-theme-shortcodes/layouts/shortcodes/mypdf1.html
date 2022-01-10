@@ -4,7 +4,13 @@
 <object 
 {{- with .Get "pdf" }}
 data="{{ . }}"
-type="application/pdf" width="1000px" Height="1080px" 
+type="application/pdf" 
+                  {{- with .Get "width" }}
+                  Width="{{ . }}" 
+                  {{- else -}}
+                  Width="1100px" 
+                  {{- end -}}
+                  Height="1080px" 
 {{- end -}}
 >
 

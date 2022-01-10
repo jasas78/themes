@@ -10,7 +10,7 @@
     {{- end}}
     {{- if $.Site.Params.aboutUs }}
     <div class="w3-col w3-third">
-        <table><tr><td>
+        <table class="table"><tr><td>
       <h4>{{ default `About` (i18n `aboutUs`) }}</h4>
       <div class="notranslate"><a
               {{ if $.Site.Param `footerAboutButton` }}

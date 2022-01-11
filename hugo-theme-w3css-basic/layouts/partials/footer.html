@@ -10,7 +10,7 @@
     {{- end}}
     {{- if $.Site.Params.aboutUs }}
     <div class="w3-col w3-third">
-        <table style="border:none" ><tr><td>
+        <table style="border-collapse: collapse; border: none;" ><tr><td style="border: none;" >
           <a
               {{ if $.Site.Param `footerAboutButton` }}
               {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}

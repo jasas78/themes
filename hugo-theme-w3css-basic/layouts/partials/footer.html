@@ -28,7 +28,7 @@
        {{- end }} {{/* if aboutUs */}}
 
        {{- if isset $.Site.Params (lower `footerLogo` ) }}
-          <td rowspan="3" style="vertical-align: center ; border: hidden;">
+          <td rowspan="4" style="vertical-align: center ; border: hidden;">
           <a 
               {{ if $.Site.Param `footerAboutButton` }}
               {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}

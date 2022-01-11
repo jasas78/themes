@@ -106,6 +106,8 @@
 
     <div class="w3-col w3-third">
         <table style="border-collapse: collapse; border: hidden;" >
+
+         {{ if $.Site.Param `footerBlogAndNewsButton` }}
          <tr style="border: hidden;">
           <td style="vertical-align: center ; border: hidden;" >
           <a
@@ -134,6 +136,40 @@
           </a>
           </td>
          </tr>
+         {{ end }}
+
+         {{ if $.Site.Param `footerFriendAndLinksButton` }}
+         <tr style="border: hidden;">
+          <td style="vertical-align: center ; border: hidden;" >
+          <a
+              {{ if $.Site.Param `footerFriendAndLinksButton` }}
+              {{ with ($.Site.GetPage `page` ($.Site.Param `footerFriendAndLinksButton`)) }}
+              href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
+              {{end}}
+              {{end}}
+              target="_blank" 
+              class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
+              >
+              {{- $.Site.Params.friendAndLinks | markdownify }}
+          </a>
+          </td>
+          <td style="vertical-align: center ; border: hidden;">
+          <a
+              {{ if $.Site.Param `footerEventsAndPhotosButton` }}
+              {{ with ($.Site.GetPage `page` ($.Site.Param `footerEventsAndPhotosButton`)) }}
+              href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
+              {{end}}
+              {{end}}
+              target="_blank" 
+              class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
+              >
+              {{- $.Site.Params.eventsAndPhotos | markdownify }}
+          </a>
+          </td>
+         </tr>
+         {{ end }}
+
+
         </table>
 
     </div> <!-- w3-col -->

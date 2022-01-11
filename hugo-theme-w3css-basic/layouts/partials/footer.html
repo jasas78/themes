@@ -10,7 +10,7 @@
     {{- end}}
     {{- if $.Site.Params.aboutUs }}
     <div class="w3-col w3-third">
-        <table style="border-collapse: collapse; border: none;" ><tr><td style="border: none;" >
+        <table style="border-collapse: collapse; border: hidden;" ><tr style="border: hidden;"><td style="border: hidden;" >
           <a
               {{ if $.Site.Param `footerAboutButton` }}
               {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}
@@ -22,8 +22,8 @@
               >
               {{- $.Site.Params.aboutUs | markdownify }}
           </a>
-        </td><td style="border: none;">
-        </td><td rowspan="3" style="border: none;">
+        </td><td style="border: hidden;">
+        </td><td rowspan="3" style="border: hidden;">
 
           {{- if isset $.Site.Params (lower `footerLogo` ) }}
           <a 
@@ -38,7 +38,7 @@
             width="200" 
             height="200"></a>
           {{- end }} {{/* footerLogo */}}
-        </td></tr><tr><td style="border: none;">
+        </td></tr><tr style="border: hidden;"><td style="border: hidden;">
     {{- if isset $.Site.Params (lower `address` ) }}
             <div class="notranslate"><a
                 {{ if $.Site.Param `footerContactButton` }}
@@ -50,7 +50,7 @@
                 class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
                 >{{- $.Site.Params.address | markdownify -}}</a></div>
     {{- end }} {{/* address */}}
-        </td></tr><tr><td style="border: none;">
+        </td></tr><tr style="border: hidden;"><td style="border: hidden;">
     {{- if isset $.Site.Params (lower `donate` ) }}
           <a
            {{ if $.Site.Param `footerDonateButton` }}

@@ -153,6 +153,7 @@
               {{- $.Site.Params.friendAndLinks | markdownify }}
           </a>
           </td>
+          {{ if $.Site.Param `footerEventsAndPhotosButton` }}
           <td style="vertical-align: center ; border: hidden;">
           <a
               {{ if $.Site.Param `footerEventsAndPhotosButton` }}
@@ -166,6 +167,7 @@
               {{- $.Site.Params.eventsAndPhotos | markdownify }}
           </a>
           </td>
+          {{ end }}
          </tr>
          {{ end }}
 

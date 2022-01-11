@@ -59,6 +59,8 @@
             </td>
        {{- end }} {{/* address */}}
 
+            </tr><tr style="border: hidden;">
+
        {{ if $.Site.Param `footerFriendAndLinksButton` }}
           <td style="vertical-align: center ; border: hidden;" >
           <a
@@ -75,8 +77,10 @@
           </td>
        {{ end }}
 
-        </tr><tr style="border: hidden;"><td style="vertical-align: center ; border: hidden;">
+        </tr><tr style="border: hidden;">
+
     {{- if isset $.Site.Params (lower `donate` ) }}
+         <td style="vertical-align: center ; border: hidden;">
           <a
            {{ if $.Site.Param `footerDonateButton` }}
            {{ with ($.Site.GetPage `page` ($.Site.Param `footerDonateButton`)) }}
@@ -86,9 +90,9 @@
            target="_blank" 
            class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
            >{{- $.Site.Params.donate | markdownify -}}</a>
+        </td>
     {{- end }} {{/* donate */}}
-        </td></tr>
-        </table>
+      </tr></table>
 
     </div> <!-- w3-col -->
 

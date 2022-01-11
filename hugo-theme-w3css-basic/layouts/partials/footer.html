@@ -23,7 +23,10 @@
               >
               {{- $.Site.Params.aboutUs | markdownify }}
           </a></div>
-                </td><td>
+        </td><td>
+
+
+        </td><td rowspan="2">
 
           {{- if isset $.Site.Params (lower `footerLogo` ) }}
           <a 
@@ -38,7 +41,20 @@
             width="200" 
             height="200"></a>
           {{- end }} {{/* footerLogo */}}
-                </td></tr></table>
+        </td></tr><tr><td>
+            <div class="notranslate"><a
+                {{ if $.Site.Param `footerContactButton` }}
+                {{ with ($.Site.GetPage `page` ($.Site.Param `footerContactButton`)) }}
+                href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}' 
+                {{end}}
+                {{end}}
+                target="_blank" 
+                class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFooterButton`)}} '
+                >{{- $.Site.Params.address | markdownify -}}</a></div>
+        </td></tr><tr><td>
+                kk
+        </td></tr>
+        </table>
 
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}

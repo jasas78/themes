@@ -12,12 +12,12 @@
            <a 
             {{ if $.Site.Param `footerBlogsButton` }}
              {{ with ($.Site.GetPage `page` ($.Site.Param `footerBlogsButton`)) }}
-              href='kkk{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
-              title='kkk{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
+              href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
+              title='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
              {{end}}
             {{ else }}
-             href="eee{{ $.Site.Params.recentPosts.alltagslink }}"
-             title="eee{{ $.Site.Params.recentPosts.alltagslink }}"
+             href="{{ $.Site.Params.recentPosts.alltagslink }}"
+             title="{{ $.Site.Params.recentPosts.alltagslink }}"
             {{end}}
            style="background-color:Gray; color:Blue; font-size:80%; border:2px MediumSeaGreen dotted;"
            rel="noopener noreferrer"

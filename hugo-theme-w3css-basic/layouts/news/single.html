@@ -1,0 +1,8 @@
+{{ define `blog-qusdis` }}
+{{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
+{{- `<!-- blog/single.html (blog-qusdis) -->` | safeHTML }}
+{{- end}}
+  {{ partial `blog.qusdis-button.html` .  }}
+  {{/* partial `blog.privacy.qusdis.html` . */}}
+  {{/* template "_internal/qusdis.html" . */}}
+{{ end }}

@@ -10,7 +10,7 @@
       <h2 id="recent_posts_title">
           {{ $.Site.Params.recentPosts.title }}
            <a 
-            {{ if isset $.Site.Param `footerBlogsButton` }}
+            {{ if isset $.Site.param.footerBlogsButton }}
              {{ with $.Site.Param `footerBlogsButton` }}
               href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
               title='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'

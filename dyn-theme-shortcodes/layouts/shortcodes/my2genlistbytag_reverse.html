@@ -76,7 +76,7 @@
         {{- end -}}
     {{- end -}}
 {{- else -}} 
-    {{- range $taxonomyname, $taxonomy := sort .Site.Taxonomies "desc" -}}
+    {{- range $taxonomyname, $taxonomy := sort .Site.Taxonomies "asc" -}}
             {{- range $key, $value := $taxonomy -}}
                 {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}

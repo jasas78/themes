@@ -76,17 +76,8 @@
         {{- end -}}
     {{- end -}}
 {{- else -}} 
-====1====
-{{range .Site.Taxonomies.Alphabetical.Reverse}}
-   {{ .Title }}
-{{end}}
-====2====
-{{range .Site.Taxonomies}}
-   {{ .Title }}
-{{end}}
-====3====
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
-            {{- range $key, $value := $taxonomy.Reverse -}}
+            {{- range $key, $value := $taxonomy -}}
                 {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}
     

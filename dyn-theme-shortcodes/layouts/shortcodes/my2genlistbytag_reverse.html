@@ -76,8 +76,8 @@
         {{- end -}}
     {{- end -}}
 {{- else -}} 
-    {{- range $taxonomyname, $taxonomy := sort .Site.Taxonomies "asc" -}}
-            {{- range $key, $value := $taxonomy -}}
+    {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
+            {{- range $key, $value := sort $taxonomy "asc" -}}
                 {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}
     

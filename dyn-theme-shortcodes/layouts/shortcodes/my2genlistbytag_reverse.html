@@ -76,6 +76,15 @@
         {{- end -}}
     {{- end -}}
 {{- else -}} 
+====1====
+{{range .Site.Taxonomies.categories.Alphabetical.Reverse}}
+   {{ .Title }}
+{{end}}
+====2====
+{{range .Site.Taxonomies.categories}}
+   {{ .Title }}
+{{end}}
+====3====
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
             {{- range $key, $value := $taxonomy.Reverse -}}
                 {{- if (eq $key $para1) -}}

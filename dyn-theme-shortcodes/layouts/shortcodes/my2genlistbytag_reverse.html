@@ -77,11 +77,11 @@
     {{- end -}}
 {{- else -}} 
 ====1====
-{{range .Site.Taxonomies.categories.Alphabetical.Reverse}}
+{{range .Site.Taxonomies.Alphabetical.Reverse}}
    {{ .Title }}
 {{end}}
 ====2====
-{{range .Site.Taxonomies.categories}}
+{{range .Site.Taxonomies}}
    {{ .Title }}
 {{end}}
 ====3====

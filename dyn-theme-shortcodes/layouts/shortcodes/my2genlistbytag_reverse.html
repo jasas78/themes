@@ -1,0 +1,101 @@
+{{- $para1 := .Get 0 -}}
+{{- $paraN := len .Params -}}
+<div style="font-size:150%;">
+{{- if eq 0 $paraN -}}
+    {{- range $taxonomyname, $taxonomy := .Site.Taxonomies.Alphabetical.Reverse -}}
+    <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a> 
+        <ul>
+            {{- range $key, $value := $taxonomy -}}
+            <li> {{ $key }} </li>
+                        {{- range $index, $element := $value.Pages -}}
+    
+                        {{- $idx := mod $index 3 -}}
+                        {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
+                        {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
+                        {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+    
+                            <a rel="noopener noreferrer" 
+                               target="_blank" 
+                               href="{{- .Permalink -}}" 
+                               > 
+                               {{ add $index 1 }} :
+                               {{- .LinkTitle -}} </a> </div><br><br>
+                       {{- end -}}
+            {{- end -}}
+        </ul>
+    {{- end -}} 
+{{- else -}} 
+{{- if eq $para1 "alltags" -}}
+    {{- $index := 0 -}}
+    {{- $yn := 0 -}}
+    {{- $nowName := "" -}}
+    {{- range $nowpage := $.Site.RegularPages -}}
+        {{- $yn = 0 -}}
+
+        {{- $year1 := .Date -}}
+        {{- if $year1.IsZero -}}
+            {{- $yn = add $yn 1 -}}
+        {{- end -}}
+
+        {{- if eq (.Params.tags) nil -}}
+                {{- $yn = add $yn 200 -}}
+        {{- end -}}
+
+        {{ if in .Permalink "/hot/" }} 
+                {{- $yn = add $yn 300 -}}
+        {{ end }}
+
+        {{ if in .Permalink "/m3u8/" }} 
+                {{- $yn = add $yn 400 -}}
+        {{ end }}
+
+        {{ if in .Permalink "/time/" }} 
+                {{- $yn = add $yn 500 -}}
+        {{ end }}
+
+        {{- if (eq $yn 0) -}}
+    
+            {{- $idx := mod $index 3 -}}
+            {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
+            {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
+            {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+           
+                <a rel="noopener noreferrer" 
+                   target="_blank" 
+                   href="{{- .Permalink -}}" 
+                   > 
+                   {{ add $index 1 }} :
+                   {{- .LinkTitle -}} 
+                   <!-- 
+                   "<==>" {{- .Params.author -}}
+                   "<==>" {{- $year1.UTC.Format "2006-01-02 T 15:04:05 -0700" -}}
+                   "<==>" {{- $year1.Local.Format "2006-01-02 T 15:04:05 -0700" -}}
+                   -->
+                </a> </div><br><br>
+            {{- $index = add $index 1 -}}
+        {{- end -}}
+    {{- end -}}
+{{- else -}} 
+    {{- range $taxonomyname, $taxonomy := .Site.Taxonomies.Alphabetical.Reverse -}}
+            {{- range $key, $value := $taxonomy -}}
+                {{- if (eq $key $para1) -}}
+                        {{- range $index, $element := $value.Pages -}}
+    
+                        {{- $idx := mod $index 3 -}}
+                        {{- if (eq $idx 0) -}} <div Width="100%" style="border:1px dotted green;" > {{- end -}}
+                        {{- if (eq $idx 1) -}} <div Width="100%" style="border:1px dotted blue;" > {{- end -}}
+                        {{- if (eq $idx 2) -}} <div Width="100%" style="border:1px dotted red;" > {{- end -}}
+    
+                            <a rel="noopener noreferrer" 
+                               target="_blank" 
+                               href="{{- .Permalink -}}" 
+                               > 
+                               {{ add $index 1 }} :
+                               {{- .LinkTitle -}} </a> </div><br><br>
+                       {{- end -}}
+                {{- end -}}
+            {{- end -}}
+    {{- end -}} 
+{{- end -}} 
+{{- end -}} 
+</div>

@@ -5,7 +5,7 @@
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
     <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a> 
         <ul>
-            {{- range $key, $value := $taxonomy.Reverse -}}
+            {{- range $key, $value := $taxonomy -}}
             <li> {{ $key }} </li>
                         {{- range $index, $element := $value.Pages -}}
     
@@ -77,7 +77,7 @@
     {{- end -}}
 {{- else -}} 
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
-            {{- range $key, $value := $taxonomy.Reverse -}}
+            {{- range sort ($key, $value := $taxonomy) "key" "desc" -}}
                 {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}
     

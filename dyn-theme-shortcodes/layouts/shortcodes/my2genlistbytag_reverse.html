@@ -2,10 +2,10 @@
 {{- $paraN := len .Params -}}
 <div style="font-size:150%;">
 {{- if eq 0 $paraN -}}
-    {{- range $taxonomyname, $taxonomy := .Site.Taxonomies.Alphabetical.Reverse -}}
+    {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
     <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a> 
         <ul>
-            {{- range $key, $value := $taxonomy -}}
+            {{- range $key, $value := $taxonomy.Reverse -}}
             <li> {{ $key }} </li>
                         {{- range $index, $element := $value.Pages -}}
     
@@ -77,7 +77,7 @@
     {{- end -}}
 {{- else -}} 
     {{- range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
-            {{- range $key, $value := $taxonomy.Alphabetical.Reverse -}}
+            {{- range $key, $value := $taxonomy.Reverse -}}
                 {{- if (eq $key $para1) -}}
                         {{- range $index, $element := $value.Pages -}}
     

@@ -152,6 +152,27 @@
           </td>
          {{ end }}
 
+       {{- if isset $.Site.Params (lower `footerLog2` ) }}
+          <td rowspan="4" style="vertical-align: center ; border: hidden;">
+          <a 
+              {{ if $.Site.Param `footerAboutButton` }}
+              {{ with ($.Site.GetPage `page` ($.Site.Param `footerAboutButton`)) }}
+              href='{{ .Permalink | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'
+              {{end}}
+              {{end}}
+              >
+            <img src="{{- $.Site.Params.footerLog2 | markdownify -}}"
+            alt="footerLog2"
+            width="200" 
+            height="200"></a>
+           </td>
+       {{- end }} {{/* footerLog2 */}}
+
+
+
+         </tr><tr style="border: hidden;">
+
+
          {{ if $.Site.Param `footerTeachAndLearnButton` }}
           <td style="vertical-align: center ; border: hidden;">
           <a
@@ -167,8 +188,6 @@
           </a>
           </td>
          {{ end }}
-
-         </tr><tr style="border: hidden;">
 
           {{ if $.Site.Param `footerEventsAndPhotosButton` }}
           <td style="vertical-align: center ; border: hidden;">

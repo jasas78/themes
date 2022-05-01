@@ -150,7 +150,7 @@ regenBaseCheck:
 
 
 
-rmXML := rm -f docs/sitemap.xml docs/images/favicons/browserconfig.xml docs/resources/images/favicons/browserconfig.xml `find docs/ -name index.xml`
+rmXML ?= rm -f docs/sitemap.xml docs/images/favicons/browserconfig.xml docs/resources/images/favicons/browserconfig.xml `find docs/ -name index.xml`
 updateMakefile :=  [ ! -f scripts.Hugo/Makefile -o ! -f scripts.Hugo/themes/Makefile ] || \
 	( cat scripts.Hugo/themes/Makefile > scripts.Hugo/Makefile )
 

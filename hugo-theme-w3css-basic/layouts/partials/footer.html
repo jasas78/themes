@@ -94,7 +94,7 @@
     {{- end }} {{/* donate */}}
       </tr>
 
-       {{- if isset $.Site.Params (lower `footerLogo3` ) }}
+       {{- if isset $.Site.Params (lower `footerLog3` ) }}
        <tr>
           <td rowspan="4" style="vertical-align: center ; border: hidden;">
           <a 
@@ -104,13 +104,13 @@
               {{end}}
               {{end}}
               >
-            <img src="{{- $.Site.Params.footerLogo3 | markdownify -}}"
-            alt="footerLogo3"
+            <img src="{{- $.Site.Params.footerLog3 | markdownify -}}"
+            alt="footerLog3"
             width="200" 
             height="200"></a>
            </td>
        </tr>
-       {{- end }} {{/* footerLogo3 */}}
+       {{- end }} {{/* footerLog3 */}}
 
 
        </table>

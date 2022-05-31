@@ -57,7 +57,7 @@
   {{- $myImgCmd    := $ourElement.resImgCmd | default (index $ourSite.Params.clients (lower `resImgCmd`   ) ) | default `Resize` }}
   {{- $myImgOpt    := $ourElement.resImgOpt | default (index $ourSite.Params.clients (lower `resImgCmdOpt`) ) | default `100x`   }}
 
-  {{- if and (    $ourElement.url) ($ourElement.resImg) }}  <a href='{{ $ourElement.url }}' target="_blank">
+  {{- if and (    $ourElement.url) ($ourElement.resImg) }}  <a href='{{ $ourElement.url }}'  >
     {{ partial `resource.image.html` (dict `page` $ourPage `class` $myImgClass `style` $myImgStyle `img` $myImg `cmd` $myImgCmd `opt` $myImgOpt ) }}
   </a> {{ end }}
   {{- if and (not $ourElement.url) ($ourElement.resImg) }}

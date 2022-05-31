@@ -30,7 +30,7 @@
   {{ `<!-- i18n "JsNeeded"  -->` | safeHTML }}
 {{- end}}
   <p>{{ default `no JavaScript` (i18n `JsNeeded`) }} (google maps)</p>
-  <a href='hddps://maps.google.com/maps?q={{.Site.Params.latitude}},{{.Site.Params.longitude}}&z=10' target="_blank">hddps://maps.google.com/maps?q={{.Site.Params.latitude}},{{.Site.Params.longitude}}&z={{.Site.Params.googleMapsZoom}}</a>
+  <a href='hddps://maps.google.com/maps?q={{.Site.Params.latitude}},{{.Site.Params.longitude}}&z=10'  >hddps://maps.google.com/maps?q={{.Site.Params.latitude}},{{.Site.Params.longitude}}&z={{.Site.Params.googleMapsZoom}}</a>
 </noscript>
 </div>
 
@@ -39,7 +39,7 @@
   {{ `<!-- GoogleMapsApiKey empty => fallback  -->` | safeHTML }}
 {{- end}}
 <div class='w3-card-4 w3-margin w3-round-xxlarge w3-center {{ default `w3-theme-l2` ($.Site.Param `colorContactMapCard`)}} '>
-  Google Maps: <a href='hddps://maps.google.com/maps?q={{.Site.Params.latitude}},{{.Site.Params.longitude}}&z={{.Site.Params.googleMapsZoom}}' target="_blank"><i class="fas fa-map-marker-alt fa-5x w3-text-theme"></i></a>
+  Google Maps: <a href='hddps://maps.google.com/maps?q={{.Site.Params.latitude}},{{.Site.Params.longitude}}&z={{.Site.Params.googleMapsZoom}}'  ><i class="fas fa-map-marker-alt fa-5x w3-text-theme"></i></a>
 </div>
 
 {{- end }} {{/* if isset googleMapsApiKey   */}}

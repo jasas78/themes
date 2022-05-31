@@ -21,7 +21,7 @@
             {{end}}
            style="background-color:Gray; color:Blue; font-size:80%; border:2px MediumSeaGreen dotted;"
            rel="noopener noreferrer"
-           target="_blank"
+            
            >
            {{ if $.Site.Param `blogs` }}
             {{ $.Site.Param `blogs` }}
@@ -36,7 +36,7 @@
            title="{{ .Site.Title }}"
            style="background-color:White; color:Tomato; font-size:80%; border:2px MediumSeaGreen dotted;"
            rel="noopener noreferrer"
-           target="_blank"
+            
            > 主页 </a>
       </div>
     </div>   <!-- w3-card -->
@@ -49,7 +49,7 @@
 
       <div class="w3-third">
         <div class='w3-card-4 w3-margin w3-round w3-hover-shadow w3-opacity-min w3-hover-opacity-off {{ default `w3-theme-l4` ($.Site.Param `colorFrontRecentPostsCard`)}} '>
-          <a class="no-decoration" target="_blank" href='{{ $element.RelPermalink }}'>
+          <a class="no-decoration"   href='{{ $element.RelPermalink }}'>
 
           {{- $myImgClass  := `w3-image w3-left w3-round w3-hover-opacity` }}
           {{- $myImgStyle  := `max-width:150px; max-height:150px; width: auto; height: auto; margin: 0px 8px 16px 0px;` }}
@@ -64,7 +64,7 @@
           </div>
           </a>
           <div class="w3-container w3-center">
-            <a target="_blank" href='{{ .RelPermalink }}' class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFrontRecentPostsCardButton`)}}'>{{ default `more` (i18n `continueReading`) }}</a>
+            <a   href='{{ .RelPermalink }}' class='w3-button {{ default `w3-theme-l4` ($.Site.Param `colorFrontRecentPostsCardButton`)}}'>{{ default `more` (i18n `continueReading`) }}</a>
           </div>
         </div> <!-- w3-container -->
       </div> <!-- w3-third -->

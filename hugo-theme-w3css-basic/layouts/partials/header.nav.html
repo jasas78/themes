@@ -43,7 +43,7 @@
       {{ `<!-- range .Site.Menus.topbar.ByWeight -->` | safeHTML }}
     {{- end}}
     {{- range .Site.Menus.topbar.ByWeight }}
-  <a href='{{ .URL }}' target="_blank" class="w3-bar-item w3-button w3-right" ><i class='{{ .Pre }}'></i></a>
+  <a href='{{ .URL }}'   class="w3-bar-item w3-button w3-right" ><i class='{{ .Pre }}'></i></a>
     {{- end }}
   {{- end }}
 
@@ -77,7 +77,7 @@
       {{ `<!-- range first $.Site.Params.menutopbar.numOfItemsIfMediumDisplay .Site.Menus.topbar.ByWeight -->` | safeHTML }}
     {{- end}}
     {{- range first $.Site.Params.menutopbar.numOfItemsIfMediumDisplay .Site.Menus.topbar.ByWeight }}
-  <a href='{{ .URL }}' target="_blank" class="w3-bar-item w3-button w3-right header-nav-menu-topbar-medium" ><i class='{{ .Pre }}'></i></a>
+  <a href='{{ .URL }}'   class="w3-bar-item w3-button w3-right header-nav-menu-topbar-medium" ><i class='{{ .Pre }}'></i></a>
     {{- end }} {{/* range */}}
   {{- end }} {{/* numOfItemsIfMediumDisplay */}}
   {{- end }}{{/* socialEnable */}}
@@ -106,7 +106,7 @@
       {{ `<!-- range first $.Site.Params.menutopbar.numOfItemsIfSmallDisplay .Site.Menus.topbar.ByWeight -->` | safeHTML }}
     {{- end}}
     {{- range first $.Site.Params.menutopbar.numOfItemsIfSmallDisplayCollapsed .Site.Menus.topbar.ByWeight }}
-  <a href='{{ .URL }}' target="_blank" class="w3-bar-item w3-button w3-right header-nav-menu-topbar-small" ><i class='{{ .Pre }}'></i></a>
+  <a href='{{ .URL }}'   class="w3-bar-item w3-button w3-right header-nav-menu-topbar-small" ><i class='{{ .Pre }}'></i></a>
     {{- end }}
   {{- end }}
   {{- end }}
@@ -138,7 +138,7 @@
       {{ `<!-- range first $.Site.Params.menutopbar.numOfItemsIfSmallDisplay .Site.Menus.topbar.ByWeight -->` | safeHTML }}
     {{- end}}
     {{- range first $.Site.Params.menutopbar.numOfItemsIfSmallDisplay .Site.Menus.topbar.ByWeight }}
-  <a href='{{ .URL }}' target="_blank" class="w3-bar-item w3-button w3-right header-nav-menu-topbar-small" ><i class='{{ .Pre }}'></i></a>
+  <a href='{{ .URL }}'   class="w3-bar-item w3-button w3-right header-nav-menu-topbar-small" ><i class='{{ .Pre }}'></i></a>
     {{- end }}
   {{- end }}
   {{- end }}
@@ -176,7 +176,7 @@
       {{ `<!-- range first $.Site.Params.menutopbar.numOfItemsIfSmallDisplay .Site.Menus.topbar.ByWeight -->` | safeHTML }}
     {{- end}}
     {{- range first $.Site.Params.menutopbar.numOfItemsIfSmallDisplay .Site.Menus.topbar.ByWeight }}
-  <a href='{{ .URL }}' target="_blank" class="w3-bar-item w3-button w3-right header-nav-menu-topbar-small" ><i class='{{ .Pre }}'></i></a>
+  <a href='{{ .URL }}'   class="w3-bar-item w3-button w3-right header-nav-menu-topbar-small" ><i class='{{ .Pre }}'></i></a>
     {{- end }}
   {{- end }}
   {{- end }}

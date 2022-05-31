@@ -26,7 +26,7 @@
           {{- if $element.url  }}
             {{- $.Scratch.Set `myImgClass` `w3-hover-opacity` }}
             {{- $.Scratch.Set `myImgStyle` `width:100%`     }}
-          <a class="no-decoration" target="_blank" href='{{ $element.url | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'>
+          <a class="no-decoration"   href='{{ $element.url | absURL }}{{ if $.Site.Params.uglyURLs }}{{$.Site.Params.uglyUrl}}{{ end }}'>
           {{- end }}
 
           {{- if not $element.url  }}
